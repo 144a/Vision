@@ -1,0 +1,3 @@
+/home/pi/Vision/2017/test_vid/build/CMakeFiles/edit_cache.dir
+/home/pi/Vision/2017/test_vid/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Vision/2017/test_vid/build/CMakeFiles/test_vid.dir
