@@ -121,10 +121,13 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	cv::Mat imgCont(imgOpen);
 	std::vector< std::vector< cv::Point> > contours;
 	cv::findContours(imgCont, contours, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
+	std::vector< cv::Moments > moms;
 	imgCont = cv::Scalar::all(0);
 	cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
 
 	printf("\nFound %d contours\n", contours.size());
+
+	
 	// find bounding rectangle
 	cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 
@@ -133,25 +136,31 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		// cv::Rect rect1 = cv::boundingRect(contours[i]);
 		// cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
 		// minimum area (rotated) rectangle
-		cv::RotatedRect rect1 = cv::minAreaRect(contours[i]);
+		cv::Rect rect1 = cv::boundingRect(contours[i]);
 
 		imgDraw = img.clone();
 
-		cv::Point2f vertices[4];
-		rect1.points(vertices);
-		for (int j = 0; j < 4; j++) {
+		/*
+			cv::Point2f vertices[4];
+			rect1.points(vertices);
+			for (int j = 0; j < 4; j++) {
 			cv::line(imgDraw,  vertices[j], vertices[(j+1)%4], cv::Scalar(0,255,0));
-		}
-
+			}
+		*/
+		cv::rectangle(imgDraw,rect1,cv::Scalar(0,255,0));
+		
 		// compute Moments so we can find center of each contour (for printing for now)
 		cv::Moments mom1 = cv::moments(contours[i], true);
+		moms.push_back(mom1);
 		cv::Point center(mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		cv::Point ptText(center);
+
+		
 		
 		// printf("m00: %lf m10: %lf m01: %lf x: %lf, y: %lf\n", mom1.m00, mom1.m10, mom1.m01,
 		// mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		
-		printf("m00: %6.2lf   h: %6.2f   w: %6.2f   angle: %6.2f\n", mom1.m00, rect1.size.height, rect1.size.width, rect1.angle);
+		printf("m00: %6.2lf   h: %3d   w: %3d\n", mom1.m00, rect1.height, rect1.width);
 		
 		// check match against template
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
@@ -181,6 +190,9 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		//cv::imshow("Contours", imgDraw);
 		//cv::waitKey(0);
 
+	}
+	for (std::vector<cv::Moments>::iterator it = moms.begin() ; it != moms.end(); it++)	{
+		//		printf("m00: %6.2lf   h: %3d   w: %3d\n", mom1.m00, rect1.height, rect1.width);
 	}
 	//cv::destroyAllWindows(); 
 
