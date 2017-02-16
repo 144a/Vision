@@ -13,9 +13,6 @@ Operating ATTiny85 from 3.3v, running Radio Shack leds directly from ATTiny85
   updated 2/4/17 Troy
   - added mode 2, rgb input on cl
 
-	updated 2/11/17 BD
-	- changed I2C protocol, first byte is LED ring number, followed by R G B
-
 */
 
 #include <linux/i2c-dev.h>
@@ -50,40 +47,38 @@ main(int argc, char *argv[])
 		exit(2);
 	}
 
-	if(argc == 5) {
+	if(argc == 4) {
 		mode = 2;
 	}
 	
 	i = 0;
-	j = 1;
-	buff[0] = buff[1] = buff[2] = buff[3] = 0;
+	j = 0;
+	buff[0] = buff[1] = buff[2] = 0;
 	
 	while(!done) {
 
 		switch(mode) {
 		case 0:
-			buff[0] = 2;
-			buff[1] = 20 * (i % 2) * (((i >> 3) % 2) + 1);
-			buff[2] = 20 * ((i >> 1) % 2) * (((i >> 3) % 2) + 1);
-			buff[3] = 20 * ((i >> 2) % 2) * (((i >> 3) % 2) + 1);
+			buff[0] = 20 * (i % 2) * (((i >> 3) % 2) + 1);
+			buff[1] = 20 * ((i >> 1) % 2) * (((i >> 3) % 2) + 1);
+			buff[2] = 20 * ((i >> 2) % 2) * (((i >> 3) % 2) + 1);
 			break;
 
 		case 1:
-			buff[0] = 2;
 			buff[j] = (i >= 20) ? 39 - i : i;
 			// printf("i: %d  buff[j]: %d\n", i, buff[j]);
 			break;
 			
 		case 2:
 			done = 1;
-			for(i = 0; i < 4; i++) {
+			for(i = 0; i < 3; i++) {
 				buff[i] = atoi(argv[i + 1]);
 			}
 			break;
 		}
 	
-		ret = write(file, buff, 4);
-		if(ret != 4) {
+		ret = write(file, buff, 3);
+		if(ret != 3) {
 			printf("Write returned wrong size: %d - %s\n", ret, strerror(errno));
 			exit(3);
 		}
@@ -99,9 +94,9 @@ main(int argc, char *argv[])
 		case 1:
 			if(++i >= 40) {
 				i = 0;
-				buff[1] = buff[2] = buff[3] = 0;
-				if(++j > 3) {
-					j = 1;
+				buff[0] = buff[1] = buff[2] = 0;
+				if(++j > 2) {
+					j = 0;
 				}
 			}
 			usleep(100000);

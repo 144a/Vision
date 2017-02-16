@@ -1,0 +1,14 @@
+/* gyro_test.cpp - test the I2C gyro
+
+	 created 3/27/15 BD
+
+*/
+
+#include <stdio.h>
+
+#include "PiGyro.h>
+
+int main(int argc, *argv[])
+{
+
+}

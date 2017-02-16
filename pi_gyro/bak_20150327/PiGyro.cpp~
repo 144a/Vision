@@ -1,0 +1,154 @@
+#include <sys/time.h>
+#include "PiGyro.h"
+
+const uint8_t PiGyro::kPowerMgmRegister;
+const uint8_t PiGyro::kDataFormatRegister;
+const uint8_t PiGyro::kDataRegister;
+constexpr double PiGyro::kGsPerLSB;
+
+/**
+ * Constructor.
+ *
+ * @param port The I2C port the gyro is attached to
+ */
+// PiGyro::PiGyro(Port port):		I2C(port, JAKE_GYRO_ADDRESS)
+PiGyro::PiGyro():
+{
+		Init();
+		// m_i2c = new I2C((I2C::Port)port, kAddress);
+		// int ret = Read(0, 1, Buff);
+
+		printf("Gyro Reg 0: %2.2X\n", GetReg0() & 0x00ff);
+}
+
+PiGyro::~PiGyro()
+{
+	// delete m_i2c;
+	// m_i2c = NULL;
+}
+
+void PiGyro::Init()
+{
+	lastUpdate = 0.0;
+	Write(kDLPFRegister, 0x1B);
+	Write(kSampleRateDivider, 9);
+	Write(kPowerMgmRegister, 1);
+	Write(kIntCfg, 1);
+	uint8_t stat;
+	int i;
+	
+	for(i = 0; i < 3; i++) {
+		angleBias[i] = 0;
+	}
+	for(int i = 0; i < 10; i++) {
+		do {
+			Read(kIntStatus, 1, &stat);
+		} while(!(stat & 1));
+		Update();
+		angleBias[0] += XAxis;
+		angleBias[1] += YAxis;
+		angleBias[2] += ZAxis;
+	}
+	for(i = 0; i < 3; i++) {
+		angleBias[i] /= (10 * 14.375); // 10 readings, divide by scale factor
+		angle[i] = 0;
+	}
+}
+
+uint8_t PiGyro::GetReg0()
+{
+	uint8_t id;
+	Read(0, 1, &id);
+
+	return id;
+}
+
+int16_t PiGyro::GetReg(uint8_t regNum)
+{
+	uint16_t ret;
+	uint8_t buff[2];
+
+	Read(regNum, 2, buff);
+	ret = (buff[0] << 8) | buff[1];
+	return (int16_t)ret;
+}
+
+double GetTime()
+{
+	struct timeval tv;
+
+	gettimeofday(&tv, NULL);
+	return (tv.tv_sec + (double)tv_usec/1.0e6);
+}
+
+void PiGyro::Update()
+{
+	if(lastUpdate == 0.0){
+		gettimeofday(&tv, NULL);
+		lastUpdate = GetTime();
+		return;
+	}
+	double time = GetTime();
+	double timeDelta = (time - lastUpdate);
+
+	temperature = GetReg(kTempRegister);
+	temperature = -13200 - temp;
+	temperature = temperature / 280;
+	temperature += 35;
+
+	XAxis = GetReg(kDataRegister + kAxis_X);
+	XAxis = XAxis / 14.375;
+
+	YAxis = GetReg(kDataRegister + kAxis_Y);
+	YAxis = YAxis / 14.375;
+
+	ZAxis = GetReg(kDataRegister + kAxis_Z);
+	ZAxis = ZAxis / 14.375;
+
+	angle[0] += (XAxis - angleBias) * timeDelta;
+	angle[1] += (YAxis - angleBias) * timeDelta;
+	angle[2] += (ZAxis - angleBias) * timeDelta;
+	lastUpdate = time;
+
+	for(int i = 0; i < 3; i++) {
+		if (angle[i] > 180) {
+			angle[i] -= 180;
+		}	else if (angle < -180) {
+			angle[i] += 180;
+		}
+	}
+}
+
+double PiGyro::GetX()
+{
+	return XAxis;
+}
+
+double PiGyro::GetY()
+{
+	return YAxis;
+}
+
+double PiGyro::GetZ()
+{
+	return ZAxis;
+}
+
+std::string PiGyro::GetSmartDashboardType() {
+	return "3AxisAccelerometer";
+}
+
+int PiGyro::GetTemp() {
+	return temperature;
+}
+
+double PiGyro::GetAngle(int xyz)
+{
+	return angle[xyz];
+}
+
+void PiGyro::Reset() {
+	for(int i = 0; i < 3; i++) {
+		angle[i] = 0;
+	}
+}

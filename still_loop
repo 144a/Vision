@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for ((;;))
+do 
+	raspistill -vf -hf -w 320 -h 240 -t 3000 -o ~/Vision/2017/images/`date +%Y%d%m_%T`.jpg
+	sleep 0.5
+done

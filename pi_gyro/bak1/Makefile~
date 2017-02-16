@@ -1,0 +1,39 @@
+
+##
+## 
+##
+
+INCLUDES=
+# INCLUDES=-I/usr/src/linux-headers-3.9.9-030909-generic/include/
+# INCLUDES=-Iinclude/
+
+CROSS=$(TARGET)-
+CC = g++
+AR = ar
+LD = ld
+STRIP = strip
+
+DEBUG_OPTION =
+OPT = -g
+LIBS= -lm
+CFLAGS += -Wall $(OPT) 
+
+APPS = disp_inodes
+
+all: $(APPS)
+
+disp_inodes: inode.o superblock.o grouptable.o disp_inodes.o $(LIBS) 
+	$(CC)  $(CFLAGS) inode.o superblock.o grouptable.o disp_inodes.o $(LIBS) -o  $@ 
+	@echo "make $@ finished on `date`"
+
+%.o:	%.c
+	$(CC) $(CFLAGS) $(INCLUDES) -c $<
+
+%.o:	%.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $<
+
+clean:
+	rm -f disp_inodes disp_inodes.o inode.o grouptable.o superblock.o $(APPS)
+
+
+

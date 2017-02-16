@@ -7,7 +7,7 @@
 	 - LATER, add command line for following:
 	 - don't print if > threshold
 	 - add angle
-	 updated 1/21/17
+	 updated 1/21/17x
 	 - pull template processing out of process()
 	
 	
@@ -27,8 +27,9 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
+#include <math.h>
 
-#define TEMPLATE_FILE "template17.jpg"
+#define TEMPLATE_FILE "template17top.jpg"
 
 // Globals
 	
@@ -76,9 +77,17 @@ int process_template()
 	cv::inRange(imgTemplate, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgTemplate);
 	cv::morphologyEx(imgTemplate, imgTemplate, CV_MOP_OPEN, cv::Mat());
 	cv::findContours(imgTemplate, contoursTemplate, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
+	
 	// cv::namedWindow("Template", cv::WINDOW_AUTOSIZE);
 	// cv::imshow("Template", imgTemplate);
+	// cv::waitKey(0);
 
+}
+
+// find distance to target
+int distance(int pixelheight)
+{
+	return 24.71815424 * pow(.9901601227, pixelheight);
 }
 
 int process(cv::Mat img, cv::Mat &imgDraw)
@@ -115,7 +124,7 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	imgCont = cv::Scalar::all(0);
 	cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
 
-	printf("Found %d contours\n", contours.size());
+	printf("\nFound %d contours\n", contours.size());
 	// find bounding rectangle
 	cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 
@@ -131,16 +140,19 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		cv::Point2f vertices[4];
 		rect1.points(vertices);
 		for (int j = 0; j < 4; j++) {
-			cv::line(imgDraw, vertices[j], vertices[(j+1)%4], cv::Scalar(0,255,0));
+			cv::line(imgDraw,  vertices[j], vertices[(j+1)%4], cv::Scalar(0,255,0));
 		}
 
 		// compute Moments so we can find center of each contour (for printing for now)
 		cv::Moments mom1 = cv::moments(contours[i], true);
 		cv::Point center(mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		cv::Point ptText(center);
+		
 		// printf("m00: %lf m10: %lf m01: %lf x: %lf, y: %lf\n", mom1.m00, mom1.m10, mom1.m01,
-		//			 mom1.m10/mom1.m00, mom1.m01/mom1.m00);
-
+		// mom1.m10/mom1.m00, mom1.m01/mom1.m00);
+		
+		printf("m00: %6.2lf   h: %6.2f   w: %6.2f   angle: %6.2f\n", mom1.m00, rect1.size.height, rect1.size.width, rect1.angle);
+		
 		// check match against template
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
 
@@ -148,7 +160,7 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		double fontScale = 0.5;
 		char s1[255];
 		// sprintf(s1, "#%d %0.2lf", i, match);
-		if((match <= 5.0)) {
+		if((match <= 3.0)) {
 			sprintf(s1, "#%d %0.2lf", i, match);
 			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
 
@@ -158,15 +170,19 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 
 			sprintf(s1, "y: %d", center.y);
 			ptText.y += 15;
-			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+			// print distance from target to cli
+			//printf("%d feet away\n", distance(240.0 - center.y));
+			
 		} else {
 			cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
 		}
-		cv::imshow("Contours", imgDraw);
-		cv::waitKey(0);
+		//cv::imshow("Contours", imgDraw);
+		//cv::waitKey(0);
 
 	}
-	cv::destroyAllWindows(); 
+	//cv::destroyAllWindows(); 
 
 	return 0;
 }
@@ -214,8 +230,8 @@ int main(int argc, char** argv){
 		if(frame.empty()) break;
 		process(frame, imgDraw);
 		cv::imshow("Contours", imgDraw);
-		// if(cv::waitKey(33) >= 0) break;
-		cv::waitKey(0);
+		if(cv::waitKey(33) >= 0) break;
+		//cv::waitKey(0);
 	}
 	return 0;
 	
