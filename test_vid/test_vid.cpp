@@ -32,7 +32,8 @@
 #define TEMPLATE_FILE "template17top.jpg"
 
 // Globals
-	
+int displayf = 0;
+
 /*
 //extract blue
 int HMin = 75; // 120 from robot code
@@ -123,21 +124,30 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	cv::findContours(imgCont, contours, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
 	std::vector< cv::Moments > moms;
 	imgCont = cv::Scalar::all(0);
-	cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
+	if(displayf){
+		cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
+	}
+	std::vector< cv::Rect > rects;
 
 	printf("\nFound %d contours\n", contours.size());
 
 	
 	// find bounding rectangle
-	cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
+	if(displayf){
+		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
+	}
 
 	for(int i = 0; i < contours.size(); i++) {
 		// bounding rectange
-		// cv::Rect rect1 = cv::boundingRect(contours[i]);
-		// cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
-		// minimum area (rotated) rectangle
 		cv::Rect rect1 = cv::boundingRect(contours[i]);
+		if(displayf){
+			cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
+		}
+		
+		// minimum area (rotated) rectangle
+		// cv::RotatedRect rect1 = cv::minAreaRect(contours[i]);
 
+		rects.push_back(rect1);
 		imgDraw = img.clone();
 
 		/*
@@ -147,7 +157,6 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 			cv::line(imgDraw,  vertices[j], vertices[(j+1)%4], cv::Scalar(0,255,0));
 			}
 		*/
-		cv::rectangle(imgDraw,rect1,cv::Scalar(0,255,0));
 		
 		// compute Moments so we can find center of each contour (for printing for now)
 		cv::Moments mom1 = cv::moments(contours[i], true);
@@ -169,31 +178,49 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		double fontScale = 0.5;
 		char s1[255];
 		// sprintf(s1, "#%d %0.2lf", i, match);
-		if((match <= 3.0)) {
-			sprintf(s1, "#%d %0.2lf", i, match);
-			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
-
-			sprintf(s1, "x: %d", center.x);
-			ptText.y += 15;
-			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
-
-			sprintf(s1, "y: %d", center.y);
-			ptText.y += 15;
-			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
-
-			// print distance from target to cli
-			//printf("%d feet away\n", distance(240.0 - center.y));
+		if(displayf){
+			if((match <= 3.0)) {
 			
-		} else {
-			cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
+				sprintf(s1, "#%d %0.2lf", i, match);
+				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+
+				sprintf(s1, "x: %d", center.x);
+				ptText.y += 15;
+				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+
+				sprintf(s1, "y: %d", center.y);
+				ptText.y += 15;
+				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+			
+				// print distance from target to cli
+				//printf("%d feet away\n", distance(240.0 - center.y));
+			
+			} else {
+				cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
+			}
 		}
 		//cv::imshow("Contours", imgDraw);
 		//cv::waitKey(0);
+	}
 
-	}
-	for (std::vector<cv::Moments>::iterator it = moms.begin() ; it != moms.end(); it++)	{
-		//		printf("m00: %6.2lf   h: %3d   w: %3d\n", mom1.m00, rect1.height, rect1.width);
-	}
+	/*
+		std::vector<cv::Moments>::iterator itM = moms.begin();
+		std::vector<cv::Rect>::iterator itR = rects.begin();
+	
+		while(itM != moms.end())	{
+		printf("m00: %6.2lf   h: %3d   w: %3d\n", itM->m00 , itR->height, itR->width);
+		itM++;
+		itR++;
+		}
+	*/
+
+	double y[2];
+	y[0] = 1.0 * rects[0].y;
+	y[1] = 1.0 * rects[1].y;
+	printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
+	
+	//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
+
 	//cv::destroyAllWindows(); 
 
 	return 0;
@@ -218,15 +245,55 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	}
 */
 
+void usage(){
+	printf("usage: test_vid [-h] [-d] [fid]\n");
+	printf("where:\n");
+	printf("       -h - print this help screen\n");
+	printf("       -d - display processing frames\n");
+	printf("       fid - file name to process\n");
+	printf("             if no file name is given, use camera 0\n");
+}
+
 int main(int argc, char** argv){
 	
-	cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
+	char* fid = 0;
+	displayf = 0;
 	
+	if (argc > 3){
+		usage();
+		return -1;
+	}
+	
+	if(argc > 1){
+		if(*argv[1] == '-'){
+			switch(argv[1][1]){
+			case 'd':
+				displayf = 1;
+				if (argc > 2){
+					fid = argv[2];
+				}
+				break;
+				
+			case 'h':
+				usage();
+				return 0;
+				break;
+
+			}
+		} else {
+			fid = argv[1];	
+		}		
+	}
+
+	printf("*%s*", fid);
+	if(displayf){
+		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
+	}
 	cv::VideoCapture cap;
-	if(argc==1){
+	if(fid == 0){
 		cap.open(0);              //open first camera
 	}else{
-		cap.open(argv[1]);
+		cap.open(fid);
 	}
 	if(!cap.isOpened()){        //check if we succeeded
 		std::cerr << "Couldn't open capture. Life sucks." <<std::endl;
@@ -241,7 +308,9 @@ int main(int argc, char** argv){
 		cap >> frame;
 		if(frame.empty()) break;
 		process(frame, imgDraw);
-		cv::imshow("Contours", imgDraw);
+		if(displayf){
+			cv::imshow("Contours", imgDraw);
+		}
 		if(cv::waitKey(33) >= 0) break;
 		//cv::waitKey(0);
 	}
