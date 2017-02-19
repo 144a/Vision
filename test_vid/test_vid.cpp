@@ -86,9 +86,9 @@ int process_template()
 }
 
 // find distance to target
-int distance(int pixelheight)
+double distance(int width)
 {
-	return 24.71815424 * pow(.9901601227, pixelheight);
+	return (-0.2555350554 * width + 24.3431734317);
 }
 
 int process(cv::Mat img, cv::Mat &imgDraw)
@@ -131,14 +131,14 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 
 	printf("\nFound %d contours\n", contours.size());
 
-	
 	// find bounding rectangle
 	if(displayf){
 		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 	}
 
 	for(int i = 0; i < contours.size(); i++) {
-		// bounding rectange
+		// bounding rectangle
+		
 		cv::Rect rect1 = cv::boundingRect(contours[i]);
 		if(displayf){
 			cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
@@ -169,7 +169,7 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		// printf("m00: %lf m10: %lf m01: %lf x: %lf, y: %lf\n", mom1.m00, mom1.m10, mom1.m01,
 		// mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		
-		printf("m00: %6.2lf   h: %3d   w: %3d\n", mom1.m00, rect1.height, rect1.width);
+		printf("m00: %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
 		
 		// check match against template
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
@@ -213,14 +213,15 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		itR++;
 		}
 	*/
-
-	double y[2];
-	y[0] = 1.0 * rects[0].y;
-	y[1] = 1.0 * rects[1].y;
-	printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
+	if(contours.size() >= 1){
+		double y[2];
+		y[0] = 1.0 * rects[0].y;
+		y[1] = 1.0 * rects[1].y;
+		printf("distance!?!: %6.2lf\n", distance(rects[0].width));
+		//printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
 	
-	//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
-
+		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
+	}
 	//cv::destroyAllWindows(); 
 
 	return 0;
@@ -311,8 +312,8 @@ int main(int argc, char** argv){
 		if(displayf){
 			cv::imshow("Contours", imgDraw);
 		}
-		if(cv::waitKey(33) >= 0) break;
-		//cv::waitKey(0);
+		//if(cv::waitKey(33) >= 0) break;
+		cv::waitKey(0);
 	}
 	return 0;
 	
