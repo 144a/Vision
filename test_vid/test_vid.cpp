@@ -213,12 +213,53 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		itR++;
 		}
 	*/
+
+	/*
+	std::vector<cv::Rect>::iterator itR = rects.begin();
+	std::vector<cv::Rect>::iterator itR2 = rects.begin();
+
+	std::vector< cv::Rect > nrects;
+
+	while(itR != rects.end()) {
+		itR2 = rects.begin();
+		while(itR2 != rects.end()) {
+			if((((1.0 * itR2->height)/(1.0 * itR->y - 1.0 * itR2->y)) < 80) && (((1.0 * itR2->height)/(1.0 * itR->y - 1.0 * itR2->y)) > 55)) {
+					nrects.push_back(itR);
+					nrects.push_back(itR2);
+					rects.clear();
+					rects.push_back(nrects[0]);
+					rects.push_back(nrects[1]);
+			}
+			itR2++;
+		}
+		itR++;
+	}
+	*/
+	
+	std::vector< cv::Rect > nrects;
+	
+	for(int iter = 0; iter < rects.size(); iter++) {
+		for(int iter2 = 0; iter2 < rects.size(); iter2++) {
+			if(true or((((1.0 * rects[iter2].height)/(1.0 * rects[iter].y - 1.0 * rects[iter2].y)) < 80) && (((1.0 * rects[iter2].height)/(1.0 * rects[iter].y - 1.0 * rects[iter2].y)) > 55))) {
+					nrects.push_back(rects[iter]);
+					nrects.push_back(rects[iter2]);
+					rects.clear();
+					rects.push_back(nrects[0]);
+					rects.push_back(nrects[1]);
+					
+			}
+		}
+	}
+
+
+	
 	if(contours.size() >= 1){
 		double y[2];
 		y[0] = 1.0 * rects[0].y;
 		y[1] = 1.0 * rects[1].y;
 		printf("distance!?!: %6.2lf\n", distance(rects[0].width));
-		//printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
+		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
+		printf("Analysed %3d Contours\n", rects.size());
 	
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
