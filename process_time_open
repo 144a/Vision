@@ -1,0 +1,4529 @@
+*Test_Vids/20170402_17:03:07.mp4*
+HSV converison time: 5804 usec
+Threshold time: 3171 usec
+Morphology time: 9844 usec
+Contour time: 3714 usec
+Found 2 contours
+Moments time: 59
+m00: 126.50   h:   7   w:  31 y: 410
+Match Shapes time: 63
+Moments time: 19
+m00: 201.00   h:   9   w:  30 y: 392
+Match Shapes time: 33
+Contour loop time: 3984 usec
+distance!?!:  16.42
+Process time: 27355
+
+HSV converison time: 3027 usec
+Threshold time: 3164 usec
+Morphology time: 9851 usec
+Contour time: 3125 usec
+Found 2 contours
+Moments time: 22
+m00: 130.50   h:   7   w:  31 y: 410
+Match Shapes time: 33
+Moments time: 20
+m00: 200.00   h:   9   w:  30 y: 392
+Match Shapes time: 34
+Contour loop time: 3676 usec
+distance!?!:  16.42
+Process time: 23785
+
+HSV converison time: 4288 usec
+Threshold time: 3074 usec
+Morphology time: 9758 usec
+Contour time: 3712 usec
+Found 2 contours
+Moments time: 22
+m00: 135.00   h:   8   w:  31 y: 410
+Match Shapes time: 37
+Moments time: 21
+m00: 201.50   h:   9   w:  30 y: 392
+Match Shapes time: 33
+Contour loop time: 3837 usec
+distance!?!:  16.42
+Process time: 25593
+
+HSV converison time: 4661 usec
+Threshold time: 3186 usec
+Morphology time: 9704 usec
+Contour time: 3592 usec
+Found 2 contours
+Moments time: 19
+m00: 126.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 18
+m00: 217.50   h:  10   w:  32 y: 392
+Match Shapes time: 34
+Contour loop time: 3860 usec
+distance!?!:  16.17
+Process time: 25916
+
+HSV converison time: 4696 usec
+Threshold time: 3136 usec
+Morphology time: 9701 usec
+Contour time: 3307 usec
+Found 2 contours
+Moments time: 19
+m00: 126.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 18
+m00: 217.50   h:  10   w:  32 y: 392
+Match Shapes time: 34
+Contour loop time: 3917 usec
+distance!?!:  16.17
+Process time: 25685
+
+HSV converison time: 3119 usec
+Threshold time: 3039 usec
+Morphology time: 9780 usec
+Contour time: 3011 usec
+Found 2 contours
+Moments time: 20
+m00: 126.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 18
+m00: 217.50   h:  10   w:  32 y: 392
+Match Shapes time: 34
+Contour loop time: 3766 usec
+distance!?!:  16.17
+Process time: 23641
+
+HSV converison time: 3023 usec
+Threshold time: 2994 usec
+Morphology time: 9734 usec
+Contour time: 3157 usec
+Found 2 contours
+Moments time: 17
+m00: 126.50   h:   8   w:  32 y: 410
+Match Shapes time: 33
+Moments time: 18
+m00: 217.50   h:  10   w:  32 y: 392
+Match Shapes time: 33
+Contour loop time: 3567 usec
+distance!?!:  16.17
+Process time: 23435
+
+HSV converison time: 3006 usec
+Threshold time: 3096 usec
+Morphology time: 9631 usec
+Contour time: 3065 usec
+Found 2 contours
+Moments time: 21
+m00: 126.50   h:   8   w:  32 y: 410
+Match Shapes time: 36
+Moments time: 16
+m00: 222.50   h:  10   w:  34 y: 392
+Match Shapes time: 31
+Contour loop time: 3813 usec
+distance!?!:  16.17
+Process time: 23535
+
+HSV converison time: 4987 usec
+Threshold time: 2996 usec
+Morphology time: 9760 usec
+Contour time: 3664 usec
+Found 2 contours
+Moments time: 18
+m00: 130.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 20
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 35
+Contour loop time: 3657 usec
+distance!?!:  16.17
+Process time: 26000
+
+HSV converison time: 3061 usec
+Threshold time: 3129 usec
+Morphology time: 9846 usec
+Contour time: 3134 usec
+Found 2 contours
+Moments time: 21
+m00: 130.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 18
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 33
+Contour loop time: 4007 usec
+distance!?!:  16.17
+Process time: 24109
+
+HSV converison time: 7201 usec
+Threshold time: 3096 usec
+Morphology time: 9852 usec
+Contour time: 3120 usec
+Found 2 contours
+Moments time: 20
+m00: 132.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 60
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 34
+Contour loop time: 3962 usec
+distance!?!:  16.17
+Process time: 28159
+
+HSV converison time: 4405 usec
+Threshold time: 3087 usec
+Morphology time: 9648 usec
+Contour time: 3614 usec
+Found 2 contours
+Moments time: 22
+m00: 132.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 19
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 32
+Contour loop time: 4014 usec
+distance!?!:  16.17
+Process time: 25687
+
+HSV converison time: 5899 usec
+Threshold time: 3073 usec
+Morphology time: 9626 usec
+Contour time: 3684 usec
+Found 2 contours
+Moments time: 20
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 36
+Moments time: 15
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 31
+Contour loop time: 3825 usec
+distance!?!:  16.17
+Process time: 27028
+
+HSV converison time: 4180 usec
+Threshold time: 3221 usec
+Morphology time: 9987 usec
+Contour time: 3185 usec
+Found 2 contours
+Moments time: 19
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 18
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 33
+Contour loop time: 4064 usec
+distance!?!:  16.17
+Process time: 25590
+
+HSV converison time: 3010 usec
+Threshold time: 3116 usec
+Morphology time: 9873 usec
+Contour time: 3190 usec
+Found 2 contours
+Moments time: 19
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 33
+Moments time: 17
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 33
+Contour loop time: 3843 usec
+distance!?!:  16.17
+Process time: 24027
+
+HSV converison time: 4753 usec
+Threshold time: 3001 usec
+Morphology time: 9620 usec
+Contour time: 3678 usec
+Found 2 contours
+Moments time: 20
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 18
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 32
+Contour loop time: 3907 usec
+distance!?!:  16.17
+Process time: 25864
+
+HSV converison time: 4801 usec
+Threshold time: 3089 usec
+Morphology time: 9661 usec
+Contour time: 3354 usec
+Found 2 contours
+Moments time: 21
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 17
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 34
+Contour loop time: 3925 usec
+distance!?!:  16.17
+Process time: 25762
+
+HSV converison time: 4774 usec
+Threshold time: 3096 usec
+Morphology time: 9677 usec
+Contour time: 3755 usec
+Found 2 contours
+Moments time: 20
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 18
+m00: 224.50   h:  10   w:  34 y: 392
+Match Shapes time: 33
+Contour loop time: 3857 usec
+distance!?!:  16.17
+Process time: 26087
+
+HSV converison time: 4942 usec
+Threshold time: 3199 usec
+Morphology time: 9745 usec
+Contour time: 3644 usec
+Found 2 contours
+Moments time: 22
+m00: 138.00   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 19
+m00: 221.50   h:  10   w:  33 y: 392
+Match Shapes time: 34
+Contour loop time: 3897 usec
+distance!?!:  16.17
+Process time: 26365
+
+HSV converison time: 4788 usec
+Threshold time: 3149 usec
+Morphology time: 9785 usec
+Contour time: 3661 usec
+Found 2 contours
+Moments time: 22
+m00: 138.00   h:   8   w:  32 y: 410
+Match Shapes time: 34
+Moments time: 18
+m00: 221.50   h:  10   w:  33 y: 392
+Match Shapes time: 36
+Contour loop time: 3921 usec
+distance!?!:  16.17
+Process time: 26237
+
+HSV converison time: 4960 usec
+Threshold time: 3177 usec
+Morphology time: 9765 usec
+Contour time: 3696 usec
+Found 2 contours
+Moments time: 25
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 37
+Moments time: 18
+m00: 221.50   h:  10   w:  33 y: 392
+Match Shapes time: 34
+Contour loop time: 3831 usec
+distance!?!:  16.17
+Process time: 26383
+
+HSV converison time: 3326 usec
+Threshold time: 3138 usec
+Morphology time: 9686 usec
+Contour time: 3364 usec
+Found 2 contours
+Moments time: 20
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 21
+m00: 221.50   h:  10   w:  33 y: 392
+Match Shapes time: 35
+Contour loop time: 3861 usec
+distance!?!:  16.17
+Process time: 24323
+
+HSV converison time: 4908 usec
+Threshold time: 3034 usec
+Morphology time: 9699 usec
+Contour time: 3627 usec
+Found 2 contours
+Moments time: 24
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 36
+Moments time: 18
+m00: 221.00   h:  10   w:  33 y: 392
+Match Shapes time: 36
+Contour loop time: 3864 usec
+distance!?!:  16.17
+Process time: 26058
+
+HSV converison time: 4901 usec
+Threshold time: 3029 usec
+Morphology time: 9667 usec
+Contour time: 3684 usec
+Found 2 contours
+Moments time: 20
+m00: 138.50   h:   8   w:  32 y: 410
+Match Shapes time: 35
+Moments time: 19
+m00: 228.00   h:  12   w:  33 y: 390
+Match Shapes time: 37
+Contour loop time: 3967 usec
+distance!?!:  16.17
+Process time: 26205
+
+HSV converison time: 3376 usec
+Threshold time: 3017 usec
+Morphology time: 9699 usec
+Contour time: 3707 usec
+Found 2 contours
+Moments time: 22
+m00: 151.00   h:  10   w:  32 y: 408
+Match Shapes time: 36
+Moments time: 18
+m00: 241.00   h:  12   w:  32 y: 390
+Match Shapes time: 34
+Contour loop time: 3876 usec
+distance!?!:  16.17
+Process time: 24587
+
+HSV converison time: 4825 usec
+Threshold time: 3122 usec
+Morphology time: 9673 usec
+Contour time: 3621 usec
+Found 2 contours
+Moments time: 20
+m00: 157.50   h:   8   w:  33 y: 408
+Match Shapes time: 34
+Moments time: 18
+m00: 250.50   h:  12   w:  32 y: 390
+Match Shapes time: 34
+Contour loop time: 3910 usec
+distance!?!:  15.91
+Process time: 26100
+
+HSV converison time: 4852 usec
+Threshold time: 3062 usec
+Morphology time: 9674 usec
+Contour time: 3634 usec
+Found 2 contours
+Moments time: 22
+m00: 168.50   h:   8   w:  32 y: 408
+Match Shapes time: 37
+Moments time: 18
+m00: 258.00   h:  11   w:  32 y: 390
+Match Shapes time: 34
+Contour loop time: 3938 usec
+distance!?!:  16.17
+Process time: 26041
+
+HSV converison time: 3536 usec
+Threshold time: 2992 usec
+Morphology time: 9819 usec
+Contour time: 3681 usec
+Found 2 contours
+Moments time: 17
+m00: 178.50   h:   8   w:  34 y: 408
+Match Shapes time: 34
+Moments time: 18
+m00: 276.50   h:  12   w:  33 y: 388
+Match Shapes time: 34
+Contour loop time: 3650 usec
+distance!?!:  15.65
+Process time: 24600
+
+HSV converison time: 4729 usec
+Threshold time: 3097 usec
+Morphology time: 9675 usec
+Contour time: 3063 usec
+Found 2 contours
+Moments time: 20
+m00: 182.00   h:   8   w:  33 y: 408
+Match Shapes time: 34
+Moments time: 21
+m00: 286.50   h:  12   w:  34 y: 388
+Match Shapes time: 35
+Contour loop time: 3823 usec
+distance!?!:  15.91
+Process time: 25307
+
+HSV converison time: 2991 usec
+Threshold time: 3278 usec
+Morphology time: 9783 usec
+Contour time: 3027 usec
+Found 2 contours
+Moments time: 22
+m00: 171.00   h:   8   w:  32 y: 408
+Match Shapes time: 36
+Moments time: 18
+m00: 271.00   h:  12   w:  34 y: 388
+Match Shapes time: 35
+Contour loop time: 3886 usec
+distance!?!:  16.17
+Process time: 23936
+
+HSV converison time: 3091 usec
+Threshold time: 3204 usec
+Morphology time: 9768 usec
+Contour time: 3011 usec
+Found 2 contours
+Moments time: 22
+m00: 164.50   h:   8   w:  32 y: 408
+Match Shapes time: 36
+Moments time: 18
+m00: 264.50   h:  12   w:  32 y: 388
+Match Shapes time: 35
+Contour loop time: 3853 usec
+distance!?!:  16.17
+Process time: 23868
+
+HSV converison time: 2980 usec
+Threshold time: 3350 usec
+Morphology time: 9814 usec
+Contour time: 3019 usec
+Found 2 contours
+Moments time: 22
+m00: 141.50   h:   8   w:  33 y: 408
+Match Shapes time: 36
+Moments time: 24
+m00: 252.00   h:  12   w:  32 y: 388
+Match Shapes time: 33
+Contour loop time: 3989 usec
+distance!?!:  15.91
+Process time: 24103
+
+HSV converison time: 4335 usec
+Threshold time: 3205 usec
+Morphology time: 9782 usec
+Contour time: 3018 usec
+Found 2 contours
+Moments time: 19
+m00: 123.00   h:   7   w:  34 y: 408
+Match Shapes time: 34
+Moments time: 19
+m00: 233.00   h:  11   w:  33 y: 388
+Match Shapes time: 34
+Contour loop time: 3784 usec
+distance!?!:  15.65
+Process time: 25026
+
+HSV converison time: 3119 usec
+Threshold time: 3136 usec
+Morphology time: 9771 usec
+Contour time: 3038 usec
+Found 2 contours
+Moments time: 17
+m00: 141.00   h:   9   w:  32 y: 406
+Match Shapes time: 32
+Moments time: 16
+m00: 226.00   h:  10   w:  33 y: 388
+Match Shapes time: 30
+Contour loop time: 3660 usec
+distance!?!:  16.17
+Process time: 23668
+
+HSV converison time: 3104 usec
+Threshold time: 3234 usec
+Morphology time: 9725 usec
+Contour time: 3023 usec
+Found 2 contours
+Moments time: 20
+m00: 142.50   h:   8   w:  32 y: 406
+Match Shapes time: 34
+Moments time: 18
+m00: 238.00   h:  12   w:  34 y: 386
+Match Shapes time: 34
+Contour loop time: 3929 usec
+distance!?!:  16.17
+Process time: 23961
+
+HSV converison time: 3025 usec
+Threshold time: 3314 usec
+Morphology time: 9782 usec
+Contour time: 3037 usec
+Found 2 contours
+Moments time: 21
+m00: 172.50   h:   8   w:  32 y: 404
+Match Shapes time: 35
+Moments time: 20
+m00: 259.00   h:  11   w:  33 y: 386
+Match Shapes time: 36
+Contour loop time: 3895 usec
+distance!?!:  16.17
+Process time: 24162
+
+HSV converison time: 3006 usec
+Threshold time: 3293 usec
+Morphology time: 9815 usec
+Contour time: 3081 usec
+Found 2 contours
+Moments time: 20
+m00: 172.00   h:   8   w:  32 y: 404
+Match Shapes time: 38
+Moments time: 19
+m00: 256.50   h:  13   w:  32 y: 384
+Match Shapes time: 33
+Contour loop time: 3852 usec
+distance!?!:  16.17
+Process time: 24014
+
+HSV converison time: 2989 usec
+Threshold time: 3274 usec
+Morphology time: 9793 usec
+Contour time: 2972 usec
+Found 2 contours
+Moments time: 20
+m00: 185.00   h:   8   w:  33 y: 404
+Match Shapes time: 35
+Moments time: 19
+m00: 259.00   h:  12   w:  32 y: 384
+Match Shapes time: 35
+Contour loop time: 3908 usec
+distance!?!:  15.91
+Process time: 23879
+
+HSV converison time: 2975 usec
+Threshold time: 3269 usec
+Morphology time: 9797 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 19
+m00: 178.00   h:   8   w:  33 y: 404
+Match Shapes time: 35
+Moments time: 18
+m00: 269.00   h:  12   w:  32 y: 384
+Match Shapes time: 35
+Contour loop time: 3837 usec
+distance!?!:  15.91
+Process time: 23862
+
+HSV converison time: 2987 usec
+Threshold time: 3072 usec
+Morphology time: 9789 usec
+Contour time: 3094 usec
+Found 2 contours
+Moments time: 17
+m00: 174.50   h:   8   w:  32 y: 404
+Match Shapes time: 33
+Moments time: 19
+m00: 273.50   h:  12   w:  34 y: 384
+Match Shapes time: 34
+Contour loop time: 3566 usec
+distance!?!:  16.17
+Process time: 23467
+
+HSV converison time: 2984 usec
+Threshold time: 3308 usec
+Morphology time: 9633 usec
+Contour time: 3109 usec
+Found 2 contours
+Moments time: 20
+m00: 164.50   h:   8   w:  32 y: 404
+Match Shapes time: 35
+Moments time: 17
+m00: 265.00   h:  12   w:  34 y: 384
+Match Shapes time: 33
+Contour loop time: 3857 usec
+distance!?!:  16.17
+Process time: 23873
+
+HSV converison time: 3014 usec
+Threshold time: 3410 usec
+Morphology time: 9789 usec
+Contour time: 3020 usec
+Found 2 contours
+Moments time: 20
+m00: 174.50   h:   8   w:  34 y: 404
+Match Shapes time: 37
+Moments time: 19
+m00: 258.50   h:  12   w:  34 y: 384
+Match Shapes time: 35
+Contour loop time: 3833 usec
+distance!?!:  15.65
+Process time: 24041
+
+HSV converison time: 3040 usec
+Threshold time: 3311 usec
+Morphology time: 9777 usec
+Contour time: 3017 usec
+Found 2 contours
+Moments time: 20
+m00: 148.50   h:   8   w:  33 y: 404
+Match Shapes time: 35
+Moments time: 18
+m00: 238.00   h:  12   w:  33 y: 384
+Match Shapes time: 34
+Contour loop time: 3883 usec
+distance!?!:  15.91
+Process time: 23985
+
+HSV converison time: 3018 usec
+Threshold time: 3244 usec
+Morphology time: 9790 usec
+Contour time: 2973 usec
+Found 2 contours
+Moments time: 23
+m00: 139.50   h:   8   w:  32 y: 404
+Match Shapes time: 36
+Moments time: 18
+m00: 237.50   h:  11   w:  33 y: 384
+Match Shapes time: 34
+Contour loop time: 3922 usec
+distance!?!:  16.17
+Process time: 23886
+
+HSV converison time: 2993 usec
+Threshold time: 3320 usec
+Morphology time: 9819 usec
+Contour time: 3031 usec
+Found 2 contours
+Moments time: 20
+m00: 137.50   h:  10   w:  32 y: 402
+Match Shapes time: 34
+Moments time: 19
+m00: 234.00   h:  10   w:  34 y: 384
+Match Shapes time: 33
+Contour loop time: 3966 usec
+distance!?!:  16.17
+Process time: 24097
+
+HSV converison time: 3104 usec
+Threshold time: 3112 usec
+Morphology time: 9833 usec
+Contour time: 3029 usec
+Found 2 contours
+Moments time: 19
+m00: 142.50   h:   8   w:  32 y: 402
+Match Shapes time: 33
+Moments time: 22
+m00: 240.50   h:  12   w:  33 y: 382
+Match Shapes time: 33
+Contour loop time: 3620 usec
+distance!?!:  16.17
+Process time: 23653
+
+HSV converison time: 3180 usec
+Threshold time: 3261 usec
+Morphology time: 9647 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 20
+m00: 154.00   h:   8   w:  34 y: 402
+Match Shapes time: 36
+Moments time: 17
+m00: 250.00   h:  12   w:  33 y: 382
+Match Shapes time: 30
+Contour loop time: 3845 usec
+distance!?!:  15.65
+Process time: 23886
+
+HSV converison time: 3206 usec
+Threshold time: 3279 usec
+Morphology time: 9778 usec
+Contour time: 3025 usec
+Found 2 contours
+Moments time: 20
+m00: 146.00   h:   8   w:  33 y: 402
+Match Shapes time: 34
+Moments time: 21
+m00: 251.00   h:  12   w:  32 y: 382
+Match Shapes time: 34
+Contour loop time: 3875 usec
+distance!?!:  15.91
+Process time: 24230
+
+HSV converison time: 3077 usec
+Threshold time: 3147 usec
+Morphology time: 9821 usec
+Contour time: 3052 usec
+Found 2 contours
+Moments time: 22
+m00: 170.00   h:  10   w:  33 y: 400
+Match Shapes time: 34
+Moments time: 19
+m00: 250.00   h:  12   w:  32 y: 382
+Match Shapes time: 31
+Contour loop time: 3903 usec
+distance!?!:  15.91
+Process time: 23957
+
+HSV converison time: 3108 usec
+Threshold time: 3292 usec
+Morphology time: 9753 usec
+Contour time: 3072 usec
+Found 2 contours
+Moments time: 21
+m00: 170.00   h:  10   w:  33 y: 400
+Match Shapes time: 34
+Moments time: 19
+m00: 251.00   h:  12   w:  32 y: 382
+Match Shapes time: 35
+Contour loop time: 3907 usec
+distance!?!:  15.91
+Process time: 24075
+
+HSV converison time: 2968 usec
+Threshold time: 3334 usec
+Morphology time: 9783 usec
+Contour time: 3019 usec
+Found 2 contours
+Moments time: 22
+m00: 169.50   h:   8   w:  33 y: 400
+Match Shapes time: 36
+Moments time: 18
+m00: 252.00   h:  12   w:  32 y: 382
+Match Shapes time: 33
+Contour loop time: 3851 usec
+distance!?!:  15.91
+Process time: 23900
+
+HSV converison time: 4127 usec
+Threshold time: 3238 usec
+Morphology time: 9679 usec
+Contour time: 3168 usec
+Found 2 contours
+Moments time: 20
+m00: 174.00   h:   8   w:  33 y: 400
+Match Shapes time: 35
+Moments time: 18
+m00: 256.50   h:  12   w:  33 y: 382
+Match Shapes time: 32
+Contour loop time: 3844 usec
+distance!?!:  15.91
+Process time: 24962
+
+HSV converison time: 2971 usec
+Threshold time: 3178 usec
+Morphology time: 9748 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 18
+m00: 187.50   h:   8   w:  34 y: 400
+Match Shapes time: 33
+Moments time: 22
+m00: 276.50   h:  12   w:  34 y: 380
+Match Shapes time: 32
+Contour loop time: 3546 usec
+distance!?!:  15.65
+Process time: 23490
+
+HSV converison time: 3042 usec
+Threshold time: 3342 usec
+Morphology time: 9653 usec
+Contour time: 3054 usec
+Found 2 contours
+Moments time: 21
+m00: 181.00   h:   8   w:  33 y: 400
+Match Shapes time: 36
+Moments time: 15
+m00: 269.00   h:  12   w:  33 y: 380
+Match Shapes time: 31
+Contour loop time: 3817 usec
+distance!?!:  15.91
+Process time: 23823
+
+HSV converison time: 3075 usec
+Threshold time: 3206 usec
+Morphology time: 9723 usec
+Contour time: 3018 usec
+Found 2 contours
+Moments time: 19
+m00: 175.50   h:   8   w:  32 y: 400
+Match Shapes time: 34
+Moments time: 20
+m00: 272.00   h:  12   w:  34 y: 380
+Match Shapes time: 34
+Contour loop time: 3833 usec
+distance!?!:  16.17
+Process time: 23804
+
+HSV converison time: 3045 usec
+Threshold time: 3316 usec
+Morphology time: 9780 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 20
+m00: 183.00   h:   8   w:  32 y: 400
+Match Shapes time: 35
+Moments time: 18
+m00: 268.00   h:  12   w:  34 y: 380
+Match Shapes time: 34
+Contour loop time: 3861 usec
+distance!?!:  16.17
+Process time: 23994
+
+HSV converison time: 3012 usec
+Threshold time: 3363 usec
+Morphology time: 9786 usec
+Contour time: 3000 usec
+Found 2 contours
+Moments time: 20
+m00: 184.00   h:   8   w:  32 y: 400
+Match Shapes time: 35
+Moments time: 17
+m00: 271.50   h:  12   w:  33 y: 380
+Match Shapes time: 33
+Contour loop time: 3925 usec
+distance!?!:  16.17
+Process time: 24026
+
+HSV converison time: 3035 usec
+Threshold time: 3277 usec
+Morphology time: 9717 usec
+Contour time: 3037 usec
+Found 2 contours
+Moments time: 20
+m00: 170.50   h:   8   w:  32 y: 400
+Match Shapes time: 37
+Moments time: 18
+m00: 270.00   h:  12   w:  34 y: 380
+Match Shapes time: 34
+Contour loop time: 3904 usec
+distance!?!:  16.17
+Process time: 23941
+
+HSV converison time: 3171 usec
+Threshold time: 3052 usec
+Morphology time: 9776 usec
+Contour time: 3048 usec
+Found 2 contours
+Moments time: 18
+m00: 174.50   h:   8   w:  32 y: 400
+Match Shapes time: 33
+Moments time: 18
+m00: 268.00   h:  12   w:  34 y: 380
+Match Shapes time: 34
+Contour loop time: 3650 usec
+distance!?!:  16.17
+Process time: 23732
+
+HSV converison time: 3189 usec
+Threshold time: 3171 usec
+Morphology time: 9676 usec
+Contour time: 3075 usec
+Found 2 contours
+Moments time: 20
+m00: 165.00   h:   8   w:  32 y: 400
+Match Shapes time: 36
+Moments time: 16
+m00: 258.50   h:  12   w:  34 y: 380
+Match Shapes time: 33
+Contour loop time: 3830 usec
+distance!?!:  16.17
+Process time: 23853
+
+HSV converison time: 3156 usec
+Threshold time: 3247 usec
+Morphology time: 9764 usec
+Contour time: 3047 usec
+Found 2 contours
+Moments time: 21
+m00: 139.00   h:   8   w:  32 y: 400
+Match Shapes time: 39
+Moments time: 21
+m00: 245.50   h:  11   w:  34 y: 380
+Match Shapes time: 34
+Contour loop time: 3909 usec
+distance!?!:  16.17
+Process time: 24068
+
+HSV converison time: 3148 usec
+Threshold time: 3246 usec
+Morphology time: 9774 usec
+Contour time: 3082 usec
+Found 2 contours
+Moments time: 21
+m00: 137.50   h:  10   w:  32 y: 398
+Match Shapes time: 34
+Moments time: 19
+m00: 238.50   h:  11   w:  33 y: 380
+Match Shapes time: 34
+Contour loop time: 3968 usec
+distance!?!:  16.17
+Process time: 24154
+
+HSV converison time: 3044 usec
+Threshold time: 3264 usec
+Morphology time: 9704 usec
+Contour time: 3065 usec
+Found 2 contours
+Moments time: 23
+m00: 137.00   h:  10   w:  33 y: 398
+Match Shapes time: 34
+Moments time: 17
+m00: 232.50   h:  11   w:  32 y: 380
+Match Shapes time: 34
+Contour loop time: 3940 usec
+distance!?!:  15.91
+Process time: 23959
+
+HSV converison time: 2979 usec
+Threshold time: 3305 usec
+Morphology time: 9714 usec
+Contour time: 3008 usec
+Found 2 contours
+Moments time: 19
+m00: 146.00   h:   8   w:  33 y: 398
+Match Shapes time: 35
+Moments time: 20
+m00: 244.00   h:  12   w:  32 y: 378
+Match Shapes time: 33
+Contour loop time: 3874 usec
+distance!?!:  15.91
+Process time: 23817
+
+HSV converison time: 3046 usec
+Threshold time: 3074 usec
+Morphology time: 9792 usec
+Contour time: 3125 usec
+Found 2 contours
+Moments time: 19
+m00: 168.50   h:  10   w:  33 y: 396
+Match Shapes time: 36
+Moments time: 18
+m00: 261.00   h:  12   w:  32 y: 378
+Match Shapes time: 33
+Contour loop time: 3621 usec
+distance!?!:  15.91
+Process time: 23584
+
+HSV converison time: 3089 usec
+Threshold time: 3110 usec
+Morphology time: 9718 usec
+Contour time: 3066 usec
+Found 2 contours
+Moments time: 21
+m00: 185.50   h:   8   w:  34 y: 396
+Match Shapes time: 36
+Moments time: 16
+m00: 278.50   h:  14   w:  34 y: 376
+Match Shapes time: 33
+Contour loop time: 3706 usec
+distance!?!:  15.65
+Process time: 23621
+
+HSV converison time: 3088 usec
+Threshold time: 3087 usec
+Morphology time: 9697 usec
+Contour time: 3125 usec
+Found 2 contours
+Moments time: 21
+m00: 191.50   h:   8   w:  34 y: 396
+Match Shapes time: 35
+Moments time: 19
+m00: 283.00   h:  12   w:  34 y: 376
+Match Shapes time: 34
+Contour loop time: 3834 usec
+distance!?!:  15.65
+Process time: 23786
+
+HSV converison time: 3067 usec
+Threshold time: 3168 usec
+Morphology time: 9786 usec
+Contour time: 3149 usec
+Found 2 contours
+Moments time: 19
+m00: 177.50   h:   8   w:  33 y: 396
+Match Shapes time: 34
+Moments time: 20
+m00: 261.50   h:  12   w:  35 y: 376
+Match Shapes time: 36
+Contour loop time: 3892 usec
+distance!?!:  15.91
+Process time: 23989
+
+HSV converison time: 3030 usec
+Threshold time: 3255 usec
+Morphology time: 9708 usec
+Contour time: 3065 usec
+Found 2 contours
+Moments time: 20
+m00: 144.00   h:  10   w:  33 y: 394
+Match Shapes time: 35
+Moments time: 17
+m00: 246.00   h:  11   w:  35 y: 376
+Match Shapes time: 35
+Contour loop time: 3878 usec
+distance!?!:  15.91
+Process time: 23927
+
+HSV converison time: 3001 usec
+Threshold time: 3201 usec
+Morphology time: 9794 usec
+Contour time: 2939 usec
+Found 2 contours
+Moments time: 19
+m00: 142.50   h:   8   w:  32 y: 394
+Match Shapes time: 35
+Moments time: 19
+m00: 277.00   h:  12   w:  35 y: 374
+Match Shapes time: 33
+Contour loop time: 3901 usec
+distance!?!:  16.17
+Process time: 23766
+
+HSV converison time: 3043 usec
+Threshold time: 3086 usec
+Morphology time: 9742 usec
+Contour time: 3029 usec
+Found 2 contours
+Moments time: 23
+m00: 177.50   h:   8   w:  32 y: 392
+Match Shapes time: 34
+Moments time: 22
+m00: 289.00   h:  12   w:  35 y: 372
+Match Shapes time: 35
+Contour loop time: 3795 usec
+distance!?!:  16.17
+Process time: 23615
+
+HSV converison time: 3049 usec
+Threshold time: 3197 usec
+Morphology time: 9716 usec
+Contour time: 3018 usec
+Found 2 contours
+Moments time: 22
+m00: 183.00   h:   8   w:  32 y: 392
+Match Shapes time: 35
+Moments time: 17
+m00: 297.00   h:  12   w:  35 y: 372
+Match Shapes time: 32
+Contour loop time: 3653 usec
+distance!?!:  16.17
+Process time: 23561
+
+HSV converison time: 3004 usec
+Threshold time: 3335 usec
+Morphology time: 9770 usec
+Contour time: 3041 usec
+Found 2 contours
+Moments time: 20
+m00: 177.00   h:   8   w:  33 y: 392
+Match Shapes time: 34
+Moments time: 20
+m00: 273.50   h:  12   w:  35 y: 372
+Match Shapes time: 33
+Contour loop time: 3893 usec
+distance!?!:  15.91
+Process time: 24057
+
+HSV converison time: 3069 usec
+Threshold time: 3382 usec
+Morphology time: 9764 usec
+Contour time: 3075 usec
+Found 2 contours
+Moments time: 23
+m00: 167.50   h:   8   w:  33 y: 392
+Match Shapes time: 37
+Moments time: 19
+m00: 261.00   h:  12   w:  35 y: 372
+Match Shapes time: 33
+Contour loop time: 3966 usec
+distance!?!:  15.91
+Process time: 24214
+
+HSV converison time: 3179 usec
+Threshold time: 3273 usec
+Morphology time: 9751 usec
+Contour time: 3033 usec
+Found 2 contours
+Moments time: 20
+m00: 153.00   h:  10   w:  32 y: 390
+Match Shapes time: 33
+Moments time: 19
+m00: 271.00   h:  13   w:  35 y: 370
+Match Shapes time: 35
+Contour loop time: 3891 usec
+distance!?!:  16.17
+Process time: 24078
+
+HSV converison time: 3142 usec
+Threshold time: 3266 usec
+Morphology time: 9739 usec
+Contour time: 2937 usec
+Found 2 contours
+Moments time: 22
+m00: 167.50   h:  10   w:  34 y: 388
+Match Shapes time: 37
+Moments time: 19
+m00: 312.00   h:  14   w:  35 y: 368
+Match Shapes time: 35
+Contour loop time: 3977 usec
+distance!?!:  15.65
+Process time: 23994
+
+HSV converison time: 3081 usec
+Threshold time: 3107 usec
+Morphology time: 9790 usec
+Contour time: 3035 usec
+Found 2 contours
+Moments time: 21
+m00: 188.50   h:   8   w:  34 y: 388
+Match Shapes time: 32
+Moments time: 19
+m00: 296.00   h:  12   w:  35 y: 368
+Match Shapes time: 33
+Contour loop time: 3802 usec
+distance!?!:  15.65
+Process time: 23758
+
+HSV converison time: 3092 usec
+Threshold time: 3162 usec
+Morphology time: 9791 usec
+Contour time: 3045 usec
+Found 2 contours
+Moments time: 18
+m00: 176.00   h:   8   w:  32 y: 388
+Match Shapes time: 32
+Moments time: 21
+m00: 270.50   h:  12   w:  34 y: 368
+Match Shapes time: 34
+Contour loop time: 3585 usec
+distance!?!:  16.17
+Process time: 23644
+
+HSV converison time: 3070 usec
+Threshold time: 3267 usec
+Morphology time: 9630 usec
+Contour time: 3072 usec
+Found 2 contours
+Moments time: 22
+m00: 175.50   h:  10   w:  34 y: 386
+Match Shapes time: 37
+Moments time: 18
+m00: 268.50   h:  12   w:  34 y: 366
+Match Shapes time: 35
+Contour loop time: 3887 usec
+distance!?!:  15.65
+Process time: 23840
+
+HSV converison time: 3049 usec
+Threshold time: 3249 usec
+Morphology time: 9731 usec
+Contour time: 3107 usec
+Found 2 contours
+Moments time: 20
+m00: 171.50   h:  10   w:  36 y: 384
+Match Shapes time: 34
+Moments time: 20
+m00: 316.00   h:  14   w:  36 y: 364
+Match Shapes time: 35
+Contour loop time: 3838 usec
+distance!?!:  15.14
+Process time: 23908
+
+HSV converison time: 3011 usec
+Threshold time: 3134 usec
+Morphology time: 9786 usec
+Contour time: 3123 usec
+Found 2 contours
+Moments time: 22
+m00: 206.50   h:   8   w:  36 y: 384
+Match Shapes time: 39
+Moments time: 19
+m00: 290.50   h:  12   w:  36 y: 364
+Match Shapes time: 33
+Contour loop time: 3817 usec
+distance!?!:  15.14
+Process time: 23843
+
+HSV converison time: 2966 usec
+Threshold time: 3299 usec
+Morphology time: 9755 usec
+Contour time: 2994 usec
+Found 2 contours
+Moments time: 20
+m00: 203.00   h:   8   w:  36 y: 384
+Match Shapes time: 34
+Moments time: 18
+m00: 271.50   h:  12   w:  34 y: 364
+Match Shapes time: 34
+Contour loop time: 3868 usec
+distance!?!:  15.14
+Process time: 23824
+
+HSV converison time: 3030 usec
+Threshold time: 3261 usec
+Morphology time: 9718 usec
+Contour time: 3087 usec
+Found 2 contours
+Moments time: 19
+m00: 192.00   h:   8   w:  36 y: 384
+Match Shapes time: 35
+Moments time: 19
+m00: 261.50   h:  11   w:  36 y: 364
+Match Shapes time: 33
+Contour loop time: 3953 usec
+distance!?!:  15.14
+Process time: 23966
+
+HSV converison time: 3045 usec
+Threshold time: 3240 usec
+Morphology time: 9637 usec
+Contour time: 3035 usec
+Found 2 contours
+Moments time: 19
+m00: 170.50   h:  10   w:  36 y: 382
+Match Shapes time: 33
+Moments time: 18
+m00: 270.50   h:  12   w:  34 y: 362
+Match Shapes time: 33
+Contour loop time: 3547 usec
+distance!?!:  15.14
+Process time: 23485
+
+HSV converison time: 3038 usec
+Threshold time: 3350 usec
+Morphology time: 9774 usec
+Contour time: 3017 usec
+Found 2 contours
+Moments time: 21
+m00: 164.50   h:  10   w:  35 y: 382
+Match Shapes time: 34
+Moments time: 16
+m00: 286.50   h:  12   w:  36 y: 362
+Match Shapes time: 31
+Contour loop time: 3791 usec
+distance!?!:  15.40
+Process time: 23904
+
+HSV converison time: 3088 usec
+Threshold time: 3341 usec
+Morphology time: 9764 usec
+Contour time: 3031 usec
+Found 2 contours
+Moments time: 20
+m00: 158.00   h:   9   w:  35 y: 382
+Match Shapes time: 35
+Moments time: 19
+m00: 322.00   h:  14   w:  36 y: 360
+Match Shapes time: 34
+Contour loop time: 3877 usec
+distance!?!:  15.40
+Process time: 24053
+
+HSV converison time: 3068 usec
+Threshold time: 3350 usec
+Morphology time: 9725 usec
+Contour time: 3065 usec
+Found 2 contours
+Moments time: 20
+m00: 196.50   h:  10   w:  36 y: 380
+Match Shapes time: 36
+Moments time: 19
+m00: 314.50   h:  13   w:  36 y: 360
+Match Shapes time: 34
+Contour loop time: 3875 usec
+distance!?!:  15.14
+Process time: 24012
+
+HSV converison time: 3060 usec
+Threshold time: 3224 usec
+Morphology time: 9769 usec
+Contour time: 3007 usec
+Found 2 contours
+Moments time: 20
+m00: 200.50   h:   8   w:  34 y: 380
+Match Shapes time: 34
+Moments time: 19
+m00: 298.00   h:  12   w:  36 y: 360
+Match Shapes time: 37
+Contour loop time: 3891 usec
+distance!?!:  15.65
+Process time: 23922
+
+HSV converison time: 2985 usec
+Threshold time: 3345 usec
+Morphology time: 9800 usec
+Contour time: 3003 usec
+Found 2 contours
+Moments time: 19
+m00: 197.00   h:   8   w:  37 y: 380
+Match Shapes time: 34
+Moments time: 18
+m00: 272.00   h:  12   w:  36 y: 360
+Match Shapes time: 34
+Contour loop time: 3925 usec
+distance!?!:  14.89
+Process time: 24014
+
+HSV converison time: 3146 usec
+Threshold time: 3131 usec
+Morphology time: 9800 usec
+Contour time: 3024 usec
+Found 2 contours
+Moments time: 18
+m00: 191.50   h:  10   w:  36 y: 378
+Match Shapes time: 34
+Moments time: 19
+m00: 324.50   h:  15   w:  36 y: 356
+Match Shapes time: 33
+Contour loop time: 3648 usec
+distance!?!:  15.14
+Process time: 23696
+
+HSV converison time: 3215 usec
+Threshold time: 3083 usec
+Morphology time: 9617 usec
+Contour time: 3045 usec
+Found 2 contours
+Moments time: 24
+m00: 207.00   h:  10   w:  36 y: 376
+Match Shapes time: 37
+Moments time: 17
+m00: 319.50   h:  13   w:  38 y: 356
+Match Shapes time: 32
+Contour loop time: 3859 usec
+distance!?!:  15.14
+Process time: 23721
+
+HSV converison time: 3180 usec
+Threshold time: 3208 usec
+Morphology time: 9729 usec
+Contour time: 3068 usec
+Found 2 contours
+Moments time: 21
+m00: 211.50   h:  10   w:  36 y: 376
+Match Shapes time: 35
+Moments time: 19
+m00: 302.00   h:  12   w:  37 y: 356
+Match Shapes time: 34
+Contour loop time: 3929 usec
+distance!?!:  15.14
+Process time: 24050
+
+HSV converison time: 3158 usec
+Threshold time: 3247 usec
+Morphology time: 9759 usec
+Contour time: 3035 usec
+Found 2 contours
+Moments time: 22
+m00: 194.50   h:   8   w:  36 y: 376
+Match Shapes time: 33
+Moments time: 20
+m00: 297.50   h:  14   w:  36 y: 354
+Match Shapes time: 34
+Contour loop time: 3982 usec
+distance!?!:  15.14
+Process time: 24127
+
+HSV converison time: 3044 usec
+Threshold time: 3299 usec
+Morphology time: 9784 usec
+Contour time: 3057 usec
+Found 2 contours
+Moments time: 22
+m00: 194.50   h:  10   w:  37 y: 374
+Match Shapes time: 37
+Moments time: 18
+m00: 346.50   h:  14   w:  37 y: 352
+Match Shapes time: 37
+Contour loop time: 3895 usec
+distance!?!:  14.89
+Process time: 24041
+
+HSV converison time: 2951 usec
+Threshold time: 3104 usec
+Morphology time: 9856 usec
+Contour time: 2980 usec
+Found 2 contours
+Moments time: 20
+m00: 212.50   h:  10   w:  37 y: 372
+Match Shapes time: 35
+Moments time: 19
+m00: 323.50   h:  13   w:  37 y: 352
+Match Shapes time: 36
+Contour loop time: 3851 usec
+distance!?!:  14.89
+Process time: 23814
+
+HSV converison time: 3060 usec
+Threshold time: 3171 usec
+Morphology time: 9790 usec
+Contour time: 3075 usec
+Found 2 contours
+Moments time: 21
+m00: 217.00   h:   8   w:  38 y: 372
+Match Shapes time: 38
+Moments time: 19
+m00: 310.50   h:  14   w:  36 y: 350
+Match Shapes time: 33
+Contour loop time: 3660 usec
+distance!?!:  14.63
+Process time: 23702
+
+HSV converison time: 3055 usec
+Threshold time: 3178 usec
+Morphology time: 17605 usec
+Contour time: 5895 usec
+Found 2 contours
+Moments time: 31
+m00: 207.50   h:  10   w:  38 y: 370
+Match Shapes time: 63
+Moments time: 28
+m00: 339.00   h:  15   w:  36 y: 348
+Match Shapes time: 62
+Contour loop time: 6117 usec
+distance!?!:  14.63
+Process time: 37505
+
+HSV converison time: 5839 usec
+Threshold time: 6151 usec
+Morphology time: 19233 usec
+Contour time: 5811 usec
+Found 2 contours
+Moments time: 26
+m00: 213.50   h:  10   w:  38 y: 368
+Match Shapes time: 58
+Moments time: 26
+m00: 341.50   h:  14   w:  38 y: 348
+Match Shapes time: 67
+Contour loop time: 5945 usec
+distance!?!:  14.63
+Process time: 44630
+
+HSV converison time: 5938 usec
+Threshold time: 3289 usec
+Morphology time: 9798 usec
+Contour time: 2940 usec
+Found 2 contours
+Moments time: 22
+m00: 213.50   h:   8   w:  36 y: 368
+Match Shapes time: 34
+Moments time: 19
+m00: 339.00   h:  14   w:  38 y: 346
+Match Shapes time: 36
+Contour loop time: 3966 usec
+distance!?!:  15.14
+Process time: 26861
+
+HSV converison time: 3138 usec
+Threshold time: 3220 usec
+Morphology time: 9754 usec
+Contour time: 3011 usec
+Found 2 contours
+Moments time: 19
+m00: 208.00   h:   8   w:  38 y: 368
+Match Shapes time: 36
+Moments time: 20
+m00: 341.00   h:  16   w:  38 y: 344
+Match Shapes time: 35
+Contour loop time: 3879 usec
+distance!?!:  14.63
+Process time: 23939
+
+HSV converison time: 3090 usec
+Threshold time: 3127 usec
+Morphology time: 9830 usec
+Contour time: 3034 usec
+Found 2 contours
+Moments time: 18
+m00: 214.50   h:  10   w:  38 y: 366
+Match Shapes time: 32
+Moments time: 19
+m00: 370.00   h:  14   w:  38 y: 344
+Match Shapes time: 34
+Contour loop time: 3619 usec
+distance!?!:  14.63
+Process time: 23660
+
+HSV converison time: 3043 usec
+Threshold time: 3300 usec
+Morphology time: 9699 usec
+Contour time: 3027 usec
+Found 2 contours
+Moments time: 21
+m00: 202.50   h:  12   w:  38 y: 364
+Match Shapes time: 34
+Moments time: 20
+m00: 369.00   h:  14   w:  39 y: 344
+Match Shapes time: 32
+Contour loop time: 3921 usec
+distance!?!:  14.63
+Process time: 23922
+
+HSV converison time: 3085 usec
+Threshold time: 3215 usec
+Morphology time: 9787 usec
+Contour time: 3087 usec
+Found 2 contours
+Moments time: 22
+m00: 231.50   h:  10   w:  38 y: 364
+Match Shapes time: 36
+Moments time: 18
+m00: 334.50   h:  13   w:  39 y: 344
+Match Shapes time: 34
+Contour loop time: 3889 usec
+distance!?!:  14.63
+Process time: 24013
+
+HSV converison time: 3012 usec
+Threshold time: 3262 usec
+Morphology time: 9740 usec
+Contour time: 3139 usec
+Found 2 contours
+Moments time: 22
+m00: 221.00   h:   8   w:  38 y: 364
+Match Shapes time: 35
+Moments time: 26
+m00: 316.50   h:  14   w:  38 y: 342
+Match Shapes time: 34
+Contour loop time: 3848 usec
+distance!?!:  14.63
+Process time: 23932
+
+HSV converison time: 3034 usec
+Threshold time: 3270 usec
+Morphology time: 9823 usec
+Contour time: 3045 usec
+Found 2 contours
+Moments time: 19
+m00: 214.50   h:   8   w:  39 y: 364
+Match Shapes time: 36
+Moments time: 19
+m00: 324.00   h:  15   w:  37 y: 340
+Match Shapes time: 34
+Contour loop time: 3823 usec
+distance!?!:  14.38
+Process time: 23933
+
+HSV converison time: 3033 usec
+Threshold time: 3283 usec
+Morphology time: 9819 usec
+Contour time: 3088 usec
+Found 2 contours
+Moments time: 20
+m00: 218.50   h:  10   w:  38 y: 362
+Match Shapes time: 35
+Moments time: 18
+m00: 354.50   h:  14   w:  38 y: 340
+Match Shapes time: 33
+Contour loop time: 3884 usec
+distance!?!:  14.63
+Process time: 24061
+
+HSV converison time: 3076 usec
+Threshold time: 3144 usec
+Morphology time: 9760 usec
+Contour time: 3034 usec
+Found 2 contours
+Moments time: 19
+m00: 217.00   h:  12   w:  37 y: 360
+Match Shapes time: 33
+Moments time: 21
+m00: 345.00   h:  14   w:  39 y: 340
+Match Shapes time: 34
+Contour loop time: 3589 usec
+distance!?!:  14.89
+Process time: 23656
+
+HSV converison time: 3115 usec
+Threshold time: 3245 usec
+Morphology time: 9637 usec
+Contour time: 3037 usec
+Found 2 contours
+Moments time: 22
+m00: 226.50   h:   8   w:  38 y: 360
+Match Shapes time: 37
+Moments time: 16
+m00: 319.50   h:  14   w:  38 y: 338
+Match Shapes time: 31
+Contour loop time: 3817 usec
+distance!?!:  14.63
+Process time: 23766
+
+HSV converison time: 2994 usec
+Threshold time: 3367 usec
+Morphology time: 9762 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 20
+m00: 243.00   h:  10   w:  40 y: 358
+Match Shapes time: 35
+Moments time: 18
+m00: 374.00   h:  14   w:  39 y: 336
+Match Shapes time: 33
+Contour loop time: 3877 usec
+distance!?!:  14.12
+Process time: 23995
+
+HSV converison time: 3065 usec
+Threshold time: 3247 usec
+Morphology time: 9791 usec
+Contour time: 3040 usec
+Found 2 contours
+Moments time: 20
+m00: 233.50   h:  10   w:  40 y: 356
+Match Shapes time: 35
+Moments time: 24
+m00: 327.00   h:  14   w:  38 y: 334
+Match Shapes time: 34
+Contour loop time: 3878 usec
+distance!?!:  14.12
+Process time: 23992
+
+HSV converison time: 3013 usec
+Threshold time: 3372 usec
+Morphology time: 9736 usec
+Contour time: 3088 usec
+Found 2 contours
+Moments time: 21
+m00: 233.50   h:  10   w:  40 y: 354
+Match Shapes time: 37
+Moments time: 21
+m00: 373.50   h:  14   w:  39 y: 332
+Match Shapes time: 36
+Contour loop time: 3860 usec
+distance!?!:  14.12
+Process time: 24043
+
+HSV converison time: 3108 usec
+Threshold time: 3231 usec
+Morphology time: 9740 usec
+Contour time: 2959 usec
+Found 2 contours
+Moments time: 20
+m00: 245.50   h:  11   w:  40 y: 352
+Match Shapes time: 34
+Moments time: 18
+m00: 345.00   h:  12   w:  39 y: 332
+Match Shapes time: 37
+Contour loop time: 3958 usec
+distance!?!:  14.12
+Process time: 23936
+
+HSV converison time: 3090 usec
+Threshold time: 3124 usec
+Morphology time: 9799 usec
+Contour time: 3034 usec
+Found 2 contours
+Moments time: 18
+m00: 233.00   h:   8   w:  39 y: 352
+Match Shapes time: 33
+Moments time: 19
+m00: 373.00   h:  16   w:  39 y: 328
+Match Shapes time: 38
+Contour loop time: 3695 usec
+distance!?!:  14.38
+Process time: 23656
+
+HSV converison time: 3168 usec
+Threshold time: 3145 usec
+Morphology time: 9669 usec
+Contour time: 3032 usec
+Found 2 contours
+Moments time: 22
+m00: 273.00   h:  12   w:  41 y: 348
+Match Shapes time: 36
+Moments time: 18
+m00: 369.50   h:  14   w:  40 y: 328
+Match Shapes time: 31
+Contour loop time: 3765 usec
+distance!?!:  13.87
+Process time: 23706
+
+HSV converison time: 3149 usec
+Threshold time: 3275 usec
+Morphology time: 9748 usec
+Contour time: 3044 usec
+Found 2 contours
+Moments time: 22
+m00: 236.00   h:   8   w:  39 y: 348
+Match Shapes time: 34
+Moments time: 19
+m00: 397.00   h:  16   w:  40 y: 324
+Match Shapes time: 34
+Contour loop time: 3969 usec
+distance!?!:  14.38
+Process time: 24131
+
+HSV converison time: 3064 usec
+Threshold time: 3259 usec
+Morphology time: 9788 usec
+Contour time: 3019 usec
+Found 2 contours
+Moments time: 27
+m00: 273.50   h:  12   w:  41 y: 344
+Match Shapes time: 35
+Moments time: 19
+m00: 381.50   h:  15   w:  40 y: 322
+Match Shapes time: 37
+Contour loop time: 4055 usec
+distance!?!:  13.87
+Process time: 24139
+
+HSV converison time: 2984 usec
+Threshold time: 3259 usec
+Morphology time: 9807 usec
+Contour time: 3051 usec
+Found 2 contours
+Moments time: 19
+m00: 268.50   h:  10   w:  41 y: 342
+Match Shapes time: 35
+Moments time: 18
+m00: 409.50   h:  15   w:  41 y: 320
+Match Shapes time: 35
+Contour loop time: 3890 usec
+distance!?!:  13.87
+Process time: 24019
+
+HSV converison time: 2948 usec
+Threshold time: 3263 usec
+Morphology time: 9731 usec
+Contour time: 3074 usec
+Found 2 contours
+Moments time: 20
+m00: 262.50   h:  10   w:  42 y: 340
+Match Shapes time: 37
+Moments time: 19
+m00: 412.50   h:  16   w:  40 y: 316
+Match Shapes time: 34
+Contour loop time: 3826 usec
+distance!?!:  13.61
+Process time: 23895
+
+HSV converison time: 3065 usec
+Threshold time: 3178 usec
+Morphology time: 9781 usec
+Contour time: 3097 usec
+Found 2 contours
+Moments time: 23
+m00: 274.00   h:  12   w:  40 y: 336
+Match Shapes time: 36
+Moments time: 19
+m00: 425.50   h:  14   w:  42 y: 316
+Match Shapes time: 33
+Contour loop time: 3676 usec
+distance!?!:  14.12
+Process time: 23730
+
+HSV converison time: 3049 usec
+Threshold time: 3027 usec
+Morphology time: 9792 usec
+Contour time: 3084 usec
+Found 2 contours
+Moments time: 22
+m00: 256.00   h:  10   w:  42 y: 336
+Match Shapes time: 35
+Moments time: 18
+m00: 426.50   h:  16   w:  43 y: 312
+Match Shapes time: 33
+Contour loop time: 3646 usec
+distance!?!:  13.61
+Process time: 23522
+
+HSV converison time: 3045 usec
+Threshold time: 3262 usec
+Morphology time: 9760 usec
+Contour time: 3105 usec
+Found 2 contours
+Moments time: 26
+m00: 291.00   h:  12   w:  43 y: 332
+Match Shapes time: 38
+Moments time: 20
+m00: 408.50   h:  15   w:  42 y: 310
+Match Shapes time: 36
+Contour loop time: 3943 usec
+distance!?!:  13.36
+Process time: 24087
+
+HSV converison time: 3069 usec
+Threshold time: 3340 usec
+Morphology time: 9718 usec
+Contour time: 3128 usec
+Found 2 contours
+Moments time: 19
+m00: 258.00   h:   8   w:  43 y: 332
+Match Shapes time: 35
+Moments time: 18
+m00: 423.00   h:  15   w:  43 y: 308
+Match Shapes time: 34
+Contour loop time: 3825 usec
+distance!?!:  13.36
+Process time: 24076
+
+HSV converison time: 3041 usec
+Threshold time: 3289 usec
+Morphology time: 9795 usec
+Contour time: 3044 usec
+Found 2 contours
+Moments time: 20
+m00: 294.50   h:  12   w:  43 y: 328
+Match Shapes time: 36
+Moments time: 19
+m00: 423.00   h:  17   w:  42 y: 304
+Match Shapes time: 36
+Contour loop time: 3864 usec
+distance!?!:  13.36
+Process time: 23979
+
+HSV converison time: 3053 usec
+Threshold time: 3318 usec
+Morphology time: 9766 usec
+Contour time: 2949 usec
+Found 2 contours
+Moments time: 22
+m00: 275.50   h:  10   w:  43 y: 328
+Match Shapes time: 37
+Moments time: 20
+m00: 439.50   h:  16   w:  43 y: 304
+Match Shapes time: 35
+Contour loop time: 3843 usec
+distance!?!:  13.36
+Process time: 23854
+
+HSV converison time: 2994 usec
+Threshold time: 3291 usec
+Morphology time: 9787 usec
+Contour time: 3089 usec
+Found 2 contours
+Moments time: 20
+m00: 323.00   h:  12   w:  44 y: 324
+Match Shapes time: 36
+Moments time: 20
+m00: 451.50   h:  16   w:  44 y: 302
+Match Shapes time: 37
+Contour loop time: 3763 usec
+distance!?!:  13.10
+Process time: 23835
+
+HSV converison time: 3050 usec
+Threshold time: 3169 usec
+Morphology time: 9863 usec
+Contour time: 3039 usec
+Found 2 contours
+Moments time: 18
+m00: 273.50   h:  12   w:  43 y: 324
+Match Shapes time: 34
+Moments time: 20
+m00: 439.00   h:  16   w:  44 y: 300
+Match Shapes time: 35
+Contour loop time: 3581 usec
+distance!?!:  13.36
+Process time: 23729
+
+HSV converison time: 3149 usec
+Threshold time: 3210 usec
+Morphology time: 9701 usec
+Contour time: 3024 usec
+Found 2 contours
+Moments time: 22
+m00: 271.00   h:  10   w:  44 y: 324
+Match Shapes time: 35
+Moments time: 18
+m00: 432.50   h:  15   w:  42 y: 300
+Match Shapes time: 33
+Contour loop time: 3924 usec
+distance!?!:  13.10
+Process time: 23941
+
+HSV converison time: 3201 usec
+Threshold time: 3191 usec
+Morphology time: 9759 usec
+Contour time: 3055 usec
+Found 2 contours
+Moments time: 22
+m00: 314.00   h:  12   w:  45 y: 320
+Match Shapes time: 35
+Moments time: 20
+m00: 433.00   h:  17   w:  44 y: 297
+Match Shapes time: 37
+Contour loop time: 3935 usec
+distance!?!:  12.84
+Process time: 24075
+
+HSV converison time: 3151 usec
+Threshold time: 3228 usec
+Morphology time: 9775 usec
+Contour time: 3042 usec
+Found 2 contours
+Moments time: 22
+m00: 290.50   h:  12   w:  45 y: 320
+Match Shapes time: 100
+Moments time: 19
+m00: 446.50   h:  16   w:  44 y: 296
+Match Shapes time: 36
+Contour loop time: 3953 usec
+distance!?!:  12.84
+Process time: 24110
+
+HSV converison time: 3090 usec
+Threshold time: 3262 usec
+Morphology time: 9800 usec
+Contour time: 3009 usec
+Found 2 contours
+Moments time: 23
+m00: 288.00   h:  12   w:  44 y: 318
+Match Shapes time: 34
+Moments time: 19
+m00: 473.00   h:  17   w:  44 y: 294
+Match Shapes time: 33
+Contour loop time: 4024 usec
+distance!?!:  13.10
+Process time: 24119
+
+HSV converison time: 3040 usec
+Threshold time: 3246 usec
+Morphology time: 9782 usec
+Contour time: 3033 usec
+Found 2 contours
+Moments time: 23
+m00: 321.50   h:  12   w:  44 y: 316
+Match Shapes time: 37
+Moments time: 22
+m00: 450.50   h:  17   w:  44 y: 292
+Match Shapes time: 37
+Contour loop time: 3881 usec
+distance!?!:  13.10
+Process time: 23941
+
+HSV converison time: 3085 usec
+Threshold time: 3102 usec
+Morphology time: 9753 usec
+Contour time: 3087 usec
+Found 2 contours
+Moments time: 18
+m00: 289.50   h:  12   w:  44 y: 316
+Match Shapes time: 32
+Moments time: 19
+m00: 449.00   h:  16   w:  44 y: 292
+Match Shapes time: 33
+Contour loop time: 3534 usec
+distance!?!:  13.10
+Process time: 23502
+
+HSV converison time: 3051 usec
+Threshold time: 3219 usec
+Morphology time: 9669 usec
+Contour time: 3095 usec
+Found 2 contours
+Moments time: 21
+m00: 280.00   h:  10   w:  44 y: 316
+Match Shapes time: 37
+Moments time: 18
+m00: 462.00   h:  17   w:  45 y: 290
+Match Shapes time: 32
+Contour loop time: 3713 usec
+distance!?!:  13.10
+Process time: 23666
+
+HSV converison time: 3066 usec
+Threshold time: 3252 usec
+Morphology time: 9792 usec
+Contour time: 3110 usec
+Found 2 contours
+Moments time: 22
+m00: 295.00   h:  10   w:  45 y: 314
+Match Shapes time: 36
+Moments time: 20
+m00: 450.50   h:  16   w:  45 y: 290
+Match Shapes time: 35
+Contour loop time: 3851 usec
+distance!?!:  12.84
+Process time: 24039
+
+HSV converison time: 3014 usec
+Threshold time: 3261 usec
+Morphology time: 9742 usec
+Contour time: 3112 usec
+Found 2 contours
+Moments time: 21
+m00: 317.00   h:  12   w:  45 y: 312
+Match Shapes time: 34
+Moments time: 19
+m00: 445.00   h:  17   w:  44 y: 288
+Match Shapes time: 35
+Contour loop time: 3803 usec
+distance!?!:  12.84
+Process time: 23890
+
+HSV converison time: 3057 usec
+Threshold time: 3219 usec
+Morphology time: 9791 usec
+Contour time: 3097 usec
+Found 2 contours
+Moments time: 20
+m00: 295.00   h:  12   w:  45 y: 312
+Match Shapes time: 35
+Moments time: 21
+m00: 447.50   h:  16   w:  44 y: 288
+Match Shapes time: 35
+Contour loop time: 3923 usec
+distance!?!:  12.84
+Process time: 24044
+
+HSV converison time: 2964 usec
+Threshold time: 3314 usec
+Morphology time: 9784 usec
+Contour time: 2937 usec
+Found 2 contours
+Moments time: 21
+m00: 282.50   h:  10   w:  45 y: 312
+Match Shapes time: 33
+Moments time: 22
+m00: 481.50   h:  17   w:  44 y: 286
+Match Shapes time: 32
+Contour loop time: 3876 usec
+distance!?!:  12.84
+Process time: 23844
+
+HSV converison time: 3325 usec
+Threshold time: 3102 usec
+Morphology time: 9799 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 24
+m00: 332.00   h:  12   w:  46 y: 308
+Match Shapes time: 38
+Moments time: 20
+m00: 472.00   h:  17   w:  45 y: 284
+Match Shapes time: 41
+Contour loop time: 3664 usec
+distance!?!:  12.59
+Process time: 23869
+
+HSV converison time: 3031 usec
+Threshold time: 3214 usec
+Morphology time: 9711 usec
+Contour time: 3055 usec
+Found 2 contours
+Moments time: 20
+m00: 298.50   h:  12   w:  44 y: 308
+Match Shapes time: 35
+Moments time: 17
+m00: 463.00   h:  16   w:  46 y: 284
+Match Shapes time: 33
+Contour loop time: 3676 usec
+distance!?!:  13.10
+Process time: 23586
+
+HSV converison time: 3110 usec
+Threshold time: 3291 usec
+Morphology time: 9710 usec
+Contour time: 3019 usec
+Found 2 contours
+Moments time: 21
+m00: 292.50   h:  10   w:  46 y: 308
+Match Shapes time: 35
+Moments time: 23
+m00: 472.50   h:  17   w:  45 y: 282
+Match Shapes time: 36
+Contour loop time: 3905 usec
+distance!?!:  12.59
+Process time: 24071
+
+HSV converison time: 3020 usec
+Threshold time: 3349 usec
+Morphology time: 9793 usec
+Contour time: 3037 usec
+Found 2 contours
+Moments time: 23
+m00: 353.50   h:  12   w:  47 y: 304
+Match Shapes time: 39
+Moments time: 20
+m00: 479.00   h:  18   w:  46 y: 280
+Match Shapes time: 36
+Contour loop time: 3948 usec
+distance!?!:  12.33
+Process time: 24096
+
+HSV converison time: 3198 usec
+Threshold time: 3111 usec
+Morphology time: 9764 usec
+Contour time: 3194 usec
+Found 2 contours
+Moments time: 20
+m00: 312.50   h:  12   w:  47 y: 304
+Match Shapes time: 35
+Moments time: 22
+m00: 467.00   h:  16   w:  44 y: 280
+Match Shapes time: 34
+Contour loop time: 3961 usec
+distance!?!:  12.33
+Process time: 24205
+
+HSV converison time: 3126 usec
+Threshold time: 3267 usec
+Morphology time: 9777 usec
+Contour time: 2939 usec
+Found 2 contours
+Moments time: 18
+m00: 326.50   h:  12   w:  46 y: 302
+Match Shapes time: 36
+Moments time: 20
+m00: 522.00   h:  18   w:  46 y: 276
+Match Shapes time: 33
+Contour loop time: 3908 usec
+distance!?!:  12.59
+Process time: 23956
+
+HSV converison time: 3065 usec
+Threshold time: 3215 usec
+Morphology time: 9790 usec
+Contour time: 3025 usec
+Found 2 contours
+Moments time: 23
+m00: 333.50   h:  12   w:  47 y: 300
+Match Shapes time: 35
+Moments time: 19
+m00: 481.50   h:  16   w:  46 y: 276
+Match Shapes time: 33
+Contour loop time: 3860 usec
+distance!?!:  12.33
+Process time: 23873
+
+HSV converison time: 3042 usec
+Threshold time: 3159 usec
+Morphology time: 9792 usec
+Contour time: 3067 usec
+Found 2 contours
+Moments time: 18
+m00: 307.50   h:  10   w:  47 y: 300
+Match Shapes time: 33
+Moments time: 20
+m00: 524.50   h:  16   w:  47 y: 274
+Match Shapes time: 33
+Contour loop time: 3664 usec
+distance!?!:  12.33
+Process time: 23678
+
+HSV converison time: 3047 usec
+Threshold time: 3277 usec
+Morphology time: 9718 usec
+Contour time: 3035 usec
+Found 2 contours
+Moments time: 22
+m00: 363.00   h:  12   w:  46 y: 296
+Match Shapes time: 34
+Moments time: 19
+m00: 498.00   h:  17   w:  48 y: 272
+Match Shapes time: 35
+Contour loop time: 3958 usec
+distance!?!:  12.59
+Process time: 23953
+
+HSV converison time: 3079 usec
+Threshold time: 3298 usec
+Morphology time: 9781 usec
+Contour time: 3075 usec
+Found 2 contours
+Moments time: 20
+m00: 331.00   h:  12   w:  47 y: 296
+Match Shapes time: 36
+Moments time: 20
+m00: 491.00   h:  16   w:  47 y: 272
+Match Shapes time: 36
+Contour loop time: 3882 usec
+distance!?!:  12.33
+Process time: 24074
+
+HSV converison time: 3093 usec
+Threshold time: 3253 usec
+Morphology time: 9811 usec
+Contour time: 3054 usec
+Found 2 contours
+Moments time: 23
+m00: 314.00   h:  12   w:  47 y: 296
+Match Shapes time: 38
+Moments time: 19
+m00: 518.00   h:  17   w:  46 y: 270
+Match Shapes time: 34
+Contour loop time: 3865 usec
+distance!?!:  12.33
+Process time: 24038
+
+HSV converison time: 2985 usec
+Threshold time: 7823 usec
+Morphology time: 9787 usec
+Contour time: 3759 usec
+Found 2 contours
+Moments time: 24
+m00: 337.50   h:  12   w:  48 y: 294
+Match Shapes time: 35
+Moments time: 26
+m00: 501.50   h:  18   w:  47 y: 268
+Match Shapes time: 35
+Contour loop time: 4002 usec
+distance!?!:  12.08
+Process time: 29319
+
+HSV converison time: 5954 usec
+Threshold time: 3192 usec
+Morphology time: 9777 usec
+Contour time: 3690 usec
+Found 2 contours
+Moments time: 21
+m00: 361.00   h:  12   w:  48 y: 292
+Match Shapes time: 33
+Moments time: 19
+m00: 492.50   h:  16   w:  47 y: 268
+Match Shapes time: 34
+Contour loop time: 3970 usec
+distance!?!:  12.08
+Process time: 27518
+
+HSV converison time: 5199 usec
+Threshold time: 3322 usec
+Morphology time: 9886 usec
+Contour time: 3529 usec
+Found 2 contours
+Moments time: 22
+m00: 327.00   h:  12   w:  48 y: 292
+Match Shapes time: 34
+Moments time: 19
+m00: 518.00   h:  17   w:  47 y: 266
+Match Shapes time: 34
+Contour loop time: 3835 usec
+distance!?!:  12.08
+Process time: 26696
+
+HSV converison time: 4796 usec
+Threshold time: 3230 usec
+Morphology time: 9803 usec
+Contour time: 3670 usec
+Found 2 contours
+Moments time: 24
+m00: 352.50   h:  12   w:  48 y: 288
+Match Shapes time: 38
+Moments time: 22
+m00: 518.00   h:  18   w:  46 y: 264
+Match Shapes time: 32
+Contour loop time: 3996 usec
+distance!?!:  12.08
+Process time: 26433
+
+HSV converison time: 4774 usec
+Threshold time: 3223 usec
+Morphology time: 9830 usec
+Contour time: 3837 usec
+Found 2 contours
+Moments time: 24
+m00: 355.50   h:  12   w:  48 y: 288
+Match Shapes time: 43
+Moments time: 19
+m00: 524.50   h:  18   w:  47 y: 262
+Match Shapes time: 35
+Contour loop time: 3889 usec
+distance!?!:  12.08
+Process time: 26474
+
+HSV converison time: 3009 usec
+Threshold time: 3312 usec
+Morphology time: 9711 usec
+Contour time: 3052 usec
+Found 2 contours
+Moments time: 23
+m00: 346.50   h:  12   w:  48 y: 286
+Match Shapes time: 35
+Moments time: 19
+m00: 551.50   h:  18   w:  48 y: 260
+Match Shapes time: 36
+Contour loop time: 3853 usec
+distance!?!:  12.08
+Process time: 23963
+
+HSV converison time: 3040 usec
+Threshold time: 3367 usec
+Morphology time: 9803 usec
+Contour time: 3019 usec
+Found 2 contours
+Moments time: 22
+m00: 381.50   h:  12   w:  49 y: 284
+Match Shapes time: 35
+Moments time: 20
+m00: 510.00   h:  17   w:  48 y: 260
+Match Shapes time: 35
+Contour loop time: 3863 usec
+distance!?!:  11.82
+Process time: 24114
+
+HSV converison time: 3054 usec
+Threshold time: 3294 usec
+Morphology time: 9768 usec
+Contour time: 3055 usec
+Found 2 contours
+Moments time: 21
+m00: 346.00   h:  12   w:  49 y: 284
+Match Shapes time: 36
+Moments time: 20
+m00: 560.00   h:  19   w:  48 y: 256
+Match Shapes time: 34
+Contour loop time: 3946 usec
+distance!?!:  11.82
+Process time: 24066
+
+HSV converison time: 4730 usec
+Threshold time: 3153 usec
+Morphology time: 9734 usec
+Contour time: 3442 usec
+Found 2 contours
+Moments time: 22
+m00: 355.50   h:  12   w:  49 y: 282
+Match Shapes time: 35
+Moments time: 18
+m00: 540.50   h:  18   w:  49 y: 256
+Match Shapes time: 32
+Contour loop time: 3964 usec
+distance!?!:  11.82
+Process time: 25931
+
+HSV converison time: 2971 usec
+Threshold time: 3198 usec
+Morphology time: 9669 usec
+Contour time: 3023 usec
+Found 2 contours
+Moments time: 25
+m00: 386.50   h:  12   w:  48 y: 280
+Match Shapes time: 36
+Moments time: 20
+m00: 514.50   h:  16   w:  49 y: 256
+Match Shapes time: 37
+Contour loop time: 3743 usec
+distance!?!:  12.08
+Process time: 23527
+
+HSV converison time: 3032 usec
+Threshold time: 3189 usec
+Morphology time: 9732 usec
+Contour time: 3025 usec
+Found 2 contours
+Moments time: 21
+m00: 348.00   h:  12   w:  48 y: 280
+Match Shapes time: 37
+Moments time: 17
+m00: 579.00   h:  18   w:  49 y: 252
+Match Shapes time: 31
+Contour loop time: 3665 usec
+distance!?!:  12.08
+Process time: 23559
+
+HSV converison time: 3073 usec
+Threshold time: 3318 usec
+Morphology time: 9718 usec
+Contour time: 3047 usec
+Found 2 contours
+Moments time: 21
+m00: 352.50   h:  12   w:  49 y: 278
+Match Shapes time: 36
+Moments time: 21
+m00: 547.50   h:  18   w:  48 y: 252
+Match Shapes time: 34
+Contour loop time: 3868 usec
+distance!?!:  11.82
+Process time: 24028
+
+HSV converison time: 4472 usec
+Threshold time: 3226 usec
+Morphology time: 9780 usec
+Contour time: 3038 usec
+Found 2 contours
+Moments time: 22
+m00: 392.50   h:  14   w:  50 y: 276
+Match Shapes time: 36
+Moments time: 20
+m00: 517.00   h:  16   w:  49 y: 252
+Match Shapes time: 36
+Contour loop time: 3918 usec
+distance!?!:  11.57
+Process time: 25386
+
+HSV converison time: 3020 usec
+Threshold time: 3193 usec
+Morphology time: 9726 usec
+Contour time: 3061 usec
+Found 2 contours
+Moments time: 23
+m00: 388.00   h:  12   w:  50 y: 276
+Match Shapes time: 38
+Moments time: 21
+m00: 549.50   h:  17   w:  49 y: 250
+Match Shapes time: 36
+Contour loop time: 3951 usec
+distance!?!:  11.57
+Process time: 23889
+
+HSV converison time: 4345 usec
+Threshold time: 3277 usec
+Morphology time: 9837 usec
+Contour time: 3120 usec
+Found 2 contours
+Moments time: 22
+m00: 343.00   h:  12   w:  50 y: 276
+Match Shapes time: 38
+Moments time: 20
+m00: 576.00   h:  18   w:  49 y: 248
+Match Shapes time: 39
+Contour loop time: 3933 usec
+distance!?!:  11.57
+Process time: 25462
+
+HSV converison time: 3081 usec
+Threshold time: 3397 usec
+Morphology time: 9905 usec
+Contour time: 3141 usec
+Found 2 contours
+Moments time: 20
+m00: 377.00   h:  14   w:  50 y: 274
+Match Shapes time: 37
+Moments time: 20
+m00: 537.00   h:  18   w:  48 y: 248
+Match Shapes time: 36
+Contour loop time: 3932 usec
+distance!?!:  11.57
+Process time: 24434
+
+HSV converison time: 3030 usec
+Threshold time: 3361 usec
+Morphology time: 9917 usec
+Contour time: 3055 usec
+Found 2 contours
+Moments time: 23
+m00: 404.00   h:  14   w:  50 y: 272
+Match Shapes time: 39
+Moments time: 21
+m00: 534.00   h:  17   w:  49 y: 248
+Match Shapes time: 35
+Contour loop time: 3895 usec
+distance!?!:  11.57
+Process time: 24235
+
+HSV converison time: 2984 usec
+Threshold time: 3147 usec
+Morphology time: 9692 usec
+Contour time: 3066 usec
+Found 2 contours
+Moments time: 21
+m00: 395.50   h:  14   w:  50 y: 272
+Match Shapes time: 38
+Moments time: 18
+m00: 573.00   h:  18   w:  50 y: 246
+Match Shapes time: 33
+Contour loop time: 3726 usec
+distance!?!:  11.57
+Process time: 23625
+
+HSV converison time: 3068 usec
+Threshold time: 3415 usec
+Morphology time: 9919 usec
+Contour time: 3041 usec
+Found 2 contours
+Moments time: 20
+m00: 363.50   h:  12   w:  50 y: 272
+Match Shapes time: 34
+Moments time: 19
+m00: 590.50   h:  18   w:  50 y: 244
+Match Shapes time: 34
+Contour loop time: 3946 usec
+distance!?!:  11.57
+Process time: 24413
+
+HSV converison time: 3156 usec
+Threshold time: 3294 usec
+Morphology time: 9893 usec
+Contour time: 3041 usec
+Found 2 contours
+Moments time: 22
+m00: 387.50   h:  14   w:  50 y: 270
+Match Shapes time: 36
+Moments time: 19
+m00: 543.00   h:  17   w:  50 y: 244
+Match Shapes time: 35
+Contour loop time: 4045 usec
+distance!?!:  11.57
+Process time: 24399
+
+HSV converison time: 3168 usec
+Threshold time: 3345 usec
+Morphology time: 9882 usec
+Contour time: 3025 usec
+Found 2 contours
+Moments time: 23
+m00: 411.50   h:  14   w:  50 y: 268
+Match Shapes time: 41
+Moments time: 20
+m00: 559.00   h:  18   w:  50 y: 242
+Match Shapes time: 35
+Contour loop time: 4003 usec
+distance!?!:  11.57
+Process time: 24372
+
+HSV converison time: 4419 usec
+Threshold time: 3182 usec
+Morphology time: 9805 usec
+Contour time: 3075 usec
+Found 2 contours
+Moments time: 26
+m00: 397.50   h:  12   w:  50 y: 268
+Match Shapes time: 35
+Moments time: 22
+m00: 613.00   h:  19   w:  50 y: 240
+Match Shapes time: 33
+Contour loop time: 3957 usec
+distance!?!:  11.57
+Process time: 25382
+
+HSV converison time: 2966 usec
+Threshold time: 3301 usec
+Morphology time: 9940 usec
+Contour time: 3005 usec
+Found 2 contours
+Moments time: 20
+m00: 353.00   h:  12   w:  50 y: 268
+Match Shapes time: 39
+Moments time: 22
+m00: 572.50   h:  18   w:  51 y: 240
+Match Shapes time: 36
+Contour loop time: 3929 usec
+distance!?!:  11.57
+Process time: 24076
+
+HSV converison time: 3039 usec
+Threshold time: 3259 usec
+Morphology time: 10115 usec
+Contour time: 3106 usec
+Found 2 contours
+Moments time: 22
+m00: 383.50   h:  14   w:  50 y: 266
+Match Shapes time: 36
+Moments time: 19
+m00: 545.50   h:  17   w:  51 y: 240
+Match Shapes time: 37
+Contour loop time: 3890 usec
+distance!?!:  11.57
+Process time: 24351
+
+HSV converison time: 3108 usec
+Threshold time: 3159 usec
+Morphology time: 9823 usec
+Contour time: 3118 usec
+Found 2 contours
+Moments time: 19
+m00: 388.50   h:  13   w:  50 y: 265
+Match Shapes time: 34
+Moments time: 19
+m00: 567.50   h:  19   w:  51 y: 238
+Match Shapes time: 39
+Contour loop time: 3557 usec
+distance!?!:  11.57
+Process time: 23726
+
+HSV converison time: 4328 usec
+Threshold time: 3253 usec
+Morphology time: 9709 usec
+Contour time: 3086 usec
+Found 2 contours
+Moments time: 23
+m00: 373.00   h:  12   w:  50 y: 266
+Match Shapes time: 36
+Moments time: 17
+m00: 543.00   h:  17   w:  50 y: 240
+Match Shapes time: 32
+Contour loop time: 3655 usec
+distance!?!:  11.57
+Process time: 24948
+
+HSV converison time: 3084 usec
+Threshold time: 3463 usec
+Morphology time: 9887 usec
+Contour time: 3114 usec
+Found 2 contours
+Moments time: 20
+m00: 375.50   h:  12   w:  51 y: 266
+Match Shapes time: 35
+Moments time: 21
+m00: 543.50   h:  17   w:  50 y: 240
+Match Shapes time: 37
+Contour loop time: 3988 usec
+distance!?!:  11.31
+Process time: 24504
+
+HSV converison time: 3209 usec
+Threshold time: 3205 usec
+Morphology time: 9921 usec
+Contour time: 3090 usec
+Found 2 contours
+Moments time: 21
+m00: 376.50   h:  12   w:  51 y: 266
+Match Shapes time: 37
+Moments time: 22
+m00: 549.50   h:  18   w:  50 y: 240
+Match Shapes time: 35
+Contour loop time: 3945 usec
+distance!?!:  11.31
+Process time: 24324
+
+HSV converison time: 3203 usec
+Threshold time: 3302 usec
+Morphology time: 9815 usec
+Contour time: 3112 usec
+Found 2 contours
+Moments time: 21
+m00: 383.50   h:  14   w:  51 y: 266
+Match Shapes time: 98
+Moments time: 20
+m00: 550.50   h:  18   w:  50 y: 240
+Match Shapes time: 37
+Contour loop time: 3924 usec
+distance!?!:  11.31
+Process time: 24321
+
+HSV converison time: 3072 usec
+Threshold time: 3266 usec
+Morphology time: 9879 usec
+Contour time: 3114 usec
+Found 2 contours
+Moments time: 22
+m00: 385.00   h:  14   w:  51 y: 266
+Match Shapes time: 37
+Moments time: 24
+m00: 550.50   h:  18   w:  50 y: 240
+Match Shapes time: 35
+Contour loop time: 3922 usec
+distance!?!:  11.31
+Process time: 24220
+
+HSV converison time: 2968 usec
+Threshold time: 3409 usec
+Morphology time: 10044 usec
+Contour time: 3004 usec
+Found 2 contours
+Moments time: 22
+m00: 372.00   h:  14   w:  51 y: 266
+Match Shapes time: 34
+Moments time: 21
+m00: 551.50   h:  18   w:  50 y: 240
+Match Shapes time: 38
+Contour loop time: 3892 usec
+distance!?!:  11.31
+Process time: 24301
+
+HSV converison time: 2986 usec
+Threshold time: 3210 usec
+Morphology time: 9949 usec
+Contour time: 3136 usec
+Found 2 contours
+Moments time: 22
+m00: 341.50   h:  12   w:  51 y: 268
+Match Shapes time: 38
+Moments time: 20
+m00: 556.00   h:  18   w:  50 y: 240
+Match Shapes time: 37
+Contour loop time: 3697 usec
+distance!?!:  11.31
+Process time: 23920
+
+HSV converison time: 3114 usec
+Threshold time: 3147 usec
+Morphology time: 9867 usec
+Contour time: 3216 usec
+Found 2 contours
+Moments time: 18
+m00: 340.50   h:  12   w:  50 y: 268
+Match Shapes time: 34
+Moments time: 17
+m00: 547.00   h:  18   w:  51 y: 240
+Match Shapes time: 35
+Contour loop time: 3576 usec
+distance!?!:  11.57
+Process time: 23914
+
+HSV converison time: 4356 usec
+Threshold time: 3288 usec
+Morphology time: 9773 usec
+Contour time: 3107 usec
+Found 2 contours
+Moments time: 21
+m00: 400.00   h:  14   w:  50 y: 264
+Match Shapes time: 38
+Moments time: 17
+m00: 536.00   h:  17   w:  50 y: 240
+Match Shapes time: 33
+Contour loop time: 3748 usec
+distance!?!:  11.57
+Process time: 25180
+
+HSV converison time: 3114 usec
+Threshold time: 3366 usec
+Morphology time: 9904 usec
+Contour time: 3063 usec
+Found 2 contours
+Moments time: 20
+m00: 403.50   h:  12   w:  51 y: 264
+Match Shapes time: 34
+Moments time: 22
+m00: 587.50   h:  20   w:  49 y: 236
+Match Shapes time: 38
+Contour loop time: 3907 usec
+distance!?!:  11.31
+Process time: 24355
+
+HSV converison time: 3183 usec
+Threshold time: 3258 usec
+Morphology time: 9906 usec
+Contour time: 3062 usec
+Found 2 contours
+Moments time: 24
+m00: 379.00   h:  12   w:  51 y: 262
+Match Shapes time: 39
+Moments time: 20
+m00: 592.50   h:  18   w:  50 y: 236
+Match Shapes time: 36
+Contour loop time: 3985 usec
+distance!?!:  11.31
+Process time: 24361
+
+HSV converison time: 3183 usec
+Threshold time: 3313 usec
+Morphology time: 9908 usec
+Contour time: 3033 usec
+Found 2 contours
+Moments time: 23
+m00: 405.50   h:  12   w:  51 y: 260
+Match Shapes time: 39
+Moments time: 21
+m00: 645.00   h:  19   w:  51 y: 232
+Match Shapes time: 36
+Contour loop time: 3961 usec
+distance!?!:  11.31
+Process time: 24375
+
+HSV converison time: 4408 usec
+Threshold time: 3280 usec
+Morphology time: 9890 usec
+Contour time: 3061 usec
+Found 2 contours
+Moments time: 22
+m00: 457.50   h:  14   w:  52 y: 256
+Match Shapes time: 35
+Moments time: 20
+m00: 603.00   h:  18   w:  51 y: 230
+Match Shapes time: 39
+Contour loop time: 3979 usec
+distance!?!:  11.06
+Process time: 25582
+
+HSV converison time: 3030 usec
+Threshold time: 3317 usec
+Morphology time: 9904 usec
+Contour time: 3014 usec
+Found 2 contours
+Moments time: 21
+m00: 397.50   h:  14   w:  52 y: 254
+Match Shapes time: 38
+Moments time: 21
+m00: 626.00   h:  18   w:  52 y: 228
+Match Shapes time: 37
+Contour loop time: 3916 usec
+distance!?!:  11.06
+Process time: 24157
+
+HSV converison time: 3085 usec
+Threshold time: 3198 usec
+Morphology time: 9930 usec
+Contour time: 3084 usec
+Found 2 contours
+Moments time: 23
+m00: 425.50   h:  14   w:  52 y: 252
+Match Shapes time: 35
+Moments time: 21
+m00: 653.50   h:  20   w:  52 y: 224
+Match Shapes time: 38
+Contour loop time: 3786 usec
+distance!?!:  11.06
+Process time: 24038
+
+HSV converison time: 3081 usec
+Threshold time: 3153 usec
+Morphology time: 9920 usec
+Contour time: 3139 usec
+Found 2 contours
+Moments time: 19
+m00: 417.50   h:  16   w:  53 y: 248
+Match Shapes time: 36
+Moments time: 22
+m00: 602.50   h:  20   w:  51 y: 222
+Match Shapes time: 37
+Contour loop time: 3726 usec
+distance!?!:  10.80
+Process time: 23994
+
+HSV converison time: 4335 usec
+Threshold time: 3261 usec
+Morphology time: 9767 usec
+Contour time: 3052 usec
+Found 2 contours
+Moments time: 24
+m00: 428.00   h:  12   w:  53 y: 248
+Match Shapes time: 35
+Moments time: 18
+m00: 654.00   h:  20   w:  51 y: 220
+Match Shapes time: 33
+Contour loop time: 3738 usec
+distance!?!:  10.80
+Process time: 25084
+
+HSV converison time: 3096 usec
+Threshold time: 3359 usec
+Morphology time: 9903 usec
+Contour time: 3060 usec
+Found 2 contours
+Moments time: 24
+m00: 420.50   h:  16   w:  52 y: 244
+Match Shapes time: 38
+Moments time: 23
+m00: 610.00   h:  19   w:  52 y: 218
+Match Shapes time: 38
+Contour loop time: 3911 usec
+distance!?!:  11.06
+Process time: 24289
+
+HSV converison time: 3141 usec
+Threshold time: 3359 usec
+Morphology time: 9944 usec
+Contour time: 3043 usec
+Found 2 contours
+Moments time: 22
+m00: 431.50   h:  12   w:  52 y: 244
+Match Shapes time: 35
+Moments time: 22
+m00: 660.50   h:  20   w:  52 y: 216
+Match Shapes time: 34
+Contour loop time: 3938 usec
+distance!?!:  11.06
+Process time: 24400
+
+HSV converison time: 3225 usec
+Threshold time: 3299 usec
+Morphology time: 9869 usec
+Contour time: 3061 usec
+Found 2 contours
+Moments time: 21
+m00: 384.00   h:  14   w:  52 y: 242
+Match Shapes time: 38
+Moments time: 22
+m00: 602.00   h:  18   w:  53 y: 216
+Match Shapes time: 34
+Contour loop time: 4008 usec
+distance!?!:  11.06
+Process time: 24428
+
+HSV converison time: 4381 usec
+Threshold time: 3236 usec
+Morphology time: 9905 usec
+Contour time: 3149 usec
+Found 2 contours
+Moments time: 23
+m00: 454.50   h:  14   w:  53 y: 240
+Match Shapes time: 35
+Moments time: 21
+m00: 634.00   h:  20   w:  53 y: 212
+Match Shapes time: 41
+Contour loop time: 3872 usec
+distance!?!:  10.80
+Process time: 25544
+
+HSV converison time: 3002 usec
+Threshold time: 3285 usec
+Morphology time: 9913 usec
+Contour time: 2996 usec
+Found 2 contours
+Moments time: 23
+m00: 412.00   h:  12   w:  53 y: 240
+Match Shapes time: 37
+Moments time: 19
+m00: 670.50   h:  19   w:  53 y: 212
+Match Shapes time: 38
+Contour loop time: 3933 usec
+distance!?!:  10.80
+Process time: 24089
+
+HSV converison time: 3025 usec
+Threshold time: 3251 usec
+Morphology time: 9947 usec
+Contour time: 3081 usec
+Found 2 contours
+Moments time: 23
+m00: 455.50   h:  16   w:  52 y: 236
+Match Shapes time: 37
+Moments time: 19
+m00: 620.50   h:  19   w:  53 y: 210
+Match Shapes time: 41
+Contour loop time: 3810 usec
+distance!?!:  11.06
+Process time: 24058
+
+HSV converison time: 3090 usec
+Threshold time: 3123 usec
+Morphology time: 9877 usec
+Contour time: 3149 usec
+Found 2 contours
+Moments time: 18
+m00: 430.00   h:  12   w:  54 y: 236
+Match Shapes time: 35
+Moments time: 22
+m00: 673.50   h:  19   w:  53 y: 208
+Match Shapes time: 34
+Contour loop time: 3580 usec
+distance!?!:  10.54
+Process time: 23791
+
+HSV converison time: 3058 usec
+Threshold time: 3356 usec
+Morphology time: 9764 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 23
+m00: 441.00   h:  16   w:  55 y: 232
+Match Shapes time: 35
+Moments time: 18
+m00: 617.00   h:  20   w:  52 y: 206
+Match Shapes time: 34
+Contour loop time: 3925 usec
+distance!?!:  10.29
+Process time: 24131
+
+HSV converison time: 3016 usec
+Threshold time: 3300 usec
+Morphology time: 9900 usec
+Contour time: 3115 usec
+Found 2 contours
+Moments time: 23
+m00: 449.00   h:  14   w:  54 y: 232
+Match Shapes time: 35
+Moments time: 20
+m00: 670.00   h:  19   w:  52 y: 204
+Match Shapes time: 37
+Contour loop time: 3836 usec
+distance!?!:  10.54
+Process time: 24148
+
+HSV converison time: 3056 usec
+Threshold time: 3347 usec
+Morphology time: 9919 usec
+Contour time: 3058 usec
+Found 2 contours
+Moments time: 20
+m00: 396.50   h:  14   w:  54 y: 230
+Match Shapes time: 40
+Moments time: 20
+m00: 599.00   h:  18   w:  52 y: 204
+Match Shapes time: 35
+Contour loop time: 3904 usec
+distance!?!:  10.54
+Process time: 24247
+
+HSV converison time: 3064 usec
+Threshold time: 3394 usec
+Morphology time: 9914 usec
+Contour time: 3063 usec
+Found 2 contours
+Moments time: 21
+m00: 456.00   h:  14   w:  55 y: 228
+Match Shapes time: 38
+Moments time: 20
+m00: 616.00   h:  19   w:  53 y: 202
+Match Shapes time: 37
+Contour loop time: 4063 usec
+distance!?!:  10.29
+Process time: 24467
+
+HSV converison time: 3173 usec
+Threshold time: 3296 usec
+Morphology time: 9920 usec
+Contour time: 2962 usec
+Found 2 contours
+Moments time: 23
+m00: 452.50   h:  14   w:  54 y: 228
+Match Shapes time: 39
+Moments time: 22
+m00: 655.50   h:  20   w:  53 y: 200
+Match Shapes time: 37
+Contour loop time: 4056 usec
+distance!?!:  10.54
+Process time: 24370
+
+HSV converison time: 3167 usec
+Threshold time: 3234 usec
+Morphology time: 9916 usec
+Contour time: 3084 usec
+Found 2 contours
+Moments time: 21
+m00: 411.50   h:  12   w:  54 y: 228
+Match Shapes time: 38
+Moments time: 24
+m00: 618.50   h:  18   w:  53 y: 200
+Match Shapes time: 34
+Contour loop time: 3886 usec
+distance!?!:  10.54
+Process time: 24230
+
+HSV converison time: 3082 usec
+Threshold time: 3180 usec
+Morphology time: 10049 usec
+Contour time: 3063 usec
+Found 2 contours
+Moments time: 19
+m00: 403.50   h:  14   w:  54 y: 226
+Match Shapes time: 34
+Moments time: 23
+m00: 574.00   h:  17   w:  52 y: 200
+Match Shapes time: 34
+Contour loop time: 3666 usec
+distance!?!:  10.54
+Process time: 24027
+
+HSV converison time: 3019 usec
+Threshold time: 3337 usec
+Morphology time: 9750 usec
+Contour time: 3115 usec
+Found 2 contours
+Moments time: 21
+m00: 446.00   h:  14   w:  54 y: 224
+Match Shapes time: 33
+Moments time: 17
+m00: 610.00   h:  18   w:  52 y: 198
+Match Shapes time: 33
+Contour loop time: 3834 usec
+distance!?!:  10.54
+Process time: 23968
+
+HSV converison time: 3017 usec
+Threshold time: 3327 usec
+Morphology time: 9895 usec
+Contour time: 3221 usec
+Found 2 contours
+Moments time: 22
+m00: 447.50   h:  12   w:  54 y: 224
+Match Shapes time: 36
+Moments time: 19
+m00: 646.00   h:  18   w:  53 y: 196
+Match Shapes time: 37
+Contour loop time: 3884 usec
+distance!?!:  10.54
+Process time: 24354
+
+HSV converison time: 3098 usec
+Threshold time: 3288 usec
+Morphology time: 9952 usec
+Contour time: 3113 usec
+Found 2 contours
+Moments time: 24
+m00: 383.50   h:  12   w:  53 y: 224
+Match Shapes time: 35
+Moments time: 21
+m00: 657.00   h:  18   w:  53 y: 196
+Match Shapes time: 37
+Contour loop time: 3949 usec
+distance!?!:  10.80
+Process time: 24385
+
+HSV converison time: 3077 usec
+Threshold time: 3405 usec
+Morphology time: 9910 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 23
+m00: 457.50   h:  14   w:  53 y: 220
+Match Shapes time: 39
+Moments time: 20
+m00: 615.00   h:  19   w:  52 y: 193
+Match Shapes time: 34
+Contour loop time: 3934 usec
+distance!?!:  10.80
+Process time: 24362
+
+HSV converison time: 3166 usec
+Threshold time: 3204 usec
+Morphology time: 9901 usec
+Contour time: 2955 usec
+Found 2 contours
+Moments time: 22
+m00: 428.00   h:  12   w:  54 y: 220
+Match Shapes time: 40
+Moments time: 20
+m00: 681.00   h:  18   w:  54 y: 192
+Match Shapes time: 33
+Contour loop time: 3887 usec
+distance!?!:  10.54
+Process time: 24058
+
+HSV converison time: 3004 usec
+Threshold time: 3329 usec
+Morphology time: 9894 usec
+Contour time: 3037 usec
+Found 2 contours
+Moments time: 21
+m00: 411.50   h:  12   w:  54 y: 218
+Match Shapes time: 35
+Moments time: 19
+m00: 620.50   h:  18   w:  54 y: 190
+Match Shapes time: 36
+Contour loop time: 3834 usec
+distance!?!:  10.54
+Process time: 24044
+
+HSV converison time: 4389 usec
+Threshold time: 3105 usec
+Morphology time: 10039 usec
+Contour time: 3025 usec
+Found 2 contours
+Moments time: 18
+m00: 446.50   h:  12   w:  54 y: 216
+Match Shapes time: 33
+Moments time: 20
+m00: 664.50   h:  19   w:  54 y: 188
+Match Shapes time: 36
+Contour loop time: 3720 usec
+distance!?!:  10.54
+Process time: 25212
+
+HSV converison time: 3134 usec
+Threshold time: 3221 usec
+Morphology time: 9826 usec
+Contour time: 3056 usec
+Found 2 contours
+Moments time: 21
+m00: 431.00   h:  12   w:  56 y: 216
+Match Shapes time: 37
+Moments time: 18
+m00: 656.00   h:  18   w:  54 y: 188
+Match Shapes time: 33
+Contour loop time: 3736 usec
+distance!?!:  10.03
+Process time: 23913
+
+HSV converison time: 3220 usec
+Threshold time: 3178 usec
+Morphology time: 9903 usec
+Contour time: 3066 usec
+Found 2 contours
+Moments time: 22
+m00: 405.00   h:  14   w:  56 y: 214
+Match Shapes time: 35
+Moments time: 21
+m00: 627.50   h:  19   w:  54 y: 186
+Match Shapes time: 35
+Contour loop time: 3933 usec
+distance!?!:  10.03
+Process time: 24378
+
+HSV converison time: 4295 usec
+Threshold time: 3296 usec
+Morphology time: 9944 usec
+Contour time: 3117 usec
+Found 2 contours
+Moments time: 24
+m00: 416.00   h:  14   w:  55 y: 214
+Match Shapes time: 34
+Moments time: 23
+m00: 612.50   h:  18   w:  54 y: 186
+Match Shapes time: 34
+Contour loop time: 3870 usec
+distance!?!:  10.29
+Process time: 25504
+
+HSV converison time: 3014 usec
+Threshold time: 3313 usec
+Morphology time: 9910 usec
+Contour time: 3139 usec
+Found 2 contours
+Moments time: 24
+m00: 462.50   h:  14   w:  56 y: 212
+Match Shapes time: 38
+Moments time: 22
+m00: 652.00   h:  20   w:  53 y: 184
+Match Shapes time: 37
+Contour loop time: 3869 usec
+distance!?!:  10.03
+Process time: 24226
+
+HSV converison time: 3041 usec
+Threshold time: 3344 usec
+Morphology time: 9930 usec
+Contour time: 3079 usec
+Found 2 contours
+Moments time: 20
+m00: 455.50   h:  12   w:  56 y: 212
+Match Shapes time: 35
+Moments time: 21
+m00: 677.50   h:  18   w:  54 y: 184
+Match Shapes time: 36
+Contour loop time: 3896 usec
+distance!?!:  10.03
+Process time: 24298
+
+HSV converison time: 2995 usec
+Threshold time: 3211 usec
+Morphology time: 9923 usec
+Contour time: 2943 usec
+Found 2 contours
+Moments time: 22
+m00: 385.00   h:  12   w:  56 y: 212
+Match Shapes time: 37
+Moments time: 24
+m00: 648.00   h:  18   w:  54 y: 184
+Match Shapes time: 37
+Contour loop time: 3897 usec
+distance!?!:  10.03
+Process time: 23917
+
+HSV converison time: 4291 usec
+Threshold time: 3347 usec
+Morphology time: 9929 usec
+Contour time: 3003 usec
+Found 2 contours
+Moments time: 23
+m00: 451.00   h:  14   w:  55 y: 208
+Match Shapes time: 36
+Moments time: 20
+m00: 609.00   h:  18   w:  53 y: 182
+Match Shapes time: 38
+Contour loop time: 3963 usec
+distance!?!:  10.29
+Process time: 25512
+
+HSV converison time: 3101 usec
+Threshold time: 3135 usec
+Morphology time: 9921 usec
+Contour time: 3045 usec
+Found 2 contours
+Moments time: 19
+m00: 453.50   h:  12   w:  54 y: 208
+Match Shapes time: 34
+Moments time: 20
+m00: 678.50   h:  18   w:  54 y: 180
+Match Shapes time: 37
+Contour loop time: 3744 usec
+distance!?!:  10.54
+Process time: 23882
+
+HSV converison time: 3165 usec
+Threshold time: 3209 usec
+Morphology time: 9866 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 24
+m00: 399.50   h:  14   w:  56 y: 206
+Match Shapes time: 35
+Moments time: 19
+m00: 629.50   h:  19   w:  54 y: 178
+Match Shapes time: 35
+Contour loop time: 3812 usec
+distance!?!:  10.03
+Process time: 24054
+
+HSV converison time: 3086 usec
+Threshold time: 3171 usec
+Morphology time: 9891 usec
+Contour time: 3198 usec
+Found 2 contours
+Moments time: 23
+m00: 457.50   h:  14   w:  54 y: 204
+Match Shapes time: 35
+Moments time: 21
+m00: 648.00   h:  20   w:  54 y: 176
+Match Shapes time: 36
+Contour loop time: 3916 usec
+distance!?!:  10.54
+Process time: 24246
+
+HSV converison time: 3003 usec
+Threshold time: 3299 usec
+Morphology time: 9895 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 27
+m00: 437.00   h:  12   w:  54 y: 204
+Match Shapes time: 36
+Moments time: 21
+m00: 680.50   h:  18   w:  54 y: 176
+Match Shapes time: 36
+Contour loop time: 3953 usec
+distance!?!:  10.54
+Process time: 24248
+
+HSV converison time: 3041 usec
+Threshold time: 3276 usec
+Morphology time: 9902 usec
+Contour time: 3100 usec
+Found 2 contours
+Moments time: 22
+m00: 447.00   h:  14   w:  54 y: 200
+Match Shapes time: 35
+Moments time: 20
+m00: 665.50   h:  20   w:  54 y: 172
+Match Shapes time: 36
+Contour loop time: 3909 usec
+distance!?!:  10.54
+Process time: 24209
+
+HSV converison time: 3023 usec
+Threshold time: 3309 usec
+Morphology time: 9918 usec
+Contour time: 3017 usec
+Found 2 contours
+Moments time: 21
+m00: 462.00   h:  12   w:  54 y: 200
+Match Shapes time: 36
+Moments time: 23
+m00: 690.00   h:  18   w:  54 y: 172
+Match Shapes time: 35
+Contour loop time: 3885 usec
+distance!?!:  10.54
+Process time: 24125
+
+HSV converison time: 3058 usec
+Threshold time: 3172 usec
+Morphology time: 9958 usec
+Contour time: 3116 usec
+Found 3 contours
+Moments time: 20
+m00: 391.00   h:  12   w:  55 y: 200
+Match Shapes time: 42
+Moments time: 18
+m00:   6.00   h:   3   w:   5 y: 183
+Match Shapes time: 30
+Moments time: 20
+m00: 668.00   h:  19   w:  55 y: 170
+Match Shapes time: 38
+Contour loop time: 5868 usec
+distance!?!:  10.29
+Process time: 26238
+
+HSV converison time: 4388 usec
+Threshold time: 3280 usec
+Morphology time: 9891 usec
+Contour time: 2950 usec
+Found 2 contours
+Moments time: 22
+m00: 423.50   h:  14   w:  55 y: 198
+Match Shapes time: 38
+Moments time: 21
+m00: 627.00   h:  18   w:  55 y: 170
+Match Shapes time: 36
+Contour loop time: 3947 usec
+distance!?!:  10.29
+Process time: 25404
+
+HSV converison time: 3106 usec
+Threshold time: 3286 usec
+Morphology time: 9935 usec
+Contour time: 3043 usec
+Found 2 contours
+Moments time: 88
+m00: 476.00   h:  14   w:  56 y: 196
+Match Shapes time: 38
+Moments time: 23
+m00: 673.00   h:  20   w:  54 y: 168
+Match Shapes time: 35
+Contour loop time: 3833 usec
+distance!?!:  10.03
+Process time: 24156
+
+HSV converison time: 3161 usec
+Threshold time: 3148 usec
+Morphology time: 9927 usec
+Contour time: 3057 usec
+Found 2 contours
+Moments time: 20
+m00: 474.50   h:  12   w:  56 y: 196
+Match Shapes time: 34
+Moments time: 20
+m00: 693.00   h:  18   w:  55 y: 168
+Match Shapes time: 36
+Contour loop time: 3692 usec
+distance!?!:  10.03
+Process time: 23961
+
+HSV converison time: 3088 usec
+Threshold time: 3340 usec
+Morphology time: 9814 usec
+Contour time: 3040 usec
+Found 3 contours
+Moments time: 23
+m00: 431.00   h:  14   w:  57 y: 194
+Match Shapes time: 38
+Moments time: 18
+m00:   4.00   h:   3   w:   3 y: 181
+Match Shapes time: 26
+Moments time: 19
+m00: 654.50   h:  20   w:  56 y: 165
+Match Shapes time: 33
+Contour loop time: 5632 usec
+distance!?!:   9.78
+Process time: 25922
+
+HSV converison time: 3028 usec
+Threshold time: 3145 usec
+Morphology time: 9884 usec
+Contour time: 3116 usec
+Found 2 contours
+Moments time: 21
+m00: 481.00   h:  12   w:  57 y: 192
+Match Shapes time: 46
+Moments time: 20
+m00: 698.00   h:  18   w:  55 y: 164
+Match Shapes time: 35
+Contour loop time: 3881 usec
+distance!?!:   9.78
+Process time: 24016
+
+HSV converison time: 3024 usec
+Threshold time: 3451 usec
+Morphology time: 9913 usec
+Contour time: 3060 usec
+Found 2 contours
+Moments time: 22
+m00: 441.50   h:  14   w:  56 y: 190
+Match Shapes time: 37
+Moments time: 20
+m00: 673.50   h:  20   w:  56 y: 161
+Match Shapes time: 33
+Contour loop time: 3941 usec
+distance!?!:  10.03
+Process time: 24374
+
+HSV converison time: 3083 usec
+Threshold time: 3405 usec
+Morphology time: 9945 usec
+Contour time: 3098 usec
+Found 2 contours
+Moments time: 21
+m00: 474.50   h:  14   w:  58 y: 188
+Match Shapes time: 37
+Moments time: 21
+m00: 707.50   h:  20   w:  56 y: 160
+Match Shapes time: 38
+Contour loop time: 3886 usec
+distance!?!:   9.52
+Process time: 24394
+
+HSV converison time: 3079 usec
+Threshold time: 3322 usec
+Morphology time: 9877 usec
+Contour time: 3200 usec
+Found 2 contours
+Moments time: 28
+m00: 477.00   h:  12   w:  58 y: 188
+Match Shapes time: 35
+Moments time: 21
+m00: 713.00   h:  19   w:  56 y: 160
+Match Shapes time: 37
+Contour loop time: 3866 usec
+distance!?!:   9.52
+Process time: 24371
+
+HSV converison time: 4413 usec
+Threshold time: 3258 usec
+Morphology time: 9917 usec
+Contour time: 2951 usec
+Found 3 contours
+Moments time: 20
+m00: 458.00   h:  12   w:  58 y: 188
+Match Shapes time: 36
+Moments time: 20
+m00:   2.00   h:   3   w:   3 y: 171
+Match Shapes time: 28
+Moments time: 21
+m00: 701.50   h:  20   w:  56 y: 158
+Match Shapes time: 35
+Contour loop time: 5955 usec
+distance!?!:   9.52
+Process time: 27450
+
+HSV converison time: 2964 usec
+Threshold time: 3263 usec
+Morphology time: 9947 usec
+Contour time: 2991 usec
+Found 2 contours
+Moments time: 23
+m00: 448.50   h:  14   w:  57 y: 184
+Match Shapes time: 40
+Moments time: 23
+m00: 693.00   h:  20   w:  56 y: 156
+Match Shapes time: 35
+Contour loop time: 3859 usec
+distance!?!:   9.78
+Process time: 24001
+
+HSV converison time: 2999 usec
+Threshold time: 3337 usec
+Morphology time: 10106 usec
+Contour time: 3132 usec
+Found 2 contours
+Moments time: 20
+m00: 479.00   h:  12   w:  57 y: 184
+Match Shapes time: 34
+Moments time: 21
+m00: 722.50   h:  18   w:  55 y: 156
+Match Shapes time: 38
+Contour loop time: 3781 usec
+distance!?!:   9.78
+Process time: 24381
+
+HSV converison time: 3028 usec
+Threshold time: 3149 usec
+Morphology time: 9913 usec
+Contour time: 3139 usec
+Found 3 contours
+Moments time: 19
+m00: 453.50   h:  14   w:  58 y: 182
+Match Shapes time: 35
+Moments time: 17
+m00:   4.00   h:   3   w:   3 y: 169
+Match Shapes time: 28
+Moments time: 26
+m00: 685.00   h:  19   w:  56 y: 153
+Match Shapes time: 39
+Contour loop time: 5583 usec
+distance!?!:   9.52
+Process time: 25798
+
+HSV converison time: 3022 usec
+Threshold time: 3200 usec
+Morphology time: 9833 usec
+Contour time: 3132 usec
+Found 2 contours
+Moments time: 20
+m00: 510.50   h:  14   w:  58 y: 180
+Match Shapes time: 35
+Moments time: 23
+m00: 726.50   h:  19   w:  58 y: 152
+Match Shapes time: 36
+Contour loop time: 3608 usec
+distance!?!:   9.52
+Process time: 23784
+
+HSV converison time: 2997 usec
+Threshold time: 3369 usec
+Morphology time: 9839 usec
+Contour time: 3068 usec
+Found 2 contours
+Moments time: 21
+m00: 450.00   h:  14   w:  59 y: 178
+Match Shapes time: 39
+Moments time: 21
+m00: 777.50   h:  20   w:  57 y: 150
+Match Shapes time: 34
+Contour loop time: 4007 usec
+distance!?!:   9.27
+Process time: 24217
+
+HSV converison time: 3145 usec
+Threshold time: 3281 usec
+Morphology time: 9907 usec
+Contour time: 3061 usec
+Found 2 contours
+Moments time: 20
+m00: 492.50   h:  12   w:  56 y: 176
+Match Shapes time: 37
+Moments time: 24
+m00: 764.00   h:  20   w:  58 y: 148
+Match Shapes time: 37
+Contour loop time: 3950 usec
+distance!?!:  10.03
+Process time: 24339
+
+HSV converison time: 3230 usec
+Threshold time: 3251 usec
+Morphology time: 9875 usec
+Contour time: 3076 usec
+Found 2 contours
+Moments time: 21
+m00: 463.00   h:  14   w:  58 y: 174
+Match Shapes time: 35
+Moments time: 20
+m00: 747.50   h:  23   w:  60 y: 144
+Match Shapes time: 34
+Contour loop time: 3944 usec
+distance!?!:   9.52
+Process time: 24354
+
+HSV converison time: 4352 usec
+Threshold time: 3275 usec
+Morphology time: 9867 usec
+Contour time: 3256 usec
+Found 2 contours
+Moments time: 25
+m00: 505.50   h:  14   w:  58 y: 172
+Match Shapes time: 40
+Moments time: 23
+m00: 766.00   h:  20   w:  59 y: 144
+Match Shapes time: 36
+Contour loop time: 3989 usec
+distance!?!:   9.52
+Process time: 25733
+
+HSV converison time: 3057 usec
+Threshold time: 3280 usec
+Morphology time: 10056 usec
+Contour time: 3120 usec
+Found 2 contours
+Moments time: 21
+m00: 476.50   h:  14   w:  60 y: 170
+Match Shapes time: 41
+Moments time: 22
+m00: 723.00   h:  20   w:  58 y: 142
+Match Shapes time: 35
+Contour loop time: 3828 usec
+distance!?!:   9.01
+Process time: 24312
+
+HSV converison time: 2974 usec
+Threshold time: 3312 usec
+Morphology time: 9944 usec
+Contour time: 3158 usec
+Found 2 contours
+Moments time: 23
+m00: 491.00   h:  14   w:  58 y: 168
+Match Shapes time: 36
+Moments time: 26
+m00: 712.50   h:  19   w:  58 y: 140
+Match Shapes time: 39
+Contour loop time: 3887 usec
+distance!?!:   9.52
+Process time: 24255
+
+HSV converison time: 3149 usec
+Threshold time: 3294 usec
+Morphology time: 9901 usec
+Contour time: 3056 usec
+Found 2 contours
+Moments time: 18
+m00: 491.50   h:  12   w:  60 y: 168
+Match Shapes time: 34
+Moments time: 21
+m00: 730.00   h:  20   w:  58 y: 138
+Match Shapes time: 34
+Contour loop time: 3603 usec
+distance!?!:   9.01
+Process time: 23953
+
+HSV converison time: 3042 usec
+Threshold time: 3263 usec
+Morphology time: 9840 usec
+Contour time: 3056 usec
+Found 2 contours
+Moments time: 25
+m00: 496.50   h:  16   w:  58 y: 164
+Match Shapes time: 39
+Moments time: 18
+m00: 715.50   h:  20   w:  57 y: 136
+Match Shapes time: 33
+Contour loop time: 3740 usec
+distance!?!:   9.52
+Process time: 23868
+
+HSV converison time: 3017 usec
+Threshold time: 3476 usec
+Morphology time: 9936 usec
+Contour time: 3056 usec
+Found 2 contours
+Moments time: 24
+m00: 505.00   h:  14   w:  60 y: 164
+Match Shapes time: 38
+Moments time: 20
+m00: 739.50   h:  19   w:  58 y: 136
+Match Shapes time: 33
+Contour loop time: 3864 usec
+distance!?!:   9.01
+Process time: 24513
+
+HSV converison time: 3252 usec
+Threshold time: 3308 usec
+Morphology time: 9918 usec
+Contour time: 3071 usec
+Found 2 contours
+Moments time: 24
+m00: 466.00   h:  12   w:  60 y: 164
+Match Shapes time: 36
+Moments time: 21
+m00: 718.50   h:  20   w:  58 y: 134
+Match Shapes time: 38
+Contour loop time: 4012 usec
+distance!?!:   9.01
+Process time: 24535
+
+HSV converison time: 3248 usec
+Threshold time: 3271 usec
+Morphology time: 9902 usec
+Contour time: 3069 usec
+Found 2 contours
+Moments time: 21
+m00: 469.50   h:  14   w:  58 y: 160
+Match Shapes time: 38
+Moments time: 20
+m00: 726.50   h:  20   w:  58 y: 132
+Match Shapes time: 36
+Contour loop time: 3985 usec
+distance!?!:   9.52
+Process time: 24438
+
+HSV converison time: 4392 usec
+Threshold time: 3255 usec
+Morphology time: 9892 usec
+Contour time: 3149 usec
+Found 2 contours
+Moments time: 20
+m00: 498.50   h:  14   w:  58 y: 160
+Match Shapes time: 37
+Moments time: 21
+m00: 727.00   h:  19   w:  58 y: 132
+Match Shapes time: 36
+Contour loop time: 3862 usec
+distance!?!:   9.52
+Process time: 25576
+
+HSV converison time: 2954 usec
+Threshold time: 3349 usec
+Morphology time: 9921 usec
+Contour time: 3046 usec
+Found 2 contours
+Moments time: 21
+m00: 514.50   h:  14   w:  60 y: 158
+Match Shapes time: 38
+Moments time: 21
+m00: 741.50   h:  21   w:  59 y: 129
+Match Shapes time: 36
+Contour loop time: 3864 usec
+distance!?!:   9.01
+Process time: 24091
+
+HSV converison time: 3028 usec
+Threshold time: 3231 usec
+Morphology time: 9938 usec
+Contour time: 3096 usec
+Found 2 contours
+Moments time: 21
+m00: 528.00   h:  16   w:  60 y: 156
+Match Shapes time: 38
+Moments time: 20
+m00: 719.00   h:  20   w:  58 y: 128
+Match Shapes time: 38
+Contour loop time: 3828 usec
+distance!?!:   9.01
+Process time: 24067
+
+HSV converison time: 2990 usec
+Threshold time: 3166 usec
+Morphology time: 9923 usec
+Contour time: 3094 usec
+Found 2 contours
+Moments time: 19
+m00: 587.50   h:  14   w:  63 y: 154
+Match Shapes time: 34
+Moments time: 20
+m00: 786.00   h:  20   w:  56 y: 126
+Match Shapes time: 38
+Contour loop time: 3607 usec
+distance!?!:   8.24
+Process time: 23768
+
+HSV converison time: 3078 usec
+Threshold time: 3352 usec
+Morphology time: 9812 usec
+Contour time: 3057 usec
+Found 2 contours
+Moments time: 23
+m00: 592.50   h:  16   w:  62 y: 152
+Match Shapes time: 36
+Moments time: 19
+m00: 745.50   h:  20   w:  60 y: 124
+Match Shapes time: 33
+Contour loop time: 3857 usec
+distance!?!:   8.50
+Process time: 24079
+
+HSV converison time: 3060 usec
+Threshold time: 3352 usec
+Morphology time: 9912 usec
+Contour time: 3095 usec
+Found 2 contours
+Moments time: 24
+m00: 594.00   h:  16   w:  61 y: 152
+Match Shapes time: 36
+Moments time: 21
+m00: 774.50   h:  21   w:  58 y: 122
+Match Shapes time: 40
+Contour loop time: 3892 usec
+distance!?!:   8.76
+Process time: 24274
+
+HSV converison time: 3052 usec
+Threshold time: 3351 usec
+Morphology time: 9941 usec
+Contour time: 3052 usec
+Found 2 contours
+Moments time: 24
+m00: 545.50   h:  18   w:  61 y: 150
+Match Shapes time: 35
+Moments time: 21
+m00: 742.50   h:  22   w:  58 y: 120
+Match Shapes time: 37
+Contour loop time: 3854 usec
+distance!?!:   8.76
+Process time: 24287
+
+HSV converison time: 3088 usec
+Threshold time: 3404 usec
+Morphology time: 9923 usec
+Contour time: 3186 usec
+Found 2 contours
+Moments time: 23
+m00: 586.00   h:  18   w:  62 y: 148
+Match Shapes time: 40
+Moments time: 22
+m00: 740.00   h:  20   w:  58 y: 120
+Match Shapes time: 35
+Contour loop time: 3904 usec
+distance!?!:   8.50
+Process time: 24510
+
+HSV converison time: 4402 usec
+Threshold time: 3266 usec
+Morphology time: 9943 usec
+Contour time: 3059 usec
+Found 2 contours
+Moments time: 24
+m00: 585.00   h:  16   w:  63 y: 148
+Match Shapes time: 36
+Moments time: 21
+m00: 753.50   h:  19   w:  60 y: 120
+Match Shapes time: 38
+Contour loop time: 3996 usec
+distance!?!:   8.24
+Process time: 25599
+
+HSV converison time: 2977 usec
+Threshold time: 3324 usec
+Morphology time: 9906 usec
+Contour time: 2969 usec
+Found 2 contours
+Moments time: 21
+m00: 570.00   h:  16   w:  62 y: 148
+Match Shapes time: 39
+Moments time: 22
+m00: 765.00   h:  21   w:  60 y: 118
+Match Shapes time: 39
+Contour loop time: 4013 usec
+distance!?!:   8.50
+Process time: 24229
+
+HSV converison time: 3020 usec
+Threshold time: 3271 usec
+Morphology time: 9958 usec
+Contour time: 3096 usec
+Found 4 contours
+Moments time: 29
+m00: 539.50   h:  16   w:  62 y: 148
+Match Shapes time: 39
+Moments time: 18
+m00:   8.00   h:   3   w:   5 y: 133
+Match Shapes time: 30
+Moments time: 18
+m00:  12.00   h:   3   w:   8 y: 131
+Match Shapes time: 29
+Moments time: 22
+m00: 741.50   h:  20   w:  59 y: 118
+Match Shapes time: 35
+Contour loop time: 7655 usec
+distance!?!:   8.50
+Process time: 27946
+
+HSV converison time: 3062 usec
+Threshold time: 3368 usec
+Morphology time: 9931 usec
+Contour time: 3055 usec
+Found 3 contours
+Moments time: 23
+m00: 515.00   h:  18   w:  62 y: 146
+Match Shapes time: 35
+Moments time: 17
+m00:   8.00   h:   3   w:   5 y: 133
+Match Shapes time: 33
+Moments time: 22
+m00: 731.00   h:  22   w:  58 y: 116
+Match Shapes time: 36
+Contour loop time: 5960 usec
+distance!?!:   8.50
+Process time: 26369
+
+HSV converison time: 4360 usec
+Threshold time: 3309 usec
+Morphology time: 9896 usec
+Contour time: 2972 usec
+Found 2 contours
+Moments time: 23
+m00: 543.50   h:  20   w:  62 y: 144
+Match Shapes time: 37
+Moments time: 22
+m00: 733.50   h:  21   w:  58 y: 116
+Match Shapes time: 38
+Contour loop time: 3900 usec
+distance!?!:   8.50
+Process time: 25416
+
+HSV converison time: 2989 usec
+Threshold time: 3282 usec
+Morphology time: 9965 usec
+Contour time: 3130 usec
+Found 2 contours
+Moments time: 24
+m00: 542.50   h:  18   w:  62 y: 144
+Match Shapes time: 36
+Moments time: 21
+m00: 738.50   h:  20   w:  59 y: 116
+Match Shapes time: 38
+Contour loop time: 3751 usec
+distance!?!:   8.50
+Process time: 24067
+
+HSV converison time: 3092 usec
+Threshold time: 3139 usec
+Morphology time: 9918 usec
+Contour time: 3212 usec
+Found 2 contours
+Moments time: 20
+m00: 533.50   h:  14   w:  61 y: 144
+Match Shapes time: 33
+Moments time: 21
+m00: 726.50   h:  19   w:  58 y: 116
+Match Shapes time: 37
+Contour loop time: 3725 usec
+distance!?!:   8.76
+Process time: 24082
+
+HSV converison time: 3115 usec
+Threshold time: 3306 usec
+Morphology time: 9863 usec
+Contour time: 3042 usec
+Found 2 contours
+Moments time: 24
+m00: 507.00   h:  12   w:  62 y: 144
+Match Shapes time: 38
+Moments time: 21
+m00: 728.00   h:  21   w:  58 y: 113
+Match Shapes time: 34
+Contour loop time: 3855 usec
+distance!?!:   8.50
+Process time: 24161
+
+HSV converison time: 3039 usec
+Threshold time: 3330 usec
+Morphology time: 9888 usec
+Contour time: 3163 usec
+Found 2 contours
+Moments time: 23
+m00: 519.00   h:  16   w:  60 y: 140
+Match Shapes time: 40
+Moments time: 21
+m00: 743.50   h:  21   w:  58 y: 112
+Match Shapes time: 37
+Contour loop time: 3906 usec
+distance!?!:   9.01
+Process time: 24323
+
+HSV converison time: 3006 usec
+Threshold time: 3332 usec
+Morphology time: 9909 usec
+Contour time: 3177 usec
+Found 4 contours
+Moments time: 22
+m00:  11.50   h:   4   w:   5 y: 475
+Match Shapes time: 32
+Moments time: 17
+m00:  30.50   h:  11   w:   5 y: 460
+Match Shapes time: 36
+Moments time: 19
+m00: 541.50   h:  14   w:  60 y: 140
+Match Shapes time: 36
+Moments time: 21
+m00: 744.50   h:  20   w:  60 y: 112
+Match Shapes time: 36
+Contour loop time: 8028 usec
+distance!?!:  23.07
+Process time: 28469
+
+HSV converison time: 3082 usec
+Threshold time: 3269 usec
+Morphology time: 9915 usec
+Contour time: 3228 usec
+Found 5 contours
+Moments time: 18
+m00:   8.00   h:   5   w:   3 y: 473
+Match Shapes time: 32
+Moments time: 20
+m00:  21.00   h:   8   w:   6 y: 464
+Match Shapes time: 34
+Moments time: 20
+m00:   6.00   h:   4   w:   3 y: 459
+Match Shapes time: 30
+Moments time: 16
+m00: 520.00   h:  14   w:  62 y: 138
+Match Shapes time: 32
+Moments time: 23
+m00: 794.00   h:  21   w:  60 y: 109
+Match Shapes time: 40
+Contour loop time: 9643 usec
+distance!?!:  23.58
+Process time: 30160
+
+HSV converison time: 3136 usec
+Threshold time: 3252 usec
+Morphology time: 9779 usec
+Contour time: 3098 usec
+Found 3 contours
+Moments time: 25
+m00:  64.00   h:  18   w:   7 y: 460
+Match Shapes time: 36
+Moments time: 19
+m00: 538.50   h:  16   w:  59 y: 136
+Match Shapes time: 33
+Moments time: 20
+m00: 746.00   h:  21   w:  60 y: 108
+Match Shapes time: 36
+Contour loop time: 5774 usec
+distance!?!:  22.55
+Process time: 26034
+
+HSV converison time: 3008 usec
+Threshold time: 3295 usec
+Morphology time: 9843 usec
+Contour time: 3243 usec
+Found 3 contours
+Moments time: 22
+m00:  29.00   h:   8   w:   7 y: 472
+Match Shapes time: 36
+Moments time: 17
+m00: 535.50   h:  14   w:  60 y: 136
+Match Shapes time: 33
+Moments time: 19
+m00: 765.50   h:  20   w:  59 y: 108
+Match Shapes time: 36
+Contour loop time: 5639 usec
+distance!?!:  22.55
+Process time: 26040
+
+HSV converison time: 3050 usec
+Threshold time: 3232 usec
+Morphology time: 9865 usec
+Contour time: 3249 usec
+Found 3 contours
+Moments time: 23
+m00:  39.00   h:  10   w:   8 y: 470
+Match Shapes time: 33
+Moments time: 22
+m00: 506.50   h:  14   w:  62 y: 134
+Match Shapes time: 36
+Moments time: 19
+m00: 744.00   h:  22   w:  59 y: 104
+Match Shapes time: 35
+Contour loop time: 5594 usec
+distance!?!:  22.30
+Process time: 25971
+
+HSV converison time: 3001 usec
+Threshold time: 3449 usec
+Morphology time: 9890 usec
+Contour time: 3203 usec
+Found 3 contours
+Moments time: 22
+m00:  27.50   h:   8   w:   8 y: 470
+Match Shapes time: 38
+Moments time: 20
+m00: 542.50   h:  16   w:  62 y: 132
+Match Shapes time: 97
+Moments time: 18
+m00: 760.00   h:  21   w:  59 y: 104
+Match Shapes time: 34
+Contour loop time: 5705 usec
+distance!?!:  22.30
+Process time: 26225
+
+HSV converison time: 3097 usec
+Threshold time: 3253 usec
+Morphology time: 9948 usec
+Contour time: 3045 usec
+Found 3 contours
+Moments time: 22
+m00:  57.00   h:  16   w:   9 y: 464
+Match Shapes time: 38
+Moments time: 20
+m00: 542.50   h:  14   w:  62 y: 132
+Match Shapes time: 34
+Moments time: 18
+m00: 746.50   h:  20   w:  60 y: 104
+Match Shapes time: 33
+Contour loop time: 5799 usec
+distance!?!:  22.04
+Process time: 26097
+
+HSV converison time: 3059 usec
+Threshold time: 3241 usec
+Morphology time: 9910 usec
+Contour time: 3352 usec
+Found 4 contours
+Moments time: 26
+m00:  89.00   h:  21   w:  12 y: 459
+Match Shapes time: 37
+Moments time: 18
+m00:   4.00   h:   3   w:   3 y: 454
+Match Shapes time: 28
+Moments time: 17
+m00: 537.50   h:  12   w:  62 y: 132
+Match Shapes time: 33
+Moments time: 24
+m00: 773.50   h:  22   w:  60 y: 101
+Match Shapes time: 38
+Contour loop time: 7517 usec
+distance!?!:  21.28
+Process time: 28151
+
+HSV converison time: 3138 usec
+Threshold time: 3132 usec
+Morphology time: 9853 usec
+Contour time: 3236 usec
+Found 4 contours
+Moments time: 21
+m00: 104.50   h:  22   w:  15 y: 458
+Match Shapes time: 39
+Moments time: 19
+m00: 527.00   h:  14   w:  63 y: 130
+Match Shapes time: 33
+Moments time: 16
+m00:   4.00   h:   3   w:   3 y: 117
+Match Shapes time: 27
+Moments time: 23
+m00: 754.50   h:  22   w:  60 y: 100
+Match Shapes time: 37
+Contour loop time: 7646 usec
+distance!?!:  20.51
+Process time: 28020
+
+HSV converison time: 3025 usec
+Threshold time: 3197 usec
+Morphology time: 9854 usec
+Contour time: 3246 usec
+Found 3 contours
+Moments time: 24
+m00: 126.50   h:  24   w:  16 y: 456
+Match Shapes time: 35
+Moments time: 18
+m00: 536.50   h:  16   w:  63 y: 128
+Match Shapes time: 34
+Moments time: 22
+m00: 773.50   h:  22   w:  60 y: 100
+Match Shapes time: 35
+Contour loop time: 5571 usec
+distance!?!:  20.25
+Process time: 25893
+
+HSV converison time: 3019 usec
+Threshold time: 3322 usec
+Morphology time: 9807 usec
+Contour time: 3072 usec
+Found 6 contours
+Moments time: 22
+m00: 192.50   h:  26   w:  16 y: 454
+Match Shapes time: 37
+Moments time: 17
+m00:   4.00   h:   3   w:   3 y: 450
+Match Shapes time: 26
+Moments time: 18
+m00:   4.00   h:   3   w:   3 y: 444
+Match Shapes time: 32
+Moments time: 19
+m00:   8.50   h:   4   w:   4 y: 438
+Match Shapes time: 30
+Moments time: 21
+m00: 558.50   h:  16   w:  63 y: 128
+Match Shapes time: 38
+Moments time: 23
+m00: 761.00   h:  21   w:  60 y: 100
+Match Shapes time: 36
+Contour loop time: 11657 usec
+distance!?!:  20.25
+Process time: 31878
+
+HSV converison time: 2991 usec
+Threshold time: 3290 usec
+Morphology time: 9945 usec
+Contour time: 3160 usec
+Found 4 contours
+Moments time: 21
+m00: 176.50   h:  26   w:  16 y: 454
+Match Shapes time: 37
+Moments time: 19
+m00:   6.00   h:   4   w:   3 y: 436
+Match Shapes time: 30
+Moments time: 19
+m00: 535.50   h:  14   w:  63 y: 128
+Match Shapes time: 36
+Moments time: 21
+m00: 760.50   h:  20   w:  60 y: 100
+Match Shapes time: 38
+Contour loop time: 8010 usec
+distance!?!:  20.25
+Process time: 28407
+
+HSV converison time: 3099 usec
+Threshold time: 3307 usec
+Morphology time: 9932 usec
+Contour time: 3082 usec
+Found 4 contours
+Moments time: 21
+m00: 149.00   h:  24   w:  15 y: 456
+Match Shapes time: 33
+Moments time: 21
+m00:   8.00   h:   4   w:   4 y: 436
+Match Shapes time: 30
+Moments time: 20
+m00: 553.50   h:  14   w:  60 y: 128
+Match Shapes time: 33
+Moments time: 23
+m00: 771.50   h:  20   w:  61 y: 100
+Match Shapes time: 36
+Contour loop time: 7937 usec
+distance!?!:  20.51
+Process time: 28338
+
+HSV converison time: 3053 usec
+Threshold time: 3266 usec
+Morphology time: 9918 usec
+Contour time: 3241 usec
+Found 6 contours
+Moments time: 23
+m00: 131.50   h:  18   w:  12 y: 462
+Match Shapes time: 35
+Moments time: 18
+m00:  14.00   h:   6   w:   5 y: 454
+Match Shapes time: 36
+Moments time: 20
+m00:   4.00   h:   3   w:   3 y: 436
+Match Shapes time: 28
+Moments time: 20
+m00: 578.00   h:  14   w:  64 y: 128
+Match Shapes time: 38
+Moments time: 21
+m00:   2.00   h:   3   w:   3 y: 111
+Match Shapes time: 28
+Moments time: 19
+m00: 765.00   h:  22   w:  61 y:  98
+Match Shapes time: 35
+Contour loop time: 11651 usec
+distance!?!:  21.28
+Process time: 32086
+
+HSV converison time: 3062 usec
+Threshold time: 3306 usec
+Morphology time: 9897 usec
+Contour time: 3132 usec
+Found 6 contours
+Moments time: 21
+m00:  89.00   h:  14   w:  11 y: 466
+Match Shapes time: 37
+Moments time: 18
+m00:   4.00   h:   3   w:   3 y: 462
+Match Shapes time: 28
+Moments time: 15
+m00:  11.50   h:   5   w:   4 y: 456
+Match Shapes time: 29
+Moments time: 18
+m00:   4.00   h:   3   w:   3 y: 436
+Match Shapes time: 28
+Moments time: 20
+m00: 530.00   h:  14   w:  63 y: 126
+Match Shapes time: 37
+Moments time: 20
+m00: 753.50   h:  22   w:  61 y:  96
+Match Shapes time: 36
+Contour loop time: 11606 usec
+distance!?!:  21.53
+Process time: 31988
+
+HSV converison time: 3037 usec
+Threshold time: 3152 usec
+Morphology time: 9925 usec
+Contour time: 3223 usec
+Found 6 contours
+Moments time: 18
+m00:  98.00   h:  16   w:  10 y: 464
+Match Shapes time: 33
+Moments time: 18
+m00:  44.50   h:  13   w:   7 y: 452
+Match Shapes time: 33
+Moments time: 18
+m00:  10.00   h:   5   w:   4 y: 436
+Match Shapes time: 34
+Moments time: 16
+m00:   4.00   h:   3   w:   3 y: 428
+Match Shapes time: 29
+Moments time: 21
+m00: 544.50   h:  16   w:  60 y: 124
+Match Shapes time: 34
+Moments time: 21
+m00: 775.50   h:  22   w:  60 y:  96
+Match Shapes time: 38
+Contour loop time: 11574 usec
+distance!?!:  21.79
+Process time: 31870
+
+HSV converison time: 3153 usec
+Threshold time: 3365 usec
+Morphology time: 9964 usec
+Contour time: 3186 usec
+Found 5 contours
+Moments time: 26
+m00: 214.50   h:  30   w:  16 y: 450
+Match Shapes time: 37
+Moments time: 18
+m00:  30.50   h:  13   w:   7 y: 432
+Match Shapes time: 34
+Moments time: 21
+m00:   4.00   h:   3   w:   3 y: 428
+Match Shapes time: 29
+Moments time: 22
+m00: 560.50   h:  14   w:  62 y: 124
+Match Shapes time: 33
+Moments time: 20
+m00: 806.50   h:  22   w:  60 y:  94
+Match Shapes time: 39
+Contour loop time: 9931 usec
+distance!?!:  20.25
+Process time: 30685
+
+HSV converison time: 3036 usec
+Threshold time: 3340 usec
+Morphology time: 9949 usec
+Contour time: 3206 usec
+Found 3 contours
+Moments time: 23
+m00: 350.00   h:  56   w:  25 y: 424
+Match Shapes time: 36
+Moments time: 23
+m00: 531.50   h:  14   w:  64 y: 122
+Match Shapes time: 34
+Moments time: 25
+m00: 804.50   h:  23   w:  60 y:  92
+Match Shapes time: 35
+Contour loop time: 5914 usec
+distance!?!:  17.95
+Process time: 26449
+
+HSV converison time: 3124 usec
+Threshold time: 3268 usec
+Morphology time: 9890 usec
+Contour time: 3098 usec
+Found 3 contours
+Moments time: 23
+m00: 394.00   h:  58   w:  27 y: 422
+Match Shapes time: 40
+Moments time: 21
+m00: 538.50   h:  14   w:  62 y: 120
+Match Shapes time: 38
+Moments time: 22
+m00: 798.50   h:  22   w:  61 y:  92
+Match Shapes time: 36
+Contour loop time: 6047 usec
+distance!?!:  17.44
+Process time: 26458
+
+HSV converison time: 3086 usec
+Threshold time: 3245 usec
+Morphology time: 9924 usec
+Contour time: 3257 usec
+Found 3 contours
+Moments time: 25
+m00: 516.00   h:  67   w:  30 y: 413
+Match Shapes time: 41
+Moments time: 23
+m00: 540.50   h:  12   w:  62 y: 120
+Match Shapes time: 35
+Moments time: 22
+m00: 786.00   h:  22   w:  61 y:  90
+Match Shapes time: 41
+Contour loop time: 5891 usec
+distance!?!:  16.68
+Process time: 26437
+
+HSV converison time: 3023 usec
+Threshold time: 3408 usec
+Morphology time: 9895 usec
+Contour time: 3183 usec
+Found 3 contours
+Moments time: 27
+m00: 542.00   h:  68   w:  29 y: 412
+Match Shapes time: 36
+Moments time: 20
+m00: 531.00   h:  14   w:  62 y: 118
+Match Shapes time: 36
+Moments time: 21
+m00: 791.00   h:  24   w:  61 y:  88
+Match Shapes time: 36
+Contour loop time: 5922 usec
+distance!?!:  16.93
+Process time: 26445
+
+HSV converison time: 3182 usec
+Threshold time: 3438 usec
+Morphology time: 9910 usec
+Contour time: 3191 usec
+Found 3 contours
+Moments time: 26
+m00: 557.00   h:  70   w:  30 y: 410
+Match Shapes time: 39
+Moments time: 20
+m00: 554.00   h:  16   w:  62 y: 116
+Match Shapes time: 34
+Moments time: 19
+m00: 807.00   h:  22   w:  61 y:  88
+Match Shapes time: 39
+Contour loop time: 6028 usec
+distance!?!:  16.68
+Process time: 26771
+
+HSV converison time: 3041 usec
+Threshold time: 3191 usec
+Morphology time: 9770 usec
+Contour time: 3150 usec
+Found 3 contours
+Moments time: 24
+m00: 614.50   h:  70   w:  32 y: 410
+Match Shapes time: 40
+Moments time: 22
+m00: 541.50   h:  14   w:  61 y: 116
+Match Shapes time: 36
+Moments time: 22
+m00: 795.00   h:  21   w:  61 y:  88
+Match Shapes time: 35
+Contour loop time: 5864 usec
+distance!?!:  16.17
+Process time: 25995
+
+HSV converison time: 2981 usec
+Threshold time: 3268 usec
+Morphology time: 9744 usec
+Contour time: 3148 usec
+Found 3 contours
+Moments time: 26
+m00: 608.50   h:  70   w:  31 y: 410
+Match Shapes time: 40
+Moments time: 18
+m00: 544.00   h:  14   w:  61 y: 116
+Match Shapes time: 45
+Moments time: 20
+m00: 794.50   h:  22   w:  61 y:  88
+Match Shapes time: 37
+Contour loop time: 5996 usec
+distance!?!:  16.42
+Process time: 26096
+
+HSV converison time: 3048 usec
+Threshold time: 3166 usec
+Morphology time: 9739 usec
+Contour time: 3138 usec
+Found 4 contours
+Moments time: 26
+m00:   2.00   h:   3   w:   3 y: 444
+Match Shapes time: 30
+Moments time: 22
+m00: 576.00   h:  66   w:  30 y: 414
+Match Shapes time: 38
+Moments time: 21
+m00: 537.50   h:  14   w:  61 y: 116
+Match Shapes time: 34
+Moments time: 20
+m00: 791.00   h:  21   w:  60 y:  88
+Match Shapes time: 36
+Contour loop time: 7951 usec
+distance!?!:  23.58
+Process time: 28024
+time:   9.466 frames: 291  fps:  30.74
+time_t: 4 suseconds_t: 4 long: 4 long long 8
