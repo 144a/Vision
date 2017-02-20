@@ -28,6 +28,7 @@
 #include <iostream>
 #include <string.h>
 #include <math.h>
+#include <sys/time.h>
 
 #define TEMPLATE_FILE "template17top.jpg"
 
@@ -91,28 +92,49 @@ double distance(int width)
 	return (-0.2555350554 * width + 24.3431734317);
 }
 
+// return Linux time a long long microseconds
+long long gettime_usec()
+{
+	struct timeval tv1;
+	long long ret;
+	
+	gettimeofday(&tv1, NULL);
+	ret = tv1.tv_sec * 1000000 + tv1.tv_usec;
+	return ret;
+}
+
 int process(cv::Mat img, cv::Mat &imgDraw)
 {
+	printf("\n");
 	// cv::Mat img = cv::imread(argv[1], -1);
 	// if(img.empty()) return -1;
 	// cv::namedWindow("Input", cv::WINDOW_AUTOSIZE);
 	// cv::imshow("Input", img);
 
 	// first convert to HSV
+	long long tHSVstart = gettime_usec();
 	cv::Mat imgHSV;
 	cv::cvtColor(img, imgHSV, CV_BGR2HSV);
+	long long tHSVend = gettime_usec();
+	printf("HSV converison time: %lld usec\n", tHSVend - tHSVstart);
 
 	// threshold image
 	cv::Mat imgThresh;
 	
+	long long tthreshstart = gettime_usec();
 	// cv::threshold(imgHSV, imgThresh, );
 	cv::inRange(imgHSV, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgThresh);
+	long long tthreshend = gettime_usec();
+	printf("Threshold time: %lld usec\n", tthreshend - tthreshstart);
 	// cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);
 	// cv::imshow("Threshold", imgThresh);
 
 	// erode and dilate
 	cv::Mat imgOpen;
+	long long tmorphstart = gettime_usec();
 	cv::morphologyEx(imgThresh, imgOpen, CV_MOP_OPEN, cv::Mat());
+	long long tmorphend = gettime_usec();
+	printf("Morphology time: %lld usec\n", tmorphend - tmorphstart);
 	// cv::namedWindow("Open", cv::WINDOW_AUTOSIZE);
 	// cv::imshow("Open", imgOpen);
 
@@ -121,7 +143,10 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	imgDraw = img;
 	cv::Mat imgCont(imgOpen);
 	std::vector< std::vector< cv::Point> > contours;
+	long long tcontoursstart = gettime_usec();
 	cv::findContours(imgCont, contours, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
+	long long tcontoursend = gettime_usec();
+	printf("Contour time: %lld usec\n", tcontoursend - tcontoursstart);
 	std::vector< cv::Moments > moms;
 	imgCont = cv::Scalar::all(0);
 	if(displayf){
@@ -129,13 +154,14 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	}
 	std::vector< cv::Rect > rects;
 
-	printf("\nFound %d contours\n", contours.size());
+	printf("Found %d contours\n", contours.size());
 
 	// find bounding rectangle
 	if(displayf){
 		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 	}
 
+	long long tcontloopstart = gettime_usec();
 	for(int i = 0; i < contours.size(); i++) {
 		// bounding rectangle
 		
@@ -159,11 +185,13 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		*/
 		
 		// compute Moments so we can find center of each contour (for printing for now)
+		long long tmomentsstart = gettime_usec();
 		cv::Moments mom1 = cv::moments(contours[i], true);
+		long long tmomentsend = gettime_usec();
+		printf("Moments time: %lld\n", tmomentsend - tmomentsstart);
 		moms.push_back(mom1);
 		cv::Point center(mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		cv::Point ptText(center);
-
 		
 		
 		// printf("m00: %lf m10: %lf m01: %lf x: %lf, y: %lf\n", mom1.m00, mom1.m10, mom1.m01,
@@ -172,8 +200,10 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		printf("m00: %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
 		
 		// check match against template
+		long long tmatchstart = gettime_usec();
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
-
+		long long tmatchend = gettime_usec();
+		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
 		int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 		double fontScale = 0.5;
 		char s1[255];
@@ -202,6 +232,8 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		//cv::imshow("Contours", imgDraw);
 		//cv::waitKey(0);
 	}
+	long long tcontloopend = gettime_usec();
+	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
 	/*
 		std::vector<cv::Moments>::iterator itM = moms.begin();
@@ -358,17 +390,37 @@ int main(int argc, char** argv){
 	cv::Mat frame;
 	cv::Mat imgDraw;
 	process_template();
-
+	long long tprocess_start;
+	long long tprocess_end;
+	long long tdelta;
+	long frames = 0;
+	long long tstart;
+	long long tend;
+	double trun;
+	
+	tstart = gettime_usec();
 	for(;;){
 		cap >> frame;
 		if(frame.empty()) break;
+		tprocess_start = gettime_usec();
 		process(frame, imgDraw);
+		tprocess_end = gettime_usec();
+		frames++;
+		tdelta = tprocess_end - tprocess_start;
+		printf("Process time: %lld\n", tdelta);
 		if(displayf){
 			cv::imshow("Contours", imgDraw);
 		}
-		//if(cv::waitKey(33) >= 0) break;
-		cv::waitKey(0);
+		if(cv::waitKey(1) >= 0) break;
+		// cv::waitKey(0);
 	}
+	tend = gettime_usec();
+
+	trun = (1.0 * tend - tstart)/1e6;
+	printf("time: %7.3lf frames: %ld  fps: %6.2lf\n", trun,
+				 frames, (1.0 * frames/trun));
+	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",
+				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
 	return 0;
 	
 }
