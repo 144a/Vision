@@ -245,18 +245,22 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		itR++;
 		}
 	*/
-
-	// Filter Contours
+	
 	/*
-		for(int iter = 0; iter < moms.size();) {
+	// Filter Contours
+	std::vector< cv::Rect > nrects;
+	std::vector< cv::Moments > nmoms;
+
+	for(int iter = 0; iter < moms.size();) {
 		if(moms[iter].m00 < 100 * 1.0) {
-		moms.erase(iter);
-		rects.erase(iter);
+			nmoms.push_back(moms[iter]);
+			nrects.push_back(rects[iter]);
 		} else {
-		iter++;
+			iter++;
 		}
-		}
+	}
 	*/
+	
 	/*
 	// using indexes
 	std::vector<cv::Rect>::iterator itR = rects.begin();

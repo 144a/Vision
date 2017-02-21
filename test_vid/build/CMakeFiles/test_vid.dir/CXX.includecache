@@ -21,6 +21,8 @@ string.h
 -
 math.h
 -
+sys/time.h
+-
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h
