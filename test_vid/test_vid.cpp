@@ -207,7 +207,7 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 		int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 		double fontScale = 0.5;
 		char s1[255];
-		// sprintf(s1, "#%d %0.2lf", i, match);
+ 		// sprintf(s1, "#%d %0.2lf", i, match);
 		if(displayf){
 			if((match <= 3.0)) {
 			
@@ -252,12 +252,12 @@ int process(cv::Mat img, cv::Mat &imgDraw)
 	std::vector< cv::Moments > nmoms;
 
 	for(int iter = 0; iter < moms.size();) {
-		if(moms[iter].m00 < 100 * 1.0) {
-			nmoms.push_back(moms[iter]);
-			nrects.push_back(rects[iter]);
-		} else {
-			iter++;
-		}
+	if(moms[iter].m00 < 100 * 1.0) {
+	nmoms.push_back(moms[iter]);
+	nrects.push_back(rects[iter]);
+	} else {
+	iter++;
+	}
 	}
 	*/
 	
