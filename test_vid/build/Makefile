@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Vision/2017/test_vid
+CMAKE_SOURCE_DIR = /home/pi/TechClub/2017/Vision/test_vid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Vision/2017/test_vid/build
+CMAKE_BINARY_DIR = /home/pi/TechClub/2017/Vision/test_vid/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Vision/2017/test_vid/build/CMakeFiles /home/pi/Vision/2017/test_vid/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Vision/2017/test_vid/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_vid
+# Target rules for targets named Vision
 
 # Build rule for target.
-test_vid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_vid
-.PHONY : test_vid
+Vision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Vision
+.PHONY : Vision
 
 # fast build rule for target.
-test_vid/fast:
-	$(MAKE) -f CMakeFiles/test_vid.dir/build.make CMakeFiles/test_vid.dir/build
-.PHONY : test_vid/fast
+Vision/fast:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/build
+.PHONY : Vision/fast
 
-test_vid.o: test_vid.cpp.o
+Vision.o: Vision.cpp.o
 
-.PHONY : test_vid.o
+.PHONY : Vision.o
 
 # target to build an object file
-test_vid.cpp.o:
-	$(MAKE) -f CMakeFiles/test_vid.dir/build.make CMakeFiles/test_vid.dir/test_vid.cpp.o
-.PHONY : test_vid.cpp.o
+Vision.cpp.o:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision.cpp.o
+.PHONY : Vision.cpp.o
 
-test_vid.i: test_vid.cpp.i
+Vision.i: Vision.cpp.i
 
-.PHONY : test_vid.i
+.PHONY : Vision.i
 
 # target to preprocess a source file
-test_vid.cpp.i:
-	$(MAKE) -f CMakeFiles/test_vid.dir/build.make CMakeFiles/test_vid.dir/test_vid.cpp.i
-.PHONY : test_vid.cpp.i
+Vision.cpp.i:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision.cpp.i
+.PHONY : Vision.cpp.i
 
-test_vid.s: test_vid.cpp.s
+Vision.s: Vision.cpp.s
 
-.PHONY : test_vid.s
+.PHONY : Vision.s
 
 # target to generate assembly for a file
-test_vid.cpp.s:
-	$(MAKE) -f CMakeFiles/test_vid.dir/build.make CMakeFiles/test_vid.dir/test_vid.cpp.s
-.PHONY : test_vid.cpp.s
+Vision.cpp.s:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision.cpp.s
+.PHONY : Vision.cpp.s
+
+Vision_test.o: Vision_test.cpp.o
+
+.PHONY : Vision_test.o
+
+# target to build an object file
+Vision_test.cpp.o:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision_test.cpp.o
+.PHONY : Vision_test.cpp.o
+
+Vision_test.i: Vision_test.cpp.i
+
+.PHONY : Vision_test.i
+
+# target to preprocess a source file
+Vision_test.cpp.i:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision_test.cpp.i
+.PHONY : Vision_test.cpp.i
+
+Vision_test.s: Vision_test.cpp.s
+
+.PHONY : Vision_test.s
+
+# target to generate assembly for a file
+Vision_test.cpp.s:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Vision_test.cpp.s
+.PHONY : Vision_test.cpp.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_vid"
-	@echo "... test_vid.o"
-	@echo "... test_vid.i"
-	@echo "... test_vid.s"
+	@echo "... Vision"
+	@echo "... Vision.o"
+	@echo "... Vision.i"
+	@echo "... Vision.s"
+	@echo "... Vision_test.o"
+	@echo "... Vision_test.i"
+	@echo "... Vision_test.s"
 .PHONY : help
 
 
