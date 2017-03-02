@@ -1,0 +1,32 @@
+/* HSV_Parallel - parallel-ize HSV across all 4 cores
+
+	 created 3/1/17 BD
+
+*/
+
+
+Vision::HSV_Parallel(cvMat& img, cvMat& img_out, int code, int diffVal) :
+	img_P_HSV_in(img),
+	img_P_HSV_out(img_out),
+	code_P_HSV(code),
+	diffVal_P_HSV(diff_val)
+	{ }
+
+void Vision::operator()(const Range& range) const override
+	{
+		for (int i = range.start; i < range.end; ++i)
+		{
+	cv::cvtColor(img, img_out, CV_BGR2HSV);
+
+
+	cv::Mat in(img_P_HSV_in,
+						 cv::Rect(0, (img_P_HSV_in.rows/diffVal_P_HSV)*i, 
+											img_P_HSV_in.cols, img_P_HSV_in.rows/diffVal_P_HSV));
+	cv::Mat out(img_P_HSV_out, cv::Rect(0, (img_P_HSV_out.rows/diffVal_P_HSV)*i, 
+															 img_P_HSV_out.cols, img_P_HSV_out.rows/diffVal_P_HSV));
+	cv::cvtColor(in, out, code_P_HSV);
+
+
+		}
+	}
+

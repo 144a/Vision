@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Vision.dir/Vision.cpp.o"
   "CMakeFiles/Vision.dir/Vision_test.cpp.o"
+  "CMakeFiles/Vision.dir/HSV_Parallel.cpp.o"
   "Vision.pdb"
   "Vision"
 )

@@ -123,6 +123,33 @@ Vision/fast:
 	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/build
 .PHONY : Vision/fast
 
+HSV_Parallel.o: HSV_Parallel.cpp.o
+
+.PHONY : HSV_Parallel.o
+
+# target to build an object file
+HSV_Parallel.cpp.o:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/HSV_Parallel.cpp.o
+.PHONY : HSV_Parallel.cpp.o
+
+HSV_Parallel.i: HSV_Parallel.cpp.i
+
+.PHONY : HSV_Parallel.i
+
+# target to preprocess a source file
+HSV_Parallel.cpp.i:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/HSV_Parallel.cpp.i
+.PHONY : HSV_Parallel.cpp.i
+
+HSV_Parallel.s: HSV_Parallel.cpp.s
+
+.PHONY : HSV_Parallel.s
+
+# target to generate assembly for a file
+HSV_Parallel.cpp.s:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/HSV_Parallel.cpp.s
+.PHONY : HSV_Parallel.cpp.s
+
 Vision.o: Vision.cpp.o
 
 .PHONY : Vision.o
@@ -186,6 +213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Vision"
+	@echo "... HSV_Parallel.o"
+	@echo "... HSV_Parallel.i"
+	@echo "... HSV_Parallel.s"
 	@echo "... Vision.o"
 	@echo "... Vision.i"
 	@echo "... Vision.s"

@@ -30,7 +30,7 @@
 #include <math.h>
 #include <sys/time.h>
 #include "Vision.h"
-
+#include "HSV_Parallel.h"
 
 Vision::Vision() 
 {
@@ -115,10 +115,11 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 
 	// first convert to HSV
 	long long tHSVstart = gettime_usec();
-	cv::Mat imgHSV;
+	cv::Mat imgHSV =img.clone(); // faster to create and fill with zeros ?
 	cv::cvtColor(img, imgHSV, CV_BGR2HSV);
 
-	// parallel_for_(cv::Range(0, 4), Parallel_HSV(img, imgHSV, CV_BGR2HSV));
+	// actually, seemed to slow it down a little
+	// parallel_for_(cv::Range(0, 4), HSV_Parallel(img, imgHSV, CV_BGR2HSV, 4));
 
 	long long tHSVend = gettime_usec();
 	printf("HSV converison time: %lld usec\n", tHSVend - tHSVstart);
