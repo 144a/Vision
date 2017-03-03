@@ -126,7 +126,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 
 	if(parallelf) {
 		// actually, seemed to slow it down a little
-		parallel_for_(cv::Range(0, 4), HSV_Parallel(img, imgHSV, CV_BGR2HSV, 4));
+		parallel_for_(cv::Range(0, 8), HSV_Parallel(img, imgHSV, CV_BGR2HSV, 8));
 	} else {
 		cv::cvtColor(img, imgHSV, CV_BGR2HSV);
 	}
@@ -155,13 +155,28 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	// cv::imshow("Threshold", imgThresh);
 
 	// erode and dilate
-	cv::Mat imgOpen;
 	long long tmorphstart = gettime_usec();
-	cv::morphologyEx(imgThresh, imgOpen, CV_MOP_OPEN, cv::Mat());
+	// cloning imgThresh takes ~0.5 msec
+	cv::Mat imgOpen;
+	if(parallelf) {
+		// cloning imgThresh in here, and performing Open operation inplace increased from ~9.7msec to ~17.3msec
+		// Wow! Just replacing morphologyEx Open operation with erode() followed by dilate reduces Morphology step from ~9.6 msec to 2.4 msec!
+		// Process time now around 21-23 msec
+		cv::Mat imgTemp;
+		cv::erode(imgThresh, imgTemp, cv::Mat());
+		cv::dilate(imgTemp, imgOpen, cv::Mat());
+	} else {
+		cv::morphologyEx(imgThresh, imgOpen, CV_MOP_OPEN, cv::Mat());
+	}
 	long long tmorphend = gettime_usec();
 	printf("Morphology time: %lld usec\n", tmorphend - tmorphstart);
+
 	// cv::namedWindow("Open", cv::WINDOW_AUTOSIZE);
 	// cv::imshow("Open", imgOpen);
+
+
+
+
 
 	// find countours
 	// cv::Mat imgDraw(img);
