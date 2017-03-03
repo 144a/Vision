@@ -214,8 +214,12 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		// cv::RotatedRect rect1 = cv::minAreaRect(contours[i]);
 
 		rects.push_back(rect1);
-		imgDraw = img.clone();
-
+		// removed this line when not dsiplaying
+		// reduced Contour loop time from ~3.4 msec to 0.15 msec for 2 countours
+		if(displayf) {
+			imgDraw = img.clone();
+		}
+			
 		/*
 			cv::Point2f vertices[4];
 			rect1.points(vertices);
