@@ -15,7 +15,7 @@ void HSV_Parallel::operator()(const cv::Range& range) const
 		{
 			// cv::cvtColor(img, img_out, CV_BGR2HSV);
 
-			// get the stripe that we're working on
+			// get the stripe that we're wokring on
 			cv::Mat in(img_in,
 								 cv::Rect(0, (img_in.rows/diff)*i, 
 													img_in.cols, img_in.rows/diff));

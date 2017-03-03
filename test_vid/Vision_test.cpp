@@ -27,10 +27,11 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 
 
 void usage(){
-	printf("usage: Vision [-h] [-d] [fid]\n");
+	printf("usage: Vision [-h] [-d] [-p] [fid]\n");
 	printf("where:\n");
 	printf("       -h - print this help screen\n");
 	printf("       -d - display processing frames\n");
+	printf("       -p - use TBB for parallel processing on all 4 cores\n");
 	printf("       fid - file name to process\n");
 	printf("             if no file name is given, use camera 0\n");
 }
@@ -38,34 +39,39 @@ void usage(){
 int main(int argc, char** argv){
 	
 	Vision vis;
-
+	int i;
+	
 	char* fid = 0;
 	vis.displayf = 0;
+	vis.parallelf = 0;
 	
-	if (argc > 3){
+	if (argc > 4){
 		usage();
 		return -1;
 	}
 	
 	if(argc > 1){
-		if(*argv[1] == '-'){
-			switch(argv[1][1]){
-			case 'd':
-				vis.displayf = 1;
-				if (argc > 2){
-					fid = argv[2];
-				}
-				break;
+		for(i = 1; i < argc; i++) { 
+			if(*argv[i] == '-'){
+				switch(argv[i][1]){
+				case 'd':
+					vis.displayf = 1;
+					break;
 				
-			case 'h':
-				usage();
-				return 0;
-				break;
+				case 'p':
+					vis.setParallel(1);
+					break;
+				
+				case 'h':
+					usage();
+					return 0;
+					break;
 
-			}
-		} else {
-			fid = argv[1];	
-		}		
+				}
+			} else {
+				fid = argv[i];	
+			}		
+		}
 	}
 
 	printf("*%s*", fid);

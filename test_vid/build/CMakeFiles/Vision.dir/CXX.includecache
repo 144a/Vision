@@ -24,6 +24,24 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
+/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp
+opencv2/highgui/highgui.hpp
+-
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+Thresh_Parallel.h
+/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
+
+/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
+opencv2/highgui/highgui.hpp
+-
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+
 /home/pi/TechClub/2017/Vision/test_vid/Vision.cpp
 opencv2/highgui/highgui.hpp
 -
@@ -45,6 +63,8 @@ Vision.h
 /home/pi/TechClub/2017/Vision/test_vid/Vision.h
 HSV_Parallel.h
 /home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.h
+Thresh_Parallel.h
+/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
 
 /home/pi/TechClub/2017/Vision/test_vid/Vision.h
 opencv2/highgui/highgui.hpp

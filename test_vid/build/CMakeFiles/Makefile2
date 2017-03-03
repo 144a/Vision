@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/pi/TechClub/2017/Vision/test_vid/build
 CMakeFiles/Vision.dir/all:
 	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/depend
 	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=1,2,3,4 "Built target Vision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Vision"
 .PHONY : CMakeFiles/Vision.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/Vision.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Vision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles 0
 .PHONY : CMakeFiles/Vision.dir/rule

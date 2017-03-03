@@ -31,6 +31,7 @@
 #include <sys/time.h>
 #include "Vision.h"
 #include "HSV_Parallel.h"
+#include "Thresh_Parallel.h"
 
 Vision::Vision() 
 {
@@ -68,6 +69,7 @@ Vision::Vision()
 	*/
 
 	displayf = 0;
+	parallelf = 0;
 }
 
 
@@ -105,6 +107,11 @@ long long Vision::gettime_usec()
 	return ret;
 }
 
+void Vision::setParallel(int flag)
+{
+	parallelf = flag;
+}
+
 int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 {
 	printf("\n");
@@ -116,20 +123,32 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	// first convert to HSV
 	long long tHSVstart = gettime_usec();
 	cv::Mat imgHSV =img.clone(); // faster to create and fill with zeros ?
-	cv::cvtColor(img, imgHSV, CV_BGR2HSV);
 
-	// actually, seemed to slow it down a little
-	// parallel_for_(cv::Range(0, 4), HSV_Parallel(img, imgHSV, CV_BGR2HSV, 4));
+	if(parallelf) {
+		// actually, seemed to slow it down a little
+		parallel_for_(cv::Range(0, 4), HSV_Parallel(img, imgHSV, CV_BGR2HSV, 4));
+	} else {
+		cv::cvtColor(img, imgHSV, CV_BGR2HSV);
+	}
 
 	long long tHSVend = gettime_usec();
 	printf("HSV converison time: %lld usec\n", tHSVend - tHSVstart);
 
 	// threshold image
-	cv::Mat imgThresh;
+	cv::Mat imgThresh = cv::Mat::zeros(imgHSV.rows, imgHSV.cols, CV_8U);
 	
 	long long tthreshstart = gettime_usec();
+	// older version
 	// cv::threshold(imgHSV, imgThresh, );
-	cv::inRange(imgHSV, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgThresh);
+
+	if(parallelf) {
+		// improvement - from ~2.7ms to 1.4ms - Yay!
+		parallel_for_(cv::Range(0, 4), Thresh_Parallel(imgHSV, imgThresh, cv::Scalar(HMin, SMin, VMin),	cv::Scalar(HMax, SMax, VMax), 4));
+	} else {
+		// non-parallel version
+		cv::inRange(imgHSV, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgThresh);
+	}
+	
 	long long tthreshend = gettime_usec();
 	printf("Threshold time: %lld usec\n", tthreshend - tthreshstart);
 	// cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);

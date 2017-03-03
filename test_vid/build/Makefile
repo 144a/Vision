@@ -150,6 +150,33 @@ HSV_Parallel.cpp.s:
 	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/HSV_Parallel.cpp.s
 .PHONY : HSV_Parallel.cpp.s
 
+Thresh_Parallel.o: Thresh_Parallel.cpp.o
+
+.PHONY : Thresh_Parallel.o
+
+# target to build an object file
+Thresh_Parallel.cpp.o:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o
+.PHONY : Thresh_Parallel.cpp.o
+
+Thresh_Parallel.i: Thresh_Parallel.cpp.i
+
+.PHONY : Thresh_Parallel.i
+
+# target to preprocess a source file
+Thresh_Parallel.cpp.i:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Thresh_Parallel.cpp.i
+.PHONY : Thresh_Parallel.cpp.i
+
+Thresh_Parallel.s: Thresh_Parallel.cpp.s
+
+.PHONY : Thresh_Parallel.s
+
+# target to generate assembly for a file
+Thresh_Parallel.cpp.s:
+	$(MAKE) -f CMakeFiles/Vision.dir/build.make CMakeFiles/Vision.dir/Thresh_Parallel.cpp.s
+.PHONY : Thresh_Parallel.cpp.s
+
 Vision.o: Vision.cpp.o
 
 .PHONY : Vision.o
@@ -216,6 +243,9 @@ help:
 	@echo "... HSV_Parallel.o"
 	@echo "... HSV_Parallel.i"
 	@echo "... HSV_Parallel.s"
+	@echo "... Thresh_Parallel.o"
+	@echo "... Thresh_Parallel.i"
+	@echo "... Thresh_Parallel.s"
 	@echo "... Vision.o"
 	@echo "... Vision.i"
 	@echo "... Vision.s"

@@ -41,6 +41,7 @@ class Vision
 
 	// Globals
 	int displayf;
+	int parallelf;
 
 	//extract green
 	int HMin;
@@ -50,11 +51,13 @@ class Vision
 	int VMin;
 	int VMax;
 
+
 	std::vector< std::vector< cv::Point> > contoursTemplate;
 
 	int process_template();
 	static double distance(int width);
 	static long long gettime_usec();
+	void setParallel(int flag);
 	int process(cv::Mat img, cv::Mat &imgDraw);
 
 } ;
