@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.cpp" "/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/Vision.dir/HSV_Parallel.cpp.o"
-  "/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp" "/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o"
-  "/home/pi/TechClub/2017/Vision/test_vid/Vision.cpp" "/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/Vision.dir/Vision.cpp.o"
-  "/home/pi/TechClub/2017/Vision/test_vid/Vision_test.cpp" "/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/Vision.dir/Vision_test.cpp.o"
+  "/home/pi/Vision/2017/test_vid/HSV_Parallel.cpp" "/home/pi/Vision/2017/test_vid/build/CMakeFiles/Vision.dir/HSV_Parallel.cpp.o"
+  "/home/pi/Vision/2017/test_vid/Thresh_Parallel.cpp" "/home/pi/Vision/2017/test_vid/build/CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o"
+  "/home/pi/Vision/2017/test_vid/Vision.cpp" "/home/pi/Vision/2017/test_vid/build/CMakeFiles/Vision.dir/Vision.cpp.o"
+  "/home/pi/Vision/2017/test_vid/Vision_test.cpp" "/home/pi/Vision/2017/test_vid/build/CMakeFiles/Vision.dir/Vision_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
