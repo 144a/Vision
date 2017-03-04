@@ -103,6 +103,8 @@ sys/time.h
 -
 Vision.h
 /home/pi/Vision/2017/test_vid/Vision.h
+mosquitto.h
+-
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

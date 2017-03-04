@@ -23,7 +23,10 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 #include <math.h>
 #include <sys/time.h>
 #include "Vision.h"
+#include <mosquitto.h>
 
+#define mqtt_host "localhost"
+#define mqtt_port 1883
 
 
 void usage(){
@@ -99,7 +102,23 @@ int main(int argc, char** argv){
 	long long tstart;
 	long long tend;
 	double trun;
+	int rc;
+	char stemp[80];
 	
+	mosquitto_lib_init();
+	
+	memset(clientid, 0, 24);
+	snprintf(clientid, 23, "mysql_log_%d", getpid());
+	mosq = mosquitto_new(clientid, true, 0);
+	
+	if(!mosq)
+		{
+			printf("Couldn't create client!\n");
+			exit(-1);
+		}
+	
+	rc = mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
+
 	tstart = Vision::gettime_usec();
 	for(;;){
 		cap >> frame;
@@ -110,11 +129,22 @@ int main(int argc, char** argv){
 		frames++;
 		tdelta = tprocess_end - tprocess_start;
 		printf("Process time: %lld\n", tdelta);
-		if(vis.displayf){
+
+		sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
+		mosquitto_publish(mosq, 0, "SX/blahorwhatever", strlen(stemp), stemp, 0, 0);
+		rc = mosquitto_loop(mosq, 0, 1);
+		if(rc){
+			printf("connection error!\n");
+			// sleep(10);
+			mosquitto_reconnect(mosq);
+		}
+
+
+		if(vis.displayf) {
 			cv::imshow("Contours", imgDraw);
 		}
-		if(cv::waitKey(1) >= 0) break;
-		// cv::waitKey(0);
+		// if(cv::waitKey(1) >= 0) break;
+		cv::waitKey(0);
 	}
 	tend = Vision::gettime_usec();
 
@@ -123,6 +153,13 @@ int main(int argc, char** argv){
 				 frames, (1.0 * frames/trun));
 	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",
 				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
+
+	if(mosq) {
+		mosquitto_destroy(mosq);
+	}
+	
+	mosquitto_lib_cleanup();
+		
 	return 0;
 	
 }

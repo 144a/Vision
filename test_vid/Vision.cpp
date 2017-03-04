@@ -70,6 +70,7 @@ Vision::Vision()
 
 	displayf = 0;
 	parallelf = 0;
+	mosqf = 0;
 }
 
 
@@ -91,11 +92,19 @@ int Vision::process_template()
 }
 
 // find distance to target
-double Vision::distance(int width)
+double Vision::distance_calc(int width)
 {
-	return (-0.2555350554 * width + 24.3431734317);
+	distance = (-0.2555350554 * width + 24.3431734317);
+	return distance;
 }
 
+// find angle to taret
+double Vision::angle_calc(int xPos)
+{
+	angle = (atan((xPos-320.0)/530.47) * (180.0/M_PI));
+	return angle; 
+}
+		
 // return Linux time a long long microseconds
 long long Vision::gettime_usec()
 {
@@ -350,10 +359,12 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		double y[2];
 		y[0] = 1.0 * rects[0].y;
 		y[1] = 1.0 * rects[1].y;
-		printf("distance!?!: %6.2lf\n", distance(rects[0].width));
+		vis.distance_calc(rects[0].width);
+		vis.angle_calc(rects[0].x);
+		printf("distance!?!: %6.2lf\n",vis.distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
-		printf("Analysed %3d Contours\n", rects.size());
-	
+		printf("angleish: %6.2lf %d\n", vis.angle, rects[0].x);
+ 
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
 	//cv::destroyAllWindows(); 
@@ -471,7 +482,7 @@ int main(int argc, char** argv){
 	trun = (1.0 * tend - tstart)/1e6;
 	printf("time: %7.3lf frames: %ld  fps: %6.2lf\n", trun,
 				 frames, (1.0 * frames/trun));
-	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",
+	printf("time_t: %suseconds_t: %d long: %d long long %d\n",
 				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
 	return 0;
 	
