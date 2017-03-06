@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.cpp
+/home/pi/Vision/2017/test_vid/HSV_Parallel.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -14,9 +14,9 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 HSV_Parallel.h
-/home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.h
+/home/pi/Vision/2017/test_vid/HSV_Parallel.h
 
-/home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.h
+/home/pi/Vision/2017/test_vid/HSV_Parallel.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -24,7 +24,7 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp
+/home/pi/Vision/2017/test_vid/Thresh_Parallel.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -32,9 +32,9 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 Thresh_Parallel.h
-/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
+/home/pi/Vision/2017/test_vid/Thresh_Parallel.h
 
-/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
+/home/pi/Vision/2017/test_vid/Thresh_Parallel.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -42,7 +42,7 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/pi/TechClub/2017/Vision/test_vid/Vision.cpp
+/home/pi/Vision/2017/test_vid/Vision.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -60,13 +60,13 @@ math.h
 sys/time.h
 -
 Vision.h
-/home/pi/TechClub/2017/Vision/test_vid/Vision.h
+/home/pi/Vision/2017/test_vid/Vision.h
 HSV_Parallel.h
-/home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.h
+/home/pi/Vision/2017/test_vid/HSV_Parallel.h
 Thresh_Parallel.h
-/home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.h
+/home/pi/Vision/2017/test_vid/Thresh_Parallel.h
 
-/home/pi/TechClub/2017/Vision/test_vid/Vision.h
+/home/pi/Vision/2017/test_vid/Vision.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -84,7 +84,7 @@ math.h
 sys/time.h
 -
 
-/home/pi/TechClub/2017/Vision/test_vid/Vision_test.cpp
+/home/pi/Vision/2017/test_vid/Vision_test.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -106,7 +106,7 @@ math.h
 sys/time.h
 -
 Vision.h
-/home/pi/TechClub/2017/Vision/test_vid/Vision.h
+/home/pi/Vision/2017/test_vid/Vision.h
 mosquitto.h
 -
 
@@ -269,9 +269,9 @@ ostream
 /usr/local/include/opencv2/core/fast_math.hpp
 opencv2/core/cvdef.h
 /usr/local/include/opencv2/core/opencv2/core/cvdef.h
-fastmath.h
--
 cmath
+-
+fastmath.h
 -
 math.h
 -

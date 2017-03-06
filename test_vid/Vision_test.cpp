@@ -52,7 +52,7 @@ int main(int argc, char** argv){
 	vis.parallelf = 0;
 	int mosqf = 0;
 	
-	if (argc > 4){
+	if (argc > 5){
 		usage();
 		return -1;
 	}
@@ -144,7 +144,7 @@ int main(int argc, char** argv){
 
 		sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
 		if(mosqf) {
-			mosquitto_publish(mosq, 0, "SX/blahorwhatever", strlen(stemp), stemp, 0, 0);
+			mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
 			rc = mosquitto_loop(mosq, 0, 1);
 			if(rc){
 				printf("connection error!\n");
