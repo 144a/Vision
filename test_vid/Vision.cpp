@@ -299,20 +299,20 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		}
 	*/
 	
-	/*
+	
 	// Filter Contours
 	std::vector< cv::Rect > nrects;
 	std::vector< cv::Moments > nmoms;
 
-	for(int iter = 0; iter < moms.size();) {
-	if(moms[iter].m00 < 100 * 1.0) {
-	nmoms.push_back(moms[iter]);
-	nrects.push_back(rects[iter]);
-	} else {
-	iter++;
+	for(int i = 0; i < moms.size();) {
+		if(moms[i].m00 >= 100 * 1.0) {
+			nmoms.push_back(moms[i]);
+			nrects.push_back(rects[i]);
+		} else {
+			i++;
+		}
 	}
-	}
-	*/
+	
 	
 	/*
 	// using indexes
@@ -340,11 +340,11 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	// using iterators
 	std::vector< cv::Rect > nrects;
 	
-	for(int iter = 0; iter < rects.size(); iter++) {
-	for(int iter2 = 0; iter2 < rects.size(); iter2++) {
-	if(true or((((1.0 * rects[iter2].height)/(1.0 * rects[iter].y - 1.0 * rects[iter2].y)) < 80) && (((1.0 * rects[iter2].height)/(1.0 * rects[iter].y - 1.0 * rects[iter2].y)) > 55))) {
-	nrects.push_back(rects[iter]);
-	nrects.push_back(rects[iter2]);
+	for(int i = 0; i < rects.size(); i++) {
+	for(int j = 0; j < rects.size(); j++) {
+	if(true or((((1.0 * rects[j].height)/(1.0 * rects[i].y - 1.0 * rects[j].y)) < 80) && (((1.0 * rects[j].height)/(1.0 * rects[i].y - 1.0 * rects[j].y)) > 55))) {
+	nrects.push_back(rects[i]);
+	nrects.push_back(rects[j]);
 	rects.clear();
 	rects.push_back(nrects[0]);
 	rects.push_back(nrects[1]);
@@ -363,7 +363,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		angle_calc(rects[0].x);
 		printf("distance!?!: %6.2lf\n",distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
-		printf("angleish: %6.2lf %d\n", angle, rects[0].x);
+		printf("angleish: %6.2lf %d %d\n", angle, rects[0].x, nrects[0].x);
  
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
