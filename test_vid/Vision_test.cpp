@@ -18,6 +18,8 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
 #include <iostream>
 #include <string.h>
 #include <math.h>
@@ -30,10 +32,11 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 
 
 void usage(){
-	printf("usage: Vision [-h] [-d] [-p] [fid]\n");
+	printf("usage: Vision [-h] [-d] [-m] [-p] [fid]\n");
 	printf("where:\n");
 	printf("       -h - print this help screen\n");
 	printf("       -d - display processing frames\n");
+	printf("       -m - publish distance and angle to MQTT broker\n");
 	printf("       -p - use TBB for parallel processing on all 4 cores\n");
 	printf("       fid - file name to process\n");
 	printf("             if no file name is given, use camera 0\n");
@@ -47,6 +50,7 @@ int main(int argc, char** argv){
 	char* fid = 0;
 	vis.displayf = 0;
 	vis.parallelf = 0;
+	int mosqf = 0;
 	
 	if (argc > 4){
 		usage();
@@ -57,15 +61,19 @@ int main(int argc, char** argv){
 		for(i = 1; i < argc; i++) { 
 			if(*argv[i] == '-'){
 				switch(argv[i][1]){
-				case 'd':
+				case 'd': // display
 					vis.displayf = 1;
 					break;
 				
-				case 'p':
+				case 'm': // MQTT
+					mosqf = 1;
+					break;
+					
+				case 'p': // parallel execution using TBB
 					vis.setParallel(1);
 					break;
 				
-				case 'h':
+				case 'h': // help
 					usage();
 					return 0;
 					break;
@@ -104,21 +112,25 @@ int main(int argc, char** argv){
 	double trun;
 	int rc;
 	char stemp[80];
-	
-	mosquitto_lib_init();
-	
-	memset(clientid, 0, 24);
-	snprintf(clientid, 23, "mysql_log_%d", getpid());
-	mosq = mosquitto_new(clientid, true, 0);
-	
-	if(!mosq)
-		{
-			printf("Couldn't create client!\n");
-			exit(-1);
-		}
-	
-	rc = mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
+	struct mosquitto *mosq;
+	char clientid[24];
 
+	if(mosqf) {
+		mosquitto_lib_init();
+	
+		memset(clientid, 0, 24);
+		snprintf(clientid, 23, "vision_%d", getpid());
+		mosq = mosquitto_new(clientid, true, 0);
+	
+		if(!mosq)
+			{
+				printf("Couldn't create MQTT client!\n");
+				exit(-1);
+			}
+	
+		rc = mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
+	}
+	
 	tstart = Vision::gettime_usec();
 	for(;;){
 		cap >> frame;
@@ -131,20 +143,21 @@ int main(int argc, char** argv){
 		printf("Process time: %lld\n", tdelta);
 
 		sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
-		mosquitto_publish(mosq, 0, "SX/blahorwhatever", strlen(stemp), stemp, 0, 0);
-		rc = mosquitto_loop(mosq, 0, 1);
-		if(rc){
-			printf("connection error!\n");
-			// sleep(10);
-			mosquitto_reconnect(mosq);
+		if(mosqf) {
+			mosquitto_publish(mosq, 0, "SX/blahorwhatever", strlen(stemp), stemp, 0, 0);
+			rc = mosquitto_loop(mosq, 0, 1);
+			if(rc){
+				printf("connection error!\n");
+				// sleep(10);
+				mosquitto_reconnect(mosq);
+			}
 		}
-
 
 		if(vis.displayf) {
 			cv::imshow("Contours", imgDraw);
 		}
-		// if(cv::waitKey(1) >= 0) break;
-		cv::waitKey(0);
+		if(cv::waitKey(1) >= 0) break;
+		// cv::waitKey(0);
 	}
 	tend = Vision::gettime_usec();
 
@@ -154,12 +167,13 @@ int main(int argc, char** argv){
 	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",
 				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
 
-	if(mosq) {
-		mosquitto_destroy(mosq);
+	if(mosqf) {
+		if(mosq) {
+			mosquitto_destroy(mosq);
+		}
+		mosquitto_lib_cleanup();
 	}
 	
-	mosquitto_lib_cleanup();
-		
 	return 0;
 	
 }

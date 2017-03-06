@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Vision/2017/test_vid
+CMAKE_SOURCE_DIR = /home/pi/TechClub/2017/Vision/test_vid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Vision/2017/test_vid/build
+CMAKE_BINARY_DIR = /home/pi/TechClub/2017/Vision/test_vid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Vision.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Vision.dir/flags.make
 
 CMakeFiles/Vision.dir/Vision.cpp.o: CMakeFiles/Vision.dir/flags.make
 CMakeFiles/Vision.dir/Vision.cpp.o: ../Vision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Vision/2017/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vision.dir/Vision.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Vision.cpp.o -c /home/pi/Vision/2017/test_vid/Vision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vision.dir/Vision.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Vision.cpp.o -c /home/pi/TechClub/2017/Vision/test_vid/Vision.cpp
 
 CMakeFiles/Vision.dir/Vision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vision.dir/Vision.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Vision/2017/test_vid/Vision.cpp > CMakeFiles/Vision.dir/Vision.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TechClub/2017/Vision/test_vid/Vision.cpp > CMakeFiles/Vision.dir/Vision.cpp.i
 
 CMakeFiles/Vision.dir/Vision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vision.dir/Vision.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Vision/2017/test_vid/Vision.cpp -o CMakeFiles/Vision.dir/Vision.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TechClub/2017/Vision/test_vid/Vision.cpp -o CMakeFiles/Vision.dir/Vision.cpp.s
 
 CMakeFiles/Vision.dir/Vision.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Vision.dir/Vision.cpp.o.provides.build: CMakeFiles/Vision.dir/Vision.
 
 CMakeFiles/Vision.dir/Vision_test.cpp.o: CMakeFiles/Vision.dir/flags.make
 CMakeFiles/Vision.dir/Vision_test.cpp.o: ../Vision_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Vision/2017/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vision.dir/Vision_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Vision_test.cpp.o -c /home/pi/Vision/2017/test_vid/Vision_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vision.dir/Vision_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Vision_test.cpp.o -c /home/pi/TechClub/2017/Vision/test_vid/Vision_test.cpp
 
 CMakeFiles/Vision.dir/Vision_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vision.dir/Vision_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Vision/2017/test_vid/Vision_test.cpp > CMakeFiles/Vision.dir/Vision_test.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TechClub/2017/Vision/test_vid/Vision_test.cpp > CMakeFiles/Vision.dir/Vision_test.cpp.i
 
 CMakeFiles/Vision.dir/Vision_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vision.dir/Vision_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Vision/2017/test_vid/Vision_test.cpp -o CMakeFiles/Vision.dir/Vision_test.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TechClub/2017/Vision/test_vid/Vision_test.cpp -o CMakeFiles/Vision.dir/Vision_test.cpp.s
 
 CMakeFiles/Vision.dir/Vision_test.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/Vision.dir/Vision_test.cpp.o.provides.build: CMakeFiles/Vision.dir/Vi
 
 CMakeFiles/Vision.dir/HSV_Parallel.cpp.o: CMakeFiles/Vision.dir/flags.make
 CMakeFiles/Vision.dir/HSV_Parallel.cpp.o: ../HSV_Parallel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Vision/2017/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vision.dir/HSV_Parallel.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/HSV_Parallel.cpp.o -c /home/pi/Vision/2017/test_vid/HSV_Parallel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vision.dir/HSV_Parallel.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/HSV_Parallel.cpp.o -c /home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.cpp
 
 CMakeFiles/Vision.dir/HSV_Parallel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vision.dir/HSV_Parallel.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Vision/2017/test_vid/HSV_Parallel.cpp > CMakeFiles/Vision.dir/HSV_Parallel.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.cpp > CMakeFiles/Vision.dir/HSV_Parallel.cpp.i
 
 CMakeFiles/Vision.dir/HSV_Parallel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vision.dir/HSV_Parallel.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Vision/2017/test_vid/HSV_Parallel.cpp -o CMakeFiles/Vision.dir/HSV_Parallel.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TechClub/2017/Vision/test_vid/HSV_Parallel.cpp -o CMakeFiles/Vision.dir/HSV_Parallel.cpp.s
 
 CMakeFiles/Vision.dir/HSV_Parallel.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/Vision.dir/HSV_Parallel.cpp.o.provides.build: CMakeFiles/Vision.dir/H
 
 CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o: CMakeFiles/Vision.dir/flags.make
 CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o: ../Thresh_Parallel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Vision/2017/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o -c /home/pi/Vision/2017/test_vid/Thresh_Parallel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o -c /home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp
 
 CMakeFiles/Vision.dir/Thresh_Parallel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vision.dir/Thresh_Parallel.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Vision/2017/test_vid/Thresh_Parallel.cpp > CMakeFiles/Vision.dir/Thresh_Parallel.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp > CMakeFiles/Vision.dir/Thresh_Parallel.cpp.i
 
 CMakeFiles/Vision.dir/Thresh_Parallel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vision.dir/Thresh_Parallel.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Vision/2017/test_vid/Thresh_Parallel.cpp -o CMakeFiles/Vision.dir/Thresh_Parallel.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TechClub/2017/Vision/test_vid/Thresh_Parallel.cpp -o CMakeFiles/Vision.dir/Thresh_Parallel.cpp.s
 
 CMakeFiles/Vision.dir/Thresh_Parallel.cpp.o.requires:
 
@@ -185,7 +185,7 @@ Vision: /usr/local/lib/libopencv_imgcodecs.so.3.2.0
 Vision: /usr/local/lib/libopencv_imgproc.so.3.2.0
 Vision: /usr/local/lib/libopencv_core.so.3.2.0
 Vision: CMakeFiles/Vision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Vision/2017/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Vision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Vision"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Vision.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,6 +205,6 @@ CMakeFiles/Vision.dir/clean:
 .PHONY : CMakeFiles/Vision.dir/clean
 
 CMakeFiles/Vision.dir/depend:
-	cd /home/pi/Vision/2017/test_vid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Vision/2017/test_vid /home/pi/Vision/2017/test_vid /home/pi/Vision/2017/test_vid/build /home/pi/Vision/2017/test_vid/build /home/pi/Vision/2017/test_vid/build/CMakeFiles/Vision.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/TechClub/2017/Vision/test_vid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/TechClub/2017/Vision/test_vid /home/pi/TechClub/2017/Vision/test_vid /home/pi/TechClub/2017/Vision/test_vid/build /home/pi/TechClub/2017/Vision/test_vid/build /home/pi/TechClub/2017/Vision/test_vid/build/CMakeFiles/Vision.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Vision.dir/depend
 

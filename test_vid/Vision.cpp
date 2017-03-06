@@ -359,11 +359,11 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		double y[2];
 		y[0] = 1.0 * rects[0].y;
 		y[1] = 1.0 * rects[1].y;
-		vis.distance_calc(rects[0].width);
-		vis.angle_calc(rects[0].x);
-		printf("distance!?!: %6.2lf\n",vis.distance);
+		distance_calc(rects[0].width);
+		angle_calc(rects[0].x);
+		printf("distance!?!: %6.2lf\n",distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
-		printf("angleish: %6.2lf %d\n", vis.angle, rects[0].x);
+		printf("angleish: %6.2lf %d\n", angle, rects[0].x);
  
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
