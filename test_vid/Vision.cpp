@@ -299,7 +299,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		}
 	*/
 	
-	
+	/*
 	// Filter Contours
 	std::vector< cv::Rect > nrects;
 	std::vector< cv::Moments > nmoms;
@@ -312,7 +312,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 			i++;
 		}
 	}
-	
+	*/
 	
 	/*
 	// using indexes
@@ -363,7 +363,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		angle_calc(rects[0].x);
 		printf("distance!?!: %6.2lf\n",distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
-		printf("angleish: %6.2lf %d %d\n", angle, rects[0].x, nrects[0].x);
+		printf("angleish: %6.2lf %d %d\n", angle, rects[0].x, rects[0].x);
  
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
