@@ -299,23 +299,21 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		}
 	*/
 	
-	/*
+	
 	// Filter Contours
 	std::vector< cv::Rect > nrects;
 	std::vector< cv::Moments > nmoms;
 
-	for(int i = 0; i < moms.size();) {
-		if(moms[i].m00 >= 100 * 1.0) {
+	for(int i = 0; i < moms.size(); i++) {
+		if(moms[i].m00 >= 100.0) {
 			nmoms.push_back(moms[i]);
 			nrects.push_back(rects[i]);
-		} else {
-			i++;
+			printf("Found it! Rects Size: %d\n", nrects.size());
 		}
-	}
-	*/
+	}	
 	
 	/*
-	// using indexes
+	// using iterators
 	std::vector<cv::Rect>::iterator itR = rects.begin();
 	std::vector<cv::Rect>::iterator itR2 = rects.begin();
 
@@ -335,25 +333,34 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	}
 	itR++;
 	}
-	
-
-	// using iterators
-	std::vector< cv::Rect > nrects;
-	
-	for(int i = 0; i < rects.size(); i++) {
-	for(int j = 0; j < rects.size(); j++) {
-	if(true or((((1.0 * rects[j].height)/(1.0 * rects[i].y - 1.0 * rects[j].y)) < 80) && (((1.0 * rects[j].height)/(1.0 * rects[i].y - 1.0 * rects[j].y)) > 55))) {
-	nrects.push_back(rects[i]);
-	nrects.push_back(rects[j]);
-	rects.clear();
-	rects.push_back(nrects[0]);
-	rects.push_back(nrects[1]);
-					
-	}
-	}
-	}
-
 	*/
+
+	
+	// using indexes
+	//	std::vector< cv::Rect > nrects;
+	
+	for(int i = 0; i < nrects.size(); i++) {
+		for(int j = 0; j < nrects.size(); j++) {
+			if(i != j) {
+				double rat = ((1.0 * nrects[j].height)/(1.0 * nrects[i].y - 1.0 * nrects[j].y));
+				printf("Nrects Ratio: %6.2lf\n", rat);
+				if((rat < 0.80) &&	(rat > 0.55)) {
+					printf("Good Nrects Ratio: %6.2lf\n", rat);
+					rects.clear();
+					rects.push_back(nrects[i]);
+					rects.push_back(nrects[j]);
+					printf("Rects Size: %d\n", rects.size());
+					//	nrects.push_back(rects[i]);
+					//	nrects.push_back(rects[j]);
+					//	rects.clear();
+					//	rects.push_back(nrects[0]);
+					//	rects.push_back(nrects[1]);
+				}
+			}
+		}
+	}
+
+	
 	
 	if(contours.size() >= 1){
 		double y[2];
