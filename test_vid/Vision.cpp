@@ -71,6 +71,9 @@ Vision::Vision()
 	displayf = 0;
 	parallelf = 0;
 	mosqf = 0;
+	
+	distance = 0.0;
+	angle = 0.0;
 }
 
 
@@ -345,7 +348,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 				double rat = ((1.0 * nrects[j].height)/(1.0 * nrects[i].y - 1.0 * nrects[j].y));
 				printf("Nrects Ratio: %6.2lf\n", rat);
 				if((rat < 0.80) &&	(rat > 0.55)) {
-					printf("Good Nrects Ratio: %6.2lf\n", rat);
+					printf("Good Nrects Ratio: %6.2lf top: %d bot: %d\n", rat, j, i);
 					rects.clear();
 					rects.push_back(nrects[i]);
 					rects.push_back(nrects[j]);

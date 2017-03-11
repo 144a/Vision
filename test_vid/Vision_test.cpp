@@ -143,6 +143,7 @@ int main(int argc, char** argv){
 		printf("Process time: %lld\n", tdelta);
 
 		sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
+		// sprintf(stemp, "%6.2lf %6.2lf", 5.0, 10.0);
 		if(mosqf) {
 			mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
 			rc = mosquitto_loop(mosq, 0, 1);
@@ -156,6 +157,7 @@ int main(int argc, char** argv){
 		if(vis.displayf) {
 			cv::imshow("Contours", imgDraw);
 		}
+		// printf("HEEEEEEEEEEYY!!");
 		if(cv::waitKey(1) >= 0) break;
 		// cv::waitKey(0);
 	}
