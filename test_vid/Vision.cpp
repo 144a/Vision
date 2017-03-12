@@ -35,15 +35,7 @@
 
 Vision::Vision() 
 {
-	/*
-	//extract blue
-	int HMin = 75; // 120 from robot code
-	int HMax = 1300; // 170 from robot code
-	int SMin = 180;
-	int SMax = 255;
-	int VMin = 150;
-	int VMax = 255;
-	*/
+	
 	//extract green
 	HMin = 70;
 	HMax = 100;
@@ -52,21 +44,6 @@ Vision::Vision()
 	VMin = 125;
 	VMax = 255;
 
-	/*
-		Colors from new template *tentative*
-		bright:
-		H:180
-		S:38
-		L:100
-		middle:
-		H:177
-		S:94
-		L:98
-		dark:
-		H:165
-		S:94
-		L:82
-	*/
 
 	displayf = 0;
 	parallelf = 0;
@@ -291,18 +268,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	long long tcontloopend = gettime_usec();
 	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
-	/*
-		std::vector<cv::Moments>::iterator itM = moms.begin();
-		std::vector<cv::Rect>::iterator itR = rects.begin();
-	
-		while(itM != moms.end())	{
-		printf("m00: %6.2lf   h: %3d   w: %3d\n", itM->m00 , itR->height, itR->width);
-		itM++;
-		itR++;
-		}
-	*/
-	
-	
+
 	// Filter Contours
 	std::vector< cv::Rect > nrects;
 	std::vector< cv::Moments > nmoms;
@@ -315,29 +281,6 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 		}
 	}	
 	
-	/*
-	// using iterators
-	std::vector<cv::Rect>::iterator itR = rects.begin();
-	std::vector<cv::Rect>::iterator itR2 = rects.begin();
-
-	std::vector< cv::Rect > nrects;
-
-	while(itR != rects.end()) {
-	itR2 = rects.begin();
-	while(itR2 != rects.end()) {
-	if((((1.0 * itR2->height)/(1.0 * itR->y - 1.0 * itR2->y)) < 80) && (((1.0 * itR2->height)/(1.0 * itR->y - 1.0 * itR2->y)) > 55)) {
-	nrects.push_back(itR);
-	nrects.push_back(itR2);
-	rects.clear();
-	rects.push_back(nrects[0]);
-	rects.push_back(nrects[1]);
-	}
-	itR2++;
-	}
-	itR++;
-	}
-	*/
-
 	
 	// using indexes
 	//	std::vector< cv::Rect > nrects;
@@ -354,11 +297,6 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 					rects.push_back(nrects[i]);
 					rects.push_back(nrects[j]);
 					printf("Rects Size: %d\n", rects.size());
-					//	nrects.push_back(rects[i]);
-					//	nrects.push_back(rects[j]);
-					//	rects.clear();
-					//	rects.push_back(nrects[0]);
-					//	rects.push_back(nrects[1]);
 				}
 			}
 		}
@@ -383,120 +321,3 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	return 0;
 }
 
-/*
-	int main(int argc, char *argv[])
-	{
-	cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
-	cv::VideoCapture cap;
-	cap.open(std::string(argv[1]));
-	cv::Mat frame;
-	cv::Mat imgDraw;;
-	process_template();
-	while(1) {
-	cap >> frame;
-	if(!frame.data) break; // ran out of film
-	process(frame, imgDraw);
-	cv::imshow("Contours", imgDraw);
-	if(cv::waitKey(1) >= 0) break;
-	}
-	return 0;
-	}
-*/
-
-/*
-void usage(){
-	printf("usage: Vision [-h] [-d] [fid]\n");
-	printf("where:\n");
-	printf("       -h - print this help screen\n");
-	printf("       -d - display processing frames\n");
-	printf("       fid - file name to process\n");
-	printf("             if no file name is given, use camera 0\n");
-}
-
-int main(int argc, char** argv){
-	
-	Vision vis;
-
-	char* fid = 0;
-	vis.displayf = 0;
-	
-	if (argc > 3){
-		usage();
-		return -1;
-	}
-	
-	if(argc > 1){
-		if(*argv[1] == '-'){
-			switch(argv[1][1]){
-			case 'd':
-				vis.displayf = 1;
-				if (argc > 2){
-					fid = argv[2];
-				}
-				break;
-				
-			case 'h':
-				usage();
-				return 0;
-				break;
-
-			}
-		} else {
-			fid = argv[1];	
-		}		
-	}
-
-	printf("*%s*", fid);
-	if(vis.displayf){
-		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
-	}
-	cv::VideoCapture cap;
-	if(fid == 0){
-		cap.open(0);              //open first camera
-	}else{
-		cap.open(fid);
-	}
-	if(!cap.isOpened()){        //check if we succeeded
-		std::cerr << "Couldn't open capture. Life sucks." <<std::endl;
-		return -1;
-	}
-	
-	cv::Mat frame;
-	cv::Mat imgDraw;
-	vis.process_template();
-	long long tprocess_start;
-	long long tprocess_end;
-	long long tdelta;
-	long frames = 0;
-	long long tstart;
-	long long tend;
-	double trun;
-	
-	tstart = Vision::gettime_usec();
-	for(;;){
-		cap >> frame;
-		if(frame.empty()) break;
-		tprocess_start = vis.gettime_usec();
-		vis.process(frame, imgDraw);
-		tprocess_end = Vision::gettime_usec();
-		frames++;
-		tdelta = tprocess_end - tprocess_start;
-		printf("Process time: %lld\n", tdelta);
-		if(vis.displayf){
-			cv::imshow("Contours", imgDraw);
-		}
-		if(cv::waitKey(1) >= 0) break;
-		// cv::waitKey(0);
-	}
-	tend = Vision::gettime_usec();
-
-	trun = (1.0 * tend - tstart)/1e6;
-	printf("time: %7.3lf frames: %ld  fps: %6.2lf\n", trun,
-				 frames, (1.0 * frames/trun));
-	printf("time_t: %suseconds_t: %d long: %d long long %d\n",
-				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
-	return 0;
-	
-}
-
-*/
