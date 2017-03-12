@@ -12,3 +12,6 @@ rotate: 180
 
 Will need to add this to the launcher script
 
+template.jpg is a link to the appropriate template file for the target, either
+template_gear.jpg or template_boiler.jpg
+

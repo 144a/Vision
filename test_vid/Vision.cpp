@@ -55,10 +55,10 @@ Vision::Vision()
 
 
 
-int Vision::process_template()
+int Vision::process_template(char *templateFile)
 {
 	// ok, now lets get ready to match template.jpg
-	cv::Mat imgTemplate = cv::imread(TEMPLATE_FILE, -1);
+	cv::Mat imgTemplate = cv::imread(templateFile, -1);
 	if(imgTemplate.empty()) return -1;
 	cv::cvtColor(imgTemplate, imgTemplate, CV_BGR2HSV);
 	cv::inRange(imgTemplate, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgTemplate);
@@ -72,14 +72,28 @@ int Vision::process_template()
 }
 
 // find distance to target
-double Vision::distance_calc(int width)
+double Vision::distance_calc_boiler(int width)
 {
 	distance = (-0.2555350554 * width + 24.3431734317);
 	return distance;
 }
 
 // find angle to taret
-double Vision::angle_calc(int xPos)
+double Vision::angle_calc_boiler(int xPos)
+{
+	angle = (atan((xPos-320.0)/530.47) * (180.0/M_PI));
+	return angle; 
+}
+		
+// find distance to target
+double Vision::distance_calc_gear(int width)
+{
+	distance = (-0.2555350554 * width + 24.3431734317);
+	return distance;
+}
+
+// find angle to taret
+double Vision::angle_calc_gear(int xPos)
 {
 	angle = (atan((xPos-320.0)/530.47) * (180.0/M_PI));
 	return angle; 
@@ -101,7 +115,7 @@ void Vision::setParallel(int flag)
 	parallelf = flag;
 }
 
-int Vision::process(cv::Mat img, cv::Mat &imgDraw)
+int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 {
 	printf("\n");
 	// cv::Mat img = cv::imread(argv[1], -1);
@@ -171,17 +185,18 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	// cv::Mat imgDraw(img);
 	imgDraw = img;
 	cv::Mat imgCont(imgOpen);
-	std::vector< std::vector< cv::Point> > contours;
+	contours.clear();
 	long long tcontoursstart = gettime_usec();
 	cv::findContours(imgCont, contours, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
 	long long tcontoursend = gettime_usec();
 	printf("Contour time: %lld usec\n", tcontoursend - tcontoursstart);
-	std::vector< cv::Moments > moms;
 	imgCont = cv::Scalar::all(0);
 	if(displayf){
 		cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
 	}
-	std::vector< cv::Rect > rects;
+
+	moms.clear();
+	rects.clear();
 
 	printf("Found %d contours\n", contours.size());
 
@@ -268,7 +283,19 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	long long tcontloopend = gettime_usec();
 	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
+	if(filterf == 0) {
+		filterBoiler();
+	} else {
+		filterGear();
+	}
 
+	//cv::destroyAllWindows(); 
+
+	return 0;
+}
+
+int Vision::filterBoiler(void)
+{
 	// Filter Contours
 	std::vector< cv::Rect > nrects;
 	std::vector< cv::Moments > nmoms;
@@ -280,7 +307,6 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 			printf("Found it! Rects Size: %d\n", nrects.size());
 		}
 	}	
-	
 	
 	// using indexes
 	//	std::vector< cv::Rect > nrects;
@@ -301,23 +327,23 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 			}
 		}
 	}
-
-	
 	
 	if(contours.size() >= 1){
 		double y[2];
 		y[0] = 1.0 * rects[0].y;
 		y[1] = 1.0 * rects[1].y;
-		distance_calc(rects[0].width);
-		angle_calc(rects[0].x);
-		printf("distance!?!: %6.2lf\n",distance);
+		distance_calc_boiler(rects[0].width);
+		angle_calc_boiler(rects[0].x);
+		printf("distance!?!: %6.2lf\n", distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
 		printf("angleish: %6.2lf %d %d\n", angle, rects[0].x, rects[0].x);
  
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
-	//cv::destroyAllWindows(); 
 
 	return 0;
 }
 
+int Vision::filterGear(void)
+{
+}

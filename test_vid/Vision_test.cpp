@@ -32,12 +32,13 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 
 
 void usage(){
-	printf("usage: Vision [-h] [-d] [-m] [-p] [fid]\n");
+	printf("usage: Vision [OPTIONS] [fid]\n");
 	printf("where:\n");
 	printf("       -h - print this help screen\n");
 	printf("       -d - display processing frames\n");
 	printf("       -m - publish distance and angle to MQTT broker\n");
 	printf("       -p - use TBB for parallel processing on all 4 cores\n");
+	printf("       -g - for gear. Default is boiler\n");
 	printf("       fid - file name to process\n");
 	printf("             if no file name is given, use camera 0\n");
 }
@@ -51,8 +52,9 @@ int main(int argc, char** argv){
 	vis.displayf = 0;
 	vis.parallelf = 0;
 	int mosqf = 0;
+	int filterf = 0; // default to boiler
 	
-	if (argc > 5){
+	if (argc > 6){
 		usage();
 		return -1;
 	}
@@ -63,6 +65,10 @@ int main(int argc, char** argv){
 				switch(argv[i][1]){
 				case 'd': // display
 					vis.displayf = 1;
+					break;
+				
+				case 'g': // gear or boiler
+					filterf = 1;
 					break;
 				
 				case 'm': // MQTT
@@ -102,7 +108,8 @@ int main(int argc, char** argv){
 	
 	cv::Mat frame;
 	cv::Mat imgDraw;
-	vis.process_template();
+	vis.process_template(filterf ? TEMPLATE_FILE_GEAR : TEMPLATE_FILE_BOILER);
+
 	long long tprocess_start;
 	long long tprocess_end;
 	long long tdelta;
@@ -139,7 +146,7 @@ int main(int argc, char** argv){
 		printf("Columns: %d Rows: %d\n", frame.cols, frame.rows);
 		
 		tprocess_start = vis.gettime_usec();
-		vis.process(frame, imgDraw);
+		vis.process(frame, imgDraw, filterf);
 		tprocess_end = Vision::gettime_usec();
 		frames++;
 		tdelta = tprocess_end - tprocess_start;
