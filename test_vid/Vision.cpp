@@ -163,7 +163,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	cv::Mat imgOpen;
 	if(parallelf) {
 		// cloning imgThresh in here, and performing Open operation inplace increased from ~9.7msec to ~17.3msec
-		// Wow! Just replacing morphologyEx Open operation with erode() followed by dilate reduces Morphology step from ~9.6 msec to 2.4 msec!
+		// Wow! Just replacing morphologyEx Open operation with erode() followed by dilate() reduces Morphology step from ~9.6 msec to 2.4 msec!
 		// Process time now around 21-23 msec
 		cv::Mat imgTemp;
 		cv::erode(imgThresh, imgTemp, cv::Mat());
@@ -337,13 +337,49 @@ int Vision::filterBoiler(void)
 		printf("distance!?!: %6.2lf\n", distance);
 		printf("ratio: %6.2lf   %6.2lf %6.2lf\n", (1.0 * rects[1].height)/(y[0] - y[1]), y[0], y[1]);
 		printf("angleish: %6.2lf %d %d\n", angle, rects[0].x, rects[0].x);
- 
+		
 		//printf("m00: %6.2lf   h: %3d   w: %3d\n", moms[0].m00 , rects[0].height, rects[0].width);
 	}
-
+	
 	return 0;
 }
 
 int Vision::filterGear(void)
 {
+	// Filter Contours
+	std::vector< cv::Rect > nrects;
+	std::vector< cv::Moments > nmoms;
+	
+	for(int i = 0; i < moms.size(); i++) {
+		if(moms[i].m00 >= 100.0) {
+			nmoms.push_back(moms[i]);
+			nrects.push_back(rects[i]);
+			printf("Found it! Rects Size: %d\n", nrects.size());
+		}
+	}
+	
+	for(int i = 0; i < nrects.size(); i++) {
+		for(int j = 0; j < nrects.size(); j++) {
+			if(i!=j) {
+				if(abs(nrects[i].width - nrects[j].width) < 10) {
+					rects.clear();
+					rects.push_back(nrects[i]);
+					rects.push_back(nrects[j]);
+				}
+			}
+		}
+	}
+	
+	if(contours.size() >= 1){
+
+		distance_calc_gear(abs(rects[0].x - rects[1].x));
+		angle_calc_gear((rects[0].x + rects[1].x) / 2.0);
+		printf("distance!?!: %6.2lf\n", distance);
+		printf("angleish: %6.2lf %d %d\n", angle);
+
+
+	}
+
+	return 0;
+	
 }
