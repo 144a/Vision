@@ -1,0 +1,14 @@
+20170311
+
+Need bcm2835_v4l2 module to use Raspberry Pi camera w/OpenCV
+Added to /etc/modules
+
+To rotate camera:
+pi@Pi1:~/Vision/2017 $ v4l2-ctl -c rotate=180
+
+To read it:
+pi@Pi1:~/Vision/2017 $ v4l2-ctl -C rotate
+rotate: 180
+
+Will need to add this to the launcher script
+

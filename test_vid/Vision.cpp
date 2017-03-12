@@ -345,9 +345,10 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw)
 	for(int i = 0; i < nrects.size(); i++) {
 		for(int j = 0; j < nrects.size(); j++) {
 			if(i != j) {
-				double rat = ((1.0 * nrects[j].height)/(1.0 * nrects[i].y - 1.0 * nrects[j].y));
+				double rat = (1.0 * nrects[j].height)/((1.0 * nrects[i].y - 0.5 * nrects[i].height) -
+																							 (1.0 * nrects[j].y - 0.5 * nrects[j].height));
 				printf("Nrects Ratio: %6.2lf\n", rat);
-				if((rat < 0.80) &&	(rat > 0.55)) {
+				if((rat > 0.4) &&	(rat < 0.7)) {
 					printf("Good Nrects Ratio: %6.2lf top: %d bot: %d\n", rat, j, i);
 					rects.clear();
 					rects.push_back(nrects[i]);

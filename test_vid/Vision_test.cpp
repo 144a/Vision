@@ -85,7 +85,7 @@ int main(int argc, char** argv){
 		}
 	}
 
-	printf("*%s*", fid);
+	printf("*%s*\n", fid);
 	if(vis.displayf){
 		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 	}
@@ -135,6 +135,9 @@ int main(int argc, char** argv){
 	for(;;){
 		cap >> frame;
 		if(frame.empty()) break;
+
+		printf("Columns: %d Rows: %d\n", frame.cols, frame.rows);
+		
 		tprocess_start = vis.gettime_usec();
 		vis.process(frame, imgDraw);
 		tprocess_end = Vision::gettime_usec();
