@@ -27,7 +27,7 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 #include "Vision.h"
 #include <mosquitto.h>
 
-#define mqtt_host "localhost" // roborio-2358-frc.local
+#define mqtt_host "roborio-2358-frc.local" // roborio-2358-frc.local
 #define mqtt_port 1183
 
 
