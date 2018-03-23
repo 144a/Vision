@@ -1,0 +1,3 @@
+/home/bobd/TechClub/2018/Vision/test_vid/CMakeFiles/rebuild_cache.dir
+/home/bobd/TechClub/2018/Vision/test_vid/CMakeFiles/Vision.dir
+/home/bobd/TechClub/2018/Vision/test_vid/CMakeFiles/edit_cache.dir

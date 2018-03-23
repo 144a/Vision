@@ -35,7 +35,7 @@
 
 Vision::Vision() 
 {
-	
+	/*
 	//extract green
 	HMin = 70;
 	HMax = 100;
@@ -43,7 +43,15 @@ Vision::Vision()
 	SMax = 255;
 	VMin = 125;
 	VMax = 255;
+	*/
 
+	//extract yellow
+	HMin = 25;
+	HMax = 30;
+	SMin = 90;
+	SMax = 255;
+	VMin = 125;
+	VMax = 255;
 
 	displayf = 0;
 	parallelf = 0;
@@ -96,6 +104,21 @@ double Vision::distance_calc_gear(int width)
 double Vision::angle_calc_gear(int xPos)
 {
 	angle = (atan((xPos-320.0)/530.47) * (180.0/M_PI));
+	return angle; 
+}
+		
+// find distance to target
+double Vision::distance_calc_cube(int y)
+{
+	distance = 480.0 - y;
+	return distance;
+}
+
+// find angle to taret
+double Vision::angle_calc_cube(int xPos)
+{
+	// match sign of gyro
+	angle = atan((xPos-320.0)/530.47) * (180.0/M_PI);
 	return angle; 
 }
 		
@@ -178,9 +201,6 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	// cv::imshow("Open", imgOpen);
 
 
-
-
-
 	// find countours
 	// cv::Mat imgDraw(img);
 	imgDraw = img;
@@ -192,7 +212,8 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	printf("Contour time: %lld usec\n", tcontoursend - tcontoursstart);
 	imgCont = cv::Scalar::all(0);
 	if(displayf){
-		cv::drawContours(imgDraw, contours, -1, cv::Scalar::all(255));
+		cv::drawContours(imgDraw, contours, -1, cv::Scalar(0, 0, 255));
+		// cv::waitKey(0);
 	}
 
 	moms.clear();
@@ -202,18 +223,24 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 	// find bounding rectangle
 	if(displayf){
-		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
+		cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
+		// cv::waitKey(0);
 	}
 
 	long long tcontloopstart = gettime_usec();
 	for(int i = 0; i < contours.size(); i++) {
+		if(displayf) {
+			imgDraw = img.clone();
+		}
+
 		// bounding rectangle
 		
 		cv::Rect rect1 = cv::boundingRect(contours[i]);
 		if(displayf){
 			cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
+			// cv::rectangle(imgDraw, cv::boundingRect(contours[i]), cv::Scalar(255, 0, 0));
 		}
-		
+
 		// minimum area (rotated) rectangle
 		// cv::RotatedRect rect1 = cv::minAreaRect(contours[i]);
 
@@ -221,17 +248,9 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		// removed this line when not dsiplaying
 		// reduced Contour loop time from ~3.4 msec to 0.15 msec for 2 countours
 		if(displayf) {
-			imgDraw = img.clone();
+			// imgDraw = img.clone();
 		}
 			
-		/*
-			cv::Point2f vertices[4];
-			rect1.points(vertices);
-			for (int j = 0; j < 4; j++) {
-			cv::line(imgDraw,  vertices[j], vertices[(j+1)%4], cv::Scalar(0,255,0));
-			}
-		*/
-		
 		// compute Moments so we can find center of each contour (for printing for now)
 		long long tmomentsstart = gettime_usec();
 		cv::Moments mom1 = cv::moments(contours[i], true);
@@ -245,13 +264,19 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		// printf("m00: %lf m10: %lf m01: %lf x: %lf, y: %lf\n", mom1.m00, mom1.m10, mom1.m01,
 		// mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		
-		printf("m00: %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
+		printf("m00 (area): %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
 		
+
+		/*
 		// check match against template
 		long long tmatchstart = gettime_usec();
+		// following line is causing crashes
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
 		long long tmatchend = gettime_usec();
 		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
+		*/
+		double match = 0;
+
 		int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 		double fontScale = 0.5;
 		char s1[255];
@@ -259,7 +284,8 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		if(displayf){
 			if((match <= 3.0)) {
 			
-				sprintf(s1, "#%d %0.2lf", i, match);
+				// sprintf(s1, "#%d %0.2lf", i, match);
+				sprintf(s1, "#%d %0.2lf", i, rect1.area());
 				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
 
 				sprintf(s1, "x: %d", center.x);
@@ -277,17 +303,15 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 				cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
 			}
 		}
-		//cv::imshow("Contours", imgDraw);
-		//cv::waitKey(0);
+		cv::resizeWindow("Contours", 1280, 960);
+		cv::imshow("Contours", imgDraw);
+		// cv::waitKey(0);
 	}
 	long long tcontloopend = gettime_usec();
 	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
-	if(filterf == 0) {
-		filterBoiler();
-	} else {
-		filterGear();
-	}
+	filterCube();
+	cv::waitKey(0);
 
 	//cv::destroyAllWindows(); 
 
@@ -382,4 +406,35 @@ int Vision::filterGear(void)
 
 	return 0;
 	
+}
+
+int Vision::filterCube(void)
+{
+	// Filter Contours
+	int idxMaxArea = -1;
+	double MaxArea = -1;
+	
+	for(int i = 0; i < moms.size(); i++) {
+		if(moms[i].m00 > MaxArea) {
+			idxMaxArea = i;
+			MaxArea = moms[i].m00;
+		}
+	}
+	
+	if(idxMaxArea != -1) {
+		printf("Found it! Area: %8.1lf  Rect area:%8.1lf\n",
+					 MaxArea, 1.0 * rects[idxMaxArea].height * rects[idxMaxArea].width);
+
+		if(contours.size() >= 1){
+			// use bottom of cube for distance
+			printf("y: %d  height: %d\n", rects[idxMaxArea].y, rects[idxMaxArea].height);
+			distance_calc_cube(rects[idxMaxArea].y + rects[idxMaxArea].height);
+			// use left-right center of cube for angle calculation
+			angle_calc_cube(rects[idxMaxArea].x + rects[idxMaxArea].width/2);
+			printf("distance!?!: %6.2lf\n", distance);
+			printf("angleish: %6.2lf\n", angle);
+		}
+	}
+
+	return 0;
 }

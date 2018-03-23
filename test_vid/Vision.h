@@ -36,40 +36,43 @@
 
 class Vision
 {
-  public:
-Vision();
-~Vision() {};
+ public:
+	Vision();
+	~Vision() {};
 
-// Globals
-int displayf;
-int parallelf;
-int mosqf;
-double distance;
-double angle;
+	// Globals
+	int displayf;
+	int parallelf;
+	int mosqf;
+	double distance;
+	double angle;
 	
-//extract green
-int HMin;
-int HMax;
-int SMin;
-int SMax;
-int VMin;
-int VMax;
+	//extract green
+	int HMin;
+	int HMax;
+	int SMin;
+	int SMax;
+	int VMin;
+	int VMax;
 
-std::vector< std::vector< cv::Point> > contours;
-std::vector< cv::Moments > moms;
-std::vector< cv::Rect > rects;
+	std::vector< std::vector< cv::Point> > contours;
+	std::vector< cv::Moments > moms;
+	std::vector< cv::Rect > rects;
 
-std::vector< std::vector< cv::Point> > contoursTemplate;
+	std::vector< std::vector< cv::Point> > contoursTemplate;
 
-int process_template(char *templateFile);
-double distance_calc_boiler(int width);
-double angle_calc_boiler(int xPos);
-double distance_calc_gear(int width);
-double angle_calc_gear(int xPos);
-static long long gettime_usec();
-void setParallel(int flag);
-int process(cv::Mat img, cv::Mat &imgDraw, int filter);
-int filterBoiler(void);
-int filterGear(void);
+	int process_template(char *templateFile);
+	double distance_calc_boiler(int width);
+	double angle_calc_boiler(int xPos);
+	double distance_calc_gear(int width);
+	double angle_calc_gear(int xPos);
+	double distance_calc_cube(int y);
+	double angle_calc_cube(int xPos);
+	static long long gettime_usec();
+	void setParallel(int flag);
+	int process(cv::Mat img, cv::Mat &imgDraw, int filter);
+	int filterBoiler(void);
+	int filterGear(void);
+	int filterCube(void);
 
 } ;
