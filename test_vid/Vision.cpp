@@ -302,17 +302,17 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 			} else {
 				cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
 			}
+			// cv::resizeWindow("Contours", 1280, 960); // didn't work, must not have Qt compiled in
+			cv::imshow("Contours", imgDraw);
+			cv::waitKey(0);
 		}
-		cv::resizeWindow("Contours", 1280, 960);
-		cv::imshow("Contours", imgDraw);
-		// cv::waitKey(0);
 	}
 	long long tcontloopend = gettime_usec();
 	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
 	filterCube();
-	cv::waitKey(0);
-
+	// cv::waitKey(0); // for testing, to pause here
+	
 	//cv::destroyAllWindows(); 
 
 	return 0;

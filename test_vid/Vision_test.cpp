@@ -3,6 +3,13 @@
 	 created 2/28/17 BD
 
 	 info:
+
+	 2018:
+	 - to build project, in test_vid directory issue "make"
+	 - to run project, be in Vision directory
+	 - cmake - not sure where
+
+	 2016-17:
 	 - to make OpenCV project, copy and edit CMakeLists.tst
 	 - cd to "build" directory under source
 	 $ cmake ..
@@ -27,7 +34,8 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 #include "Vision.h"
 #include <mosquitto.h>
 
-#define mqtt_host "roborio-2358-frc.local" // roborio-2358-frc.local
+// #define mqtt_host "roborio-2358-frc.local" // roborio-2358-frc.local
+#define mqtt_host "192.168.1.112" // laptop
 #define mqtt_port 1183
 
 
