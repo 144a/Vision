@@ -56,6 +56,7 @@ int main(int argc, char** argv){
 	
 	Vision vis;
 	int i;
+	int ret = 0;
 	
 	char* fid = 0;
 	vis.displayf = 0;
@@ -155,21 +156,23 @@ int main(int argc, char** argv){
 		printf("Columns: %d Rows: %d\n", frame.cols, frame.rows);
 		
 		tprocess_start = vis.gettime_usec();
-		vis.process(frame, imgDraw, filterf);
+		ret = vis.process(frame, imgDraw, filterf);
 		tprocess_end = Vision::gettime_usec();
 		frames++;
 		tdelta = tprocess_end - tprocess_start;
 		printf("Process time: %lld\n", tdelta);
 
-		sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
+		if(ret) {
+			sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
 		
-		if(mosqf) {
-			mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
-			rc = mosquitto_loop(mosq, 0, 1);
-			if(rc){
-				printf("connection error!\n");
-				// sleep(10);
-				mosquitto_reconnect(mosq);
+			if(mosqf) {
+				mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
+				rc = mosquitto_loop(mosq, 0, 1);
+				if(rc){
+					printf("connection error!\n");
+					// sleep(10);
+					mosquitto_reconnect(mosq);
+				}
 			}
 		}
 
@@ -177,7 +180,9 @@ int main(int argc, char** argv){
 			cv::imshow("Contours", imgDraw);
 		}
 
-		if(cv::waitKey(1) >= 0) break;
+		// one or the other of the following lines (or neither)
+		// not both
+		// if(cv::waitKey(1) >= 0) break;
 		// cv::waitKey(0);
 	}
 	tend = Vision::gettime_usec();

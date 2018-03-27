@@ -140,6 +140,12 @@ void Vision::setParallel(int flag)
 
 int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 {
+	// return:
+	// 1 - if cube found
+	// 0 - if not
+
+	int ret = 0;
+
 	printf("\n");
 	// cv::Mat img = cv::imread(argv[1], -1);
 	// if(img.empty()) return -1;
@@ -310,12 +316,14 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	long long tcontloopend = gettime_usec();
 	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
 
-	filterCube();
-	// cv::waitKey(0); // for testing, to pause here
+	if(contours.size() >= 1) {
+		ret = filterCube();
+		// cv::waitKey(0); // for testing, to pause here
 	
-	//cv::destroyAllWindows(); 
+		//cv::destroyAllWindows(); 
+	}
 
-	return 0;
+	return ret;
 }
 
 int Vision::filterBoiler(void)
@@ -411,8 +419,14 @@ int Vision::filterGear(void)
 int Vision::filterCube(void)
 {
 	// Filter Contours
+	// return:
+	// 0 - if cube not found
+	// 1 - if cube found
+	// for now, returns 1 as long as contours were found
+	
 	int idxMaxArea = -1;
 	double MaxArea = -1;
+	int ret = 0;
 	
 	for(int i = 0; i < moms.size(); i++) {
 		if(moms[i].m00 > MaxArea) {
@@ -433,8 +447,9 @@ int Vision::filterCube(void)
 			angle_calc_cube(rects[idxMaxArea].x + rects[idxMaxArea].width/2);
 			printf("distance!?!: %6.2lf\n", distance);
 			printf("angleish: %6.2lf\n", angle);
+			ret = 1;
 		}
 	}
 
-	return 0;
+	return ret;
 }
