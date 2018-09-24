@@ -34,9 +34,9 @@ pi@raspberrypi:~/TechClub/2017/Vision_pll $ test_vid/build/Vision Test_Vids/2017
 #include "Vision.h"
 #include <mosquitto.h>
 
-#define mqtt_host "roborio-2358-frc.local" // roborio-2358-frc.local
-// #define mqtt_host "192.168.1.112" // laptop
-// #define mqtt_host "localhost" // laptop
+#define MQTT_HOST "roborio-2358-frc.local" // roborio-2358-frc.local
+// #define MQTT_HOST "192.168.1.112" // laptop
+// #define MQTT_HOST "localhost" // laptop
 #define mqtt_port 1183
 
 
@@ -45,7 +45,7 @@ void usage(){
 	printf("where:\n");
 	printf("       -h - print this help screen\n");
 	printf("       -d - display processing frames\n");
-	printf("       -m - publish distance and angle to MQTT broker\n");
+	printf("       -m[=addr] - publish distance and angle to MQTT broker [optional address]\n");
 	printf("       -p - use TBB for parallel processing on all 4 cores\n");
 	printf("       -g - for gear. Default is boiler\n");
 	printf("       fid - file name to process\n");
@@ -63,11 +63,16 @@ int main(int argc, char** argv){
 	vis.parallelf = 0;
 	int mosqf = 0;
 	int filterf = 0; // default to boiler
+	char mqtt_host[256];
 	
 	if (argc > 6){
 		usage();
 		return -1;
 	}
+
+	// copy default server address
+	strncpy(mqtt_host, MQTT_HOST, 255);
+	mqtt_host[255] = 0;
 	
 	if(argc > 1){
 		for(i = 1; i < argc; i++) { 
@@ -83,6 +88,11 @@ int main(int argc, char** argv){
 				
 				case 'm': // MQTT
 					mosqf = 1;
+					if(argv[i][2] == '=') {
+						// get MQTT server address
+						strncpy(mqtt_host, &argv[i][3], 255);
+						mqtt_host[255] = 0;
+					}
 					break;
 					
 				case 'p': // parallel execution using TBB
@@ -102,6 +112,8 @@ int main(int argc, char** argv){
 	}
 
 	printf("*%s*\n", fid);
+	printf("MQTT server: *%s*\n", mqtt_host);
+
 	if(vis.displayf){
 		cv::namedWindow("Contours", cv::WINDOW_AUTOSIZE);
 	}
@@ -138,7 +150,7 @@ int main(int argc, char** argv){
 		memset(clientid, 0, 24);
 		snprintf(clientid, 23, "vision_%d", getpid());
 		mosq = mosquitto_new(clientid, true, 0);
-	
+		
 		if(!mosq)
 			{
 				printf("Couldn't create MQTT client!\n");
@@ -146,6 +158,7 @@ int main(int argc, char** argv){
 			}
 	
 		rc = mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
+		printf("mosquitto_connect ret: %d\n", rc);
 	}
 	
 	tstart = Vision::gettime_usec();
@@ -157,6 +170,7 @@ int main(int argc, char** argv){
 		
 		tprocess_start = vis.gettime_usec();
 		ret = vis.process(frame, imgDraw, filterf);
+		printf("vis.process ret: %d\n", ret);
 		tprocess_end = Vision::gettime_usec();
 		frames++;
 		tdelta = tprocess_end - tprocess_start;
@@ -164,7 +178,7 @@ int main(int argc, char** argv){
 
 		if(ret) {
 			sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
-		
+			
 			if(mosqf) {
 				mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
 				rc = mosquitto_loop(mosq, 0, 1);
