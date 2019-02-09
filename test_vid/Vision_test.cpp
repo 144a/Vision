@@ -130,8 +130,13 @@ int main(int argc, char** argv){
 	
 	cv::Mat frame;
 	cv::Mat imgDraw;
-	vis.process_template(filterf ? TEMPLATE_FILE_GEAR : TEMPLATE_FILE_BOILER);
-
+	// Changed to use new template image of vision target for hatches
+	ret = vis.process_template(TEMPLATE_FILE);
+	if(ret != 0) {
+	  printf("Could not find template file %s\n", TEMPLATE_FILE);
+	  exit(-1);
+	}
+	
 	long long tprocess_start;
 	long long tprocess_end;
 	long long tdelta;
@@ -197,7 +202,7 @@ int main(int argc, char** argv){
 		// one or the other of the following lines (or neither)
 		// not both
 		// if(cv::waitKey(1) >= 0) break;
-		// cv::waitKey(0);
+		cv::waitKey(0);
 	}
 	tend = Vision::gettime_usec();
 

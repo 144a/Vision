@@ -35,16 +35,20 @@
 
 Vision::Vision() 
 {
-	/*
-	//extract green
-	HMin = 70;
-	HMax = 100;
-	SMin = 125;
-	SMax = 255;
-	VMin = 125;
-	VMax = 255;
-	*/
 
+  //extract green
+	HMin = 80;
+	HMax = 100;
+	SMin = 200;
+	SMax = 255;
+	VMin = 200;
+	VMax = 255;
+	
+	// H: 0-180
+	// S: 0-255
+	// V: 0-255
+
+	/*
 	//extract yellow
 	HMin = 25;
 	HMax = 30;
@@ -52,7 +56,8 @@ Vision::Vision()
 	SMax = 255;
 	VMin = 125;
 	VMax = 255;
-
+	*/
+	
 	displayf = 0;
 	parallelf = 0;
 	mosqf = 0;
@@ -73,9 +78,11 @@ int Vision::process_template(char *templateFile)
 	cv::morphologyEx(imgTemplate, imgTemplate, CV_MOP_OPEN, cv::Mat());
 	cv::findContours(imgTemplate, contoursTemplate, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
 	
-	// cv::namedWindow("Template", cv::WINDOW_AUTOSIZE);
-	// cv::imshow("Template", imgTemplate);
-	// cv::waitKey(0);
+	cv::namedWindow("Template", cv::WINDOW_AUTOSIZE);
+	cv::imshow("Template", imgTemplate);
+	cv::waitKey(0);
+
+	return 0;
 
 }
 
@@ -149,8 +156,8 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	printf("\n");
 	// cv::Mat img = cv::imread(argv[1], -1);
 	// if(img.empty()) return -1;
-	// cv::namedWindow("Input", cv::WINDOW_AUTOSIZE);
-	// cv::imshow("Input", img);
+  cv::namedWindow("Input", cv::WINDOW_AUTOSIZE);
+	cv::imshow("Input", img);
 
 	// first convert to HSV
 	long long tHSVstart = gettime_usec();
@@ -183,8 +190,8 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	
 	long long tthreshend = gettime_usec();
 	printf("Threshold time: %lld usec\n", tthreshend - tthreshstart);
-	// cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);
-	// cv::imshow("Threshold", imgThresh);
+	cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);
+	cv::imshow("Threshold", imgThresh);
 
 	// erode and dilate
 	long long tmorphstart = gettime_usec();
@@ -229,10 +236,13 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 	// find bounding rectangle
 	if(displayf){
-		cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
-		// cv::waitKey(0);
+
+	  cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
+	  // cv::imshow("Contours", );
+		cv::waitKey(0);
 	}
 
+	
 	long long tcontloopstart = gettime_usec();
 	for(int i = 0; i < contours.size(); i++) {
 		if(displayf) {
@@ -271,9 +281,10 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		// mom1.m10/mom1.m00, mom1.m01/mom1.m00);
 		
 		printf("m00 (area): %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
-		
 
+		
 		/*
+		//  (>^-^)>-  - - - >         < ~ ~ ~  -<(^-^<)      
 		// check match against template
 		long long tmatchstart = gettime_usec();
 		// following line is causing crashes
@@ -281,12 +292,43 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		long long tmatchend = gettime_usec();
 		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
 		*/
-		double match = 0;
 
+		/*
+		// New code to match the combined contours
+		// First, create a set of vectors of all combined contours
+		// for both new image and template (should be done in
+		// process_template(), but ill fix it later)
+		std::vector<cv::Point> newContour;
+		newContour.insert(newContour.end(), contours[i].begin(), contours[i].end());
+		newContour.insert(newContour.end(), contours[i+1].begin(), contours[i+1].end());
+		std::vector<cv::Point> newTemplateContour;
+		newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[0].begin(), contoursTemplate[0].end());
+		newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[1].begin(), contoursTemplate[1].end());
+		*/
+		
+		long long tmatchstart = gettime_usec();
+		// following line is causing crashes
+		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
+
+		// compares sets of contours
+		// double match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
+
+		long long tmatchend = gettime_usec();
+		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
+		
+		
 		int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 		double fontScale = 0.5;
+		
+		// double match = 0;
+	       
+
 		char s1[255];
- 		// sprintf(s1, "#%d %0.2lf", i, match);
+ 		sprintf(s1, "#%d %0.2lf", i, match);
+		printf("HELP ME PLEASE: %6.2lf\n", match);
+	       
+		
+	     
 		if(displayf){
 			if((match <= 3.0)) {
 			

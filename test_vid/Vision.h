@@ -30,8 +30,7 @@
 #include <math.h>
 #include <sys/time.h>
 
-#define TEMPLATE_FILE_BOILER "template_boiler.jpg"
-#define TEMPLATE_FILE_GEAR "template_gear.jpg"
+#define TEMPLATE_FILE "../../ImageThatWasEdited.jpg"
 
 
 class Vision
