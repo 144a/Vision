@@ -37,9 +37,9 @@ Vision::Vision()
 {
 
   //extract green
-	HMin = 80;
-	HMax = 100;
-	SMin = 200;
+	HMin = 70;
+	HMax = 120;
+	SMin = 65;
 	SMax = 255;
 	VMin = 200;
 	VMax = 255;
@@ -125,6 +125,12 @@ double Vision::distance_calc_cube(int y)
 double Vision::angle_calc_cube(int xPos)
 {
 	// match sign of gyro
+	angle = atan((xPos-320.0)/530.47) * (180.0/M_PI);
+	return angle; 
+}
+
+double Vision::angle_calc_target(int xPos)
+{
 	angle = atan((xPos-320.0)/530.47) * (180.0/M_PI);
 	return angle; 
 }
@@ -225,7 +231,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	printf("Contour time: %lld usec\n", tcontoursend - tcontoursstart);
 	imgCont = cv::Scalar::all(0);
 	if(displayf){
-		cv::drawContours(imgDraw, contours, -1, cv::Scalar(0, 0, 255));
+		// cv::drawContours(imgDraw, contours, -1, cv::Scalar(0, 0, 255));
 		// cv::waitKey(0);
 	}
 
@@ -234,27 +240,95 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 	printf("Found %d contours\n", contours.size());
 
+	if(contours.size() < 2) {
+		return 0;
+	}
+	
 	// find bounding rectangle
 	if(displayf){
 
-	  cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
+		// cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
 	  // cv::imshow("Contours", );
-		cv::waitKey(0);
+		// cv::waitKey(0);
 	}
 
+	// New code to match the combined contours
+	// First, create a set of vectors of all combined contours
+	// for both new image and template (should be done in
+	// process_template(), but ill fix it later)
+	std::vector<cv::Point> newContour;
+	std::vector<cv::Point> newTemplateContour;
+	newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[0].begin(), contoursTemplate[0].end());
+	newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[1].begin(), contoursTemplate[1].end());
+	double bestMatch = -1;
+	double match = -1;
+	int cont1;
+	int cont2;
 	
-	long long tcontloopstart = gettime_usec();
 	for(int i = 0; i < contours.size(); i++) {
+		for(int j = 0; j < contours.size(); j++) {
+			if(i != j) {
+				newContour.clear();
+				newContour.insert(newContour.end(), contours[i].begin(), contours[i].end());
+				newContour.insert(newContour.end(), contours[j].begin(), contours[j].end());
+
+				// compares sets of contours
+				match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
+				printf("Match-y Thing-y: %6.2lf\n", match);
+
+				if(match < bestMatch || bestMatch == -1) {
+					bestMatch = match;
+					cont1 = i;
+					cont2 = j;
+				}
+				
+				imgDraw = img.clone();
+				cv::drawContours(imgDraw, contours, i, cv::Scalar(0, 0, 255));
+				cv::drawContours(imgDraw, contours, j, cv::Scalar(0, 0, 255));
+				cv::imshow("Contours", imgDraw);
+	
+				// cv::waitKey(0);
+			}
+		}
+	}
+
+	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
+	
+	if(displayf) {
+	  imgDraw = img.clone();
+		cv::drawContours(imgDraw, contours, cont1, cv::Scalar(0, 0, 255));
+		cv::drawContours(imgDraw, contours, cont2, cv::Scalar(0, 0, 255));
+
+		// bounding rectangle
+		newContour.clear();
+		newContour.insert(newContour.end(), contours[cont1].begin(), contours[cont1].end());
+		newContour.insert(newContour.end(), contours[cont2].begin(), contours[cont2].end());
+		cv::Rect rect1 = cv::boundingRect(newContour);
+		cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
+		cv::waitKey(0);
+
+		printf("Angle of targets: %6.2lf\n", angle_calc_target(rect1.x + rect1.width / 2));
+		 
+		
+	}
+	
+	
+
+
+
+	/*
+		long long tcontloopstart = gettime_usec();
+		for(int i = 0; i < contours.size(); i++) {
 		if(displayf) {
-			imgDraw = img.clone();
+		imgDraw = img.clone();
 		}
 
 		// bounding rectangle
 		
 		cv::Rect rect1 = cv::boundingRect(contours[i]);
 		if(displayf){
-			cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
-			// cv::rectangle(imgDraw, cv::boundingRect(contours[i]), cv::Scalar(255, 0, 0));
+		cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
+		// cv::rectangle(imgDraw, cv::boundingRect(contours[i]), cv::Scalar(255, 0, 0));
 		}
 
 		// minimum area (rotated) rectangle
@@ -264,7 +338,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		// removed this line when not dsiplaying
 		// reduced Contour loop time from ~3.4 msec to 0.15 msec for 2 countours
 		if(displayf) {
-			// imgDraw = img.clone();
+		// imgDraw = img.clone();
 		}
 			
 		// compute Moments so we can find center of each contour (for printing for now)
@@ -283,7 +357,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		printf("m00 (area): %6.2lf   h: %3d   w: %3d y: %3d\n", mom1.m00, rect1.height, rect1.width, rect1.y);
 
 		
-		/*
+		// / *
 		//  (>^-^)>-  - - - >         < ~ ~ ~  -<(^-^<)      
 		// check match against template
 		long long tmatchstart = gettime_usec();
@@ -291,9 +365,9 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
 		long long tmatchend = gettime_usec();
 		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
-		*/
+		// * /
 
-		/*
+		
 		// New code to match the combined contours
 		// First, create a set of vectors of all combined contours
 		// for both new image and template (should be done in
@@ -304,14 +378,14 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		std::vector<cv::Point> newTemplateContour;
 		newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[0].begin(), contoursTemplate[0].end());
 		newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[1].begin(), contoursTemplate[1].end());
-		*/
+		
 		
 		long long tmatchstart = gettime_usec();
 		// following line is causing crashes
-		double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
+		// double match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
 
 		// compares sets of contours
-		// double match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
+		double match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
 
 		long long tmatchend = gettime_usec();
 		printf("Match Shapes time: %lld\n", tmatchend - tmatchstart);
@@ -324,49 +398,54 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	       
 
 		char s1[255];
- 		sprintf(s1, "#%d %0.2lf", i, match);
+		sprintf(s1, "#%d %0.2lf", i, match);
 		printf("HELP ME PLEASE: %6.2lf\n", match);
 	       
 		
 	     
 		if(displayf){
-			if((match <= 3.0)) {
+		if((match <= 3.0)) {
 			
-				// sprintf(s1, "#%d %0.2lf", i, match);
-				sprintf(s1, "#%d %0.2lf", i, rect1.area());
-				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+		// sprintf(s1, "#%d %0.2lf", i, match);
+		sprintf(s1, "#%d %0.2lf", i, rect1.area());
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
 
-				sprintf(s1, "x: %d", center.x);
-				ptText.y += 15;
-				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+		sprintf(s1, "x: %d", center.x);
+		ptText.y += 15;
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
 
-				sprintf(s1, "y: %d", center.y);
-				ptText.y += 15;
-				cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+		sprintf(s1, "y: %d", center.y);
+		ptText.y += 15;
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
 			
-				// print distance from target to cli
-				//printf("%d feet away\n", distance(240.0 - center.y));
+		// print distance from target to cli
+		//printf("%d feet away\n", distance(240.0 - center.y));
 			
-			} else {
-				cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
-			}
-			// cv::resizeWindow("Contours", 1280, 960); // didn't work, must not have Qt compiled in
-			cv::imshow("Contours", imgDraw);
-			cv::waitKey(0);
+		} else {
+		cv::putText(imgDraw, s1, center, fontFace, fontScale, cv::Scalar(255, 255, 255), 2);
 		}
-	}
-	long long tcontloopend = gettime_usec();
-	printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
+		// cv::resizeWindow("Contours", 1280, 960); // didn't work, must not have Qt compiled in
+		cv::imshow("Contours", imgDraw);
+		cv::waitKey(0);
+		}
+	*/
 
-	if(contours.size() >= 1) {
+
+	/*
+		long long tcontloopend = gettime_usec();
+		printf("Contour loop time: %lld usec\n", tcontloopend - tcontloopstart);
+
+		if(contours.size() >= 1) {
 		ret = filterCube();
 		// cv::waitKey(0); // for testing, to pause here
 	
 		//cv::destroyAllWindows(); 
-	}
-
+		}
+	*/
+	
 	return ret;
 }
+
 
 int Vision::filterBoiler(void)
 {

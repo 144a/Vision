@@ -120,6 +120,8 @@ int main(int argc, char** argv){
 	cv::VideoCapture cap;
 	if(fid == 0){
 		cap.open(0);              //open first camera
+		cap.set(CV_CAP_PROP_FRAME_WIDTH, 640);
+		cap.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
 	}else{
 		cap.open(fid);
 	}

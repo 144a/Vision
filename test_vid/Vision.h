@@ -67,6 +67,7 @@ class Vision
 	double angle_calc_gear(int xPos);
 	double distance_calc_cube(int y);
 	double angle_calc_cube(int xPos);
+	double angle_calc_target(int xPos);
 	static long long gettime_usec();
 	void setParallel(int flag);
 	int process(cv::Mat img, cv::Mat &imgDraw, int filter);
