@@ -45,6 +45,7 @@ void usage(){
 	printf("where:\n");
 	printf("       -h - print this help screen\n");
 	printf("       -d - display processing frames\n");
+	printf("       -c - display final processing frames\n");
 	printf("       -m[=addr] - publish distance and angle to MQTT broker [optional address]\n");
 	printf("       -p - use TBB for parallel processing on all 4 cores\n");
 	printf("       -g - for gear. Default is boiler\n");
@@ -81,7 +82,9 @@ int main(int argc, char** argv){
 				case 'd': // display
 					vis.displayf = 1;
 					break;
-				
+				case 'c': // display contours
+					vis.displayf = 2;
+					break;
 				case 'g': // gear or boiler
 					filterf = 1;
 					break;
@@ -197,14 +200,14 @@ int main(int argc, char** argv){
 			}
 		}
 
-		if(vis.displayf) {
+		if(vis.displayf == 2) {
 			cv::imshow("Contours", imgDraw);
 		}
 
 		// one or the other of the following lines (or neither)
 		// not both
 		// if(cv::waitKey(1) >= 0) break;
-		cv::waitKey(0);
+		// cv::waitKey(0);
 	}
 	tend = Vision::gettime_usec();
 

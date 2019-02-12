@@ -30,7 +30,7 @@
 #include <math.h>
 #include <sys/time.h>
 
-#define TEMPLATE_FILE "../../ImageThatWasEdited.jpg"
+#define TEMPLATE_FILE "../../Template.jpg"
 
 
 class Vision

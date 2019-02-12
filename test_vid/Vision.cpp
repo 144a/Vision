@@ -77,10 +77,12 @@ int Vision::process_template(char *templateFile)
 	cv::inRange(imgTemplate, cv::Scalar(HMin, SMin, VMin), cv::Scalar(HMax, SMax, VMax), imgTemplate);
 	cv::morphologyEx(imgTemplate, imgTemplate, CV_MOP_OPEN, cv::Mat());
 	cv::findContours(imgTemplate, contoursTemplate, cv::noArray(), cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
-	
-	cv::namedWindow("Template", cv::WINDOW_AUTOSIZE);
-	cv::imshow("Template", imgTemplate);
-	cv::waitKey(0);
+	if(displayf == 1) {
+			cv::namedWindow("Template", cv::WINDOW_AUTOSIZE);
+			cv::imshow("Template", imgTemplate);
+			cv::waitKey(0);
+	}
+
 
 	return 0;
 
@@ -134,6 +136,9 @@ double Vision::angle_calc_target(int xPos)
 	angle = atan((xPos-320.0)/530.47) * (180.0/M_PI);
 	return angle; 
 }
+
+
+
 		
 // return Linux time a long long microseconds
 long long Vision::gettime_usec()
@@ -162,9 +167,12 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	printf("\n");
 	// cv::Mat img = cv::imread(argv[1], -1);
 	// if(img.empty()) return -1;
-  cv::namedWindow("Input", cv::WINDOW_AUTOSIZE);
-	cv::imshow("Input", img);
-
+  
+	if(displayf == 1) {
+		cv::namedWindow("Input", cv::WINDOW_AUTOSIZE);
+		cv::imshow("Input", img);
+	}
+	
 	// first convert to HSV
 	long long tHSVstart = gettime_usec();
 	cv::Mat imgHSV =img.clone(); // faster to create and fill with zeros ?
@@ -195,10 +203,12 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	}
 	
 	long long tthreshend = gettime_usec();
+	
 	printf("Threshold time: %lld usec\n", tthreshend - tthreshstart);
-	cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);
-	cv::imshow("Threshold", imgThresh);
-
+	if(displayf == 1) {
+		cv::namedWindow("Threshold", cv::WINDOW_AUTOSIZE);
+		cv::imshow("Threshold", imgThresh);
+	}
 	// erode and dilate
 	long long tmorphstart = gettime_usec();
 	// cloning imgThresh takes ~0.5 msec
@@ -230,7 +240,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	long long tcontoursend = gettime_usec();
 	printf("Contour time: %lld usec\n", tcontoursend - tcontoursstart);
 	imgCont = cv::Scalar::all(0);
-	if(displayf){
+	if(displayf == 1) {
 		// cv::drawContours(imgDraw, contours, -1, cv::Scalar(0, 0, 255));
 		// cv::waitKey(0);
 	}
@@ -241,11 +251,12 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	printf("Found %d contours\n", contours.size());
 
 	if(contours.size() < 2) {
+		printf("No match found. God hath mercy on us all.\n");
 		return 0;
 	}
 	
 	// find bounding rectangle
-	if(displayf){
+	if(displayf == 1) {
 
 		// cv::namedWindow("Contours", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
 	  // cv::imshow("Contours", );
@@ -262,8 +273,16 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	newTemplateContour.insert(newTemplateContour.end(), contoursTemplate[1].begin(), contoursTemplate[1].end());
 	double bestMatch = -1;
 	double match = -1;
-	int cont1;
-	int cont2;
+	int cont1 = -99;
+	int cont2 = -99;
+	double areaCont1;
+	double areaCont2;
+	bool areaCheck = false;
+
+	int fontFace = cv::FONT_HERSHEY_SIMPLEX;
+	double fontScale = 0.5;
+	char s1[255];
+	cv::Point ptText(40, 40);							 
 	
 	for(int i = 0; i < contours.size(); i++) {
 		for(int j = 0; j < contours.size(); j++) {
@@ -271,45 +290,73 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 				newContour.clear();
 				newContour.insert(newContour.end(), contours[i].begin(), contours[i].end());
 				newContour.insert(newContour.end(), contours[j].begin(), contours[j].end());
-
-				// compares sets of contours
-				match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
-				printf("Match-y Thing-y: %6.2lf\n", match);
-
-				if(match < bestMatch || bestMatch == -1) {
-					bestMatch = match;
-					cont1 = i;
-					cont2 = j;
-				}
 				
-				imgDraw = img.clone();
-				cv::drawContours(imgDraw, contours, i, cv::Scalar(0, 0, 255));
-				cv::drawContours(imgDraw, contours, j, cv::Scalar(0, 0, 255));
-				cv::imshow("Contours", imgDraw);
-	
-				// cv::waitKey(0);
+				// Compare areas of the contour pair. If its greater than 50% similar, we allow the match
+			  
+				areaCont1 = contourArea(contours[i]);
+				areaCont2	= contourArea(contours[j]);
+				printf("Area 1: %6.2lf\n", areaCont1 / areaCont2);
+				printf("Area 2: %6.2lf\n", areaCont2);
+				if(areaCont1 >= areaCont2 && areaCont2 / areaCont1 > .5) {
+					areaCheck = true;
+				} else if(areaCont2 > areaCont1 && areaCont1 / areaCont2 > .5) {
+					areaCheck = true;
+				}
+
+				if(areaCheck) {
+					// compares sets of contours
+					match = cv::matchShapes(newTemplateContour, newContour, CV_CONTOURS_MATCH_I3, 0);
+					printf("Match-y Thing-y: %6.2lf\n", match);
+				
+					// Checks to see if match is "lit" - Caroline
+					if((match < bestMatch && match < 3.0) || bestMatch == -1) {
+						
+						bestMatch = match;
+						cont1 = i;
+						cont2 = j;
+					}
+
+					if(displayf == 1) {
+						imgDraw = img.clone();
+						cv::drawContours(imgDraw, contours, i, cv::Scalar(0, 0, 255));
+						cv::drawContours(imgDraw, contours, j, cv::Scalar(0, 0, 255));
+						cv::imshow("Contours", imgDraw);
+						cv::waitKey(0);
+					}
+				}
 			}
 		}
 	}
 
 	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
+  if(bestMatch == -1) {
+		printf("No Match Found. Did you try turning it off and back on again?");
+	}
 	
-	if(displayf) {
+	// bounding rectangle
+	newContour.clear();
+	newContour.insert(newContour.end(), contours[cont1].begin(), contours[cont1].end());
+	newContour.insert(newContour.end(), contours[cont2].begin(), contours[cont2].end());
+	cv::Rect rect1 = cv::boundingRect(newContour);
+	
+	printf("Angle of targets: %6.2lf\n", angle_calc_target(rect1.x + rect1.width / 2));
+	
+	if(displayf == 2 || displayf == 1) {
 	  imgDraw = img.clone();
 		cv::drawContours(imgDraw, contours, cont1, cv::Scalar(0, 0, 255));
 		cv::drawContours(imgDraw, contours, cont2, cv::Scalar(0, 0, 255));
-
-		// bounding rectangle
-		newContour.clear();
-		newContour.insert(newContour.end(), contours[cont1].begin(), contours[cont1].end());
-		newContour.insert(newContour.end(), contours[cont2].begin(), contours[cont2].end());
-		cv::Rect rect1 = cv::boundingRect(newContour);
 		cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
-		cv::waitKey(0);
+			
+		sprintf(s1, "Match: %6.2lf", bestMatch);
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
 
-		printf("Angle of targets: %6.2lf\n", angle_calc_target(rect1.x + rect1.width / 2));
-		 
+		sprintf(s1, "Angle:  %6.2lf", angle_calc_target(rect1.x + rect1.width / 2));
+		ptText.y += 15;
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+
 		
+		cv::imshow("Contours", imgDraw);
+		cv::waitKey(1);
 	}
 	
 	
