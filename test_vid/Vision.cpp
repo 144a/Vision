@@ -250,9 +250,30 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 	printf("Found %d contours\n", contours.size());
 
+	int fontFace = cv::FONT_HERSHEY_SIMPLEX;
+	double fontScale = 0.5;
+	char s1[255];
+	cv::Point ptText(40, 40);		
+	
 	if(contours.size() < 2) {
 		printf("No match found. God hath mercy on us all.\n");
-		return 0;
+		imgDraw = img.clone();
+		if(displayf > 0) {
+			sprintf(s1, "Match: NONE");
+			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+
+			sprintf(s1, "Angle: UNKNOWN");
+			ptText.y += 15;
+			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+		
+			sprintf(s1, "NO IDEA HOW YOU SCREWED UP THIS BADLY");
+			ptText.y += 15;
+			cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+		
+			cv::imshow("Contours", imgDraw);
+			cv::waitKey(1);
+			return 0;
+		}
 	}
 	
 	// find bounding rectangle
@@ -279,10 +300,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	double areaCont2;
 	bool areaCheck = false;
 
-	int fontFace = cv::FONT_HERSHEY_SIMPLEX;
-	double fontScale = 0.5;
-	char s1[255];
-	cv::Point ptText(40, 40);							 
+						 
 	
 	for(int i = 0; i < contours.size(); i++) {
 		for(int j = 0; j < contours.size(); j++) {
@@ -295,8 +313,8 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 			  
 				areaCont1 = contourArea(contours[i]);
 				areaCont2	= contourArea(contours[j]);
-				printf("Area 1: %6.2lf\n", areaCont1 / areaCont2);
-				printf("Area 2: %6.2lf\n", areaCont2);
+				// printf("Area 1: %6.2lf\n", areaCont1 / areaCont2);
+				// printf("Area 2: %6.2lf\n", areaCont2);
 				if(areaCont1 >= areaCont2 && areaCont2 / areaCont1 > .5) {
 					areaCheck = true;
 				} else if(areaCont2 > areaCont1 && areaCont1 / areaCont2 > .5) {
@@ -315,7 +333,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 						cont1 = i;
 						cont2 = j;
 					}
-
+					// 
 					if(displayf == 1) {
 						imgDraw = img.clone();
 						cv::drawContours(imgDraw, contours, i, cv::Scalar(0, 0, 255));
@@ -330,7 +348,25 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
   if(bestMatch == -1) {
+		imgDraw = img.clone();
 		printf("No Match Found. Did you try turning it off and back on again?");
+		if(displayf == 2) {
+			sprintf(s1, "Match: NONE");
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+
+		sprintf(s1, "Angle: UNKNOWN");
+		ptText.y += 15;
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
+		
+		sprintf(s1, "NO IDEA HOW YOU SCREWED UP THIS BADLY");
+		ptText.y += 15;
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+		
+		cv::imshow("Contours", imgDraw);
+		cv::waitKey(1);
+
+		}
+		return 0;
 	}
 	
 	// bounding rectangle
@@ -352,8 +388,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 
 		sprintf(s1, "Angle:  %6.2lf", angle_calc_target(rect1.x + rect1.width / 2));
 		ptText.y += 15;
-		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1); 
-
+		cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
 		
 		cv::imshow("Contours", imgDraw);
 		cv::waitKey(1);

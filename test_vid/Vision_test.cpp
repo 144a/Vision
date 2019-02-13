@@ -185,7 +185,7 @@ int main(int argc, char** argv){
 		frames++;
 		tdelta = tprocess_end - tprocess_start;
 		printf("Process time: %lld\n", tdelta);
-
+		
 		if(ret) {
 			sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
 			
