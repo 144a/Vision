@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Vision/2018/Vision/test_vid/HSV_Parallel.cpp
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/HSV_Parallel.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -14,9 +14,9 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 HSV_Parallel.h
-/home/pi/Vision/2018/Vision/test_vid/HSV_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/HSV_Parallel.h
 
-/home/pi/Vision/2018/Vision/test_vid/HSV_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/HSV_Parallel.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -24,7 +24,7 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/pi/Vision/2018/Vision/test_vid/Thresh_Parallel.cpp
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Thresh_Parallel.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -32,9 +32,9 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 Thresh_Parallel.h
-/home/pi/Vision/2018/Vision/test_vid/Thresh_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Thresh_Parallel.h
 
-/home/pi/Vision/2018/Vision/test_vid/Thresh_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Thresh_Parallel.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -42,7 +42,7 @@ opencv2/opencv.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/pi/Vision/2018/Vision/test_vid/Vision.cpp
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Vision.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -60,13 +60,13 @@ math.h
 sys/time.h
 -
 Vision.h
-/home/pi/Vision/2018/Vision/test_vid/Vision.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Vision.h
 HSV_Parallel.h
-/home/pi/Vision/2018/Vision/test_vid/HSV_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/HSV_Parallel.h
 Thresh_Parallel.h
-/home/pi/Vision/2018/Vision/test_vid/Thresh_Parallel.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Thresh_Parallel.h
 
-/home/pi/Vision/2018/Vision/test_vid/Vision.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Vision.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -84,7 +84,7 @@ math.h
 sys/time.h
 -
 
-/home/pi/Vision/2018/Vision/test_vid/Vision_test.cpp
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Vision_test.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -106,7 +106,7 @@ math.h
 sys/time.h
 -
 Vision.h
-/home/pi/Vision/2018/Vision/test_vid/Vision.h
+/home/themeatloaf/Desktop/Robotics/2019/Vision/test_vid/Vision.h
 mosquitto.h
 -
 
@@ -147,10 +147,6 @@ opencv2/core/mat.hpp
 /usr/local/include/opencv2/opencv2/core/mat.hpp
 opencv2/core/persistence.hpp
 /usr/local/include/opencv2/opencv2/core/persistence.hpp
-opencv2/opencv.hpp
-/usr/local/include/opencv2/opencv2/opencv.hpp
-opencv2/xfeatures2d.hpp
-/usr/local/include/opencv2/opencv2/xfeatures2d.hpp
 opencv2/core/operations.hpp
 /usr/local/include/opencv2/opencv2/core/operations.hpp
 opencv2/core/cvstd.inl.hpp
@@ -179,8 +175,16 @@ opencv2/core/cvstd.hpp
 /usr/local/include/opencv2/core/opencv2/core/cvstd.hpp
 opencv2/core/neon_utils.hpp
 /usr/local/include/opencv2/core/opencv2/core/neon_utils.hpp
+opencv2/core/vsx_utils.hpp
+/usr/local/include/opencv2/core/opencv2/core/vsx_utils.hpp
+opencv2/core/check.hpp
+/usr/local/include/opencv2/core/opencv2/core/check.hpp
 
 /usr/local/include/opencv2/core/bufferpool.hpp
+
+/usr/local/include/opencv2/core/check.hpp
+opencv2/core/base.hpp
+-
 
 /usr/local/include/opencv2/core/core_c.h
 opencv2/core/types_c.h
@@ -197,6 +201,8 @@ opencv2/core.hpp
 /usr/local/include/opencv2/core/opencv2/core.hpp
 opencv2/core/cuda_types.hpp
 /usr/local/include/opencv2/core/opencv2/core/cuda_types.hpp
+opencv2/opencv.hpp
+-
 opencv2/core/cuda.inl.hpp
 /usr/local/include/opencv2/core/opencv2/core/cuda.inl.hpp
 
@@ -206,11 +212,11 @@ opencv2/core/cuda.hpp
 
 /usr/local/include/opencv2/core/cuda_types.hpp
 
-/usr/local/include/opencv2/core/cvdef.h
-limits.h
--
-opencv2/core/hal/interface.h
-/usr/local/include/opencv2/core/opencv2/core/hal/interface.h
+/usr/local/include/opencv2/core/cv_cpu_dispatch.h
+cv_cpu_config.h
+/usr/local/include/opencv2/core/cv_cpu_config.h
+cv_cpu_helper.h
+/usr/local/include/opencv2/core/cv_cpu_helper.h
 emmintrin.h
 -
 pmmintrin.h
@@ -227,6 +233,14 @@ popcntintrin.h
 -
 immintrin.h
 -
+arm_neon.h
+-
+immintrin.h
+-
+immintrin.h
+-
+immintrin.h
+-
 immintrin.h
 -
 Intrin.h
@@ -235,8 +249,44 @@ arm_neon.h
 -
 arm_neon.h
 -
+arm_neon.h
+-
+altivec.h
+-
+emmintrin.h
+-
+Intrin.h
+-
+arm_neon.h
+-
+arm_neon.h
+-
+altivec.h
+-
+
+/usr/local/include/opencv2/core/cv_cpu_helper.h
+
+/usr/local/include/opencv2/core/cvdef.h
+cvconfig.h
+/usr/local/include/opencv2/core/cvconfig.h
+limits.h
+-
+opencv2/core/hal/interface.h
+/usr/local/include/opencv2/core/opencv2/core/hal/interface.h
+cv_cpu_dispatch.h
+/usr/local/include/opencv2/core/cv_cpu_dispatch.h
 intrin.h
 -
+array
+-
+cstdint
+-
+stdint.h
+-
+stdint.h
+-
+opencv2/core/fast_math.hpp
+/usr/local/include/opencv2/core/opencv2/core/fast_math.hpp
 
 /usr/local/include/opencv2/core/cvstd.hpp
 opencv2/core/cvdef.h
@@ -269,6 +319,8 @@ ostream
 /usr/local/include/opencv2/core/fast_math.hpp
 opencv2/core/cvdef.h
 /usr/local/include/opencv2/core/opencv2/core/cvdef.h
+emmintrin.h
+-
 cmath
 -
 fastmath.h
@@ -297,6 +349,8 @@ opencv2/core/types.hpp
 /usr/local/include/opencv2/core/opencv2/core/types.hpp
 opencv2/core/bufferpool.hpp
 /usr/local/include/opencv2/core/opencv2/core/bufferpool.hpp
+type_traits
+-
 opencv2/core/mat.inl.hpp
 /usr/local/include/opencv2/core/opencv2/core/mat.inl.hpp
 
@@ -311,6 +365,8 @@ opencv2/core/traits.hpp
 /usr/local/include/opencv2/core/opencv2/core/traits.hpp
 opencv2/core/saturate.hpp
 /usr/local/include/opencv2/core/opencv2/core/saturate.hpp
+initializer_list
+-
 
 /usr/local/include/opencv2/core/neon_utils.hpp
 opencv2/core/cvdef.h
@@ -389,12 +445,58 @@ opencv2/core.hpp
 /usr/local/include/opencv2/core/utility.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/core/opencv2/core.hpp
+ostream
+-
+functional
+-
 opencv2/core/core_c.h
 /usr/local/include/opencv2/core/opencv2/core/core_c.h
 
 /usr/local/include/opencv2/core/version.hpp
 
+/usr/local/include/opencv2/core/vsx_utils.hpp
+opencv2/core/cvdef.h
+/usr/local/include/opencv2/core/opencv2/core/cvdef.h
+assert.h
+-
+
+/usr/local/include/opencv2/dnn.hpp
+opencv2/dnn/dnn.hpp
+-
+
+/usr/local/include/opencv2/dnn/dict.hpp
+opencv2/core.hpp
+-
+map
+-
+ostream
+-
+opencv2/dnn/dnn.hpp
+-
+
+/usr/local/include/opencv2/dnn/dnn.hpp
+vector
+-
+opencv2/core.hpp
+-
+opencv2/dnn/dict.hpp
+-
+opencv2/dnn/layer.hpp
+-
+opencv2/dnn/dnn.inl.hpp
+-
+
+/usr/local/include/opencv2/dnn/dnn.inl.hpp
+opencv2/dnn.hpp
+-
+
+/usr/local/include/opencv2/dnn/layer.hpp
+opencv2/dnn.hpp
+-
+
 /usr/local/include/opencv2/features2d.hpp
+opencv2/opencv_modules.hpp
+/usr/local/include/opencv2/opencv2/opencv_modules.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
 opencv2/flann/miniflann.hpp
@@ -447,6 +549,8 @@ typeinfo
 -
 
 /usr/local/include/opencv2/flann/autotuned_index.h
+sstream
+-
 general.h
 /usr/local/include/opencv2/flann/general.h
 nn_index.h
@@ -851,8 +955,6 @@ opencv2/videoio/videoio_c.h
 /usr/local/include/opencv2/imgcodecs.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
-opencv2/opencv.hpp
--
 
 /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h
 opencv2/core/core_c.h
@@ -861,34 +963,6 @@ opencv2/core/core_c.h
 /usr/local/include/opencv2/imgproc.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
-opencv2/core.hpp
--
-opencv2/imgproc.hpp
--
-opencv2/imgcodecs.hpp
--
-opencv2/highgui.hpp
--
-iostream
--
-opencv2/imgproc.hpp
--
-opencv2/highgui.hpp
--
-opencv2/imgproc.hpp
--
-opencv2/highgui.hpp
--
-math.h
--
-opencv2/imgproc.hpp
--
-opencv2/highgui.hpp
--
-opencv2/imgproc.hpp
-/usr/local/include/opencv2/opencv2/imgproc.hpp
-opencv2/highgui.hpp
-/usr/local/include/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
 /usr/local/include/opencv2/opencv2/imgproc/imgproc_c.h
 
@@ -913,6 +987,10 @@ map
 -
 iostream
 -
+opencv2/ml/ml.inl.hpp
+-
+
+/usr/local/include/opencv2/ml/ml.inl.hpp
 
 /usr/local/include/opencv2/objdetect.hpp
 opencv2/core.hpp
@@ -923,6 +1001,8 @@ opencv2/objdetect/objdetect_c.h
 /usr/local/include/opencv2/opencv2/objdetect/objdetect_c.h
 
 /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
+opencv2/core.hpp
+-
 vector
 -
 
@@ -943,6 +1023,8 @@ opencv2/calib3d.hpp
 /usr/local/include/opencv2/opencv2/calib3d.hpp
 opencv2/features2d.hpp
 /usr/local/include/opencv2/opencv2/features2d.hpp
+opencv2/dnn.hpp
+/usr/local/include/opencv2/opencv2/dnn.hpp
 opencv2/flann.hpp
 /usr/local/include/opencv2/opencv2/flann.hpp
 opencv2/highgui.hpp
@@ -1063,6 +1145,8 @@ opencv2/stitching/detail/camera.hpp
 /usr/local/include/opencv2/stitching/detail/blenders.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/stitching/detail/opencv2/core.hpp
+opencv2/core/cuda.hpp
+/usr/local/include/opencv2/stitching/detail/opencv2/core/cuda.hpp
 
 /usr/local/include/opencv2/stitching/detail/camera.hpp
 opencv2/core.hpp
@@ -1325,4 +1409,42 @@ opencv2/videostab/global_motion.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/global_motion.hpp
 opencv2/videostab/log.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/log.hpp
+
+/usr/local/include/opencv2/viz.hpp
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+opencv2/viz/viz3d.hpp
+-
+opencv2/viz/vizcore.hpp
+-
+
+/usr/local/include/opencv2/viz/types.hpp
+string
+-
+opencv2/core.hpp
+-
+opencv2/core/affine.hpp
+-
+
+/usr/local/include/opencv2/viz/viz3d.hpp
+opencv2/core.hpp
+-
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+
+/usr/local/include/opencv2/viz/vizcore.hpp
+opencv2/viz/types.hpp
+-
+opencv2/viz/widgets.hpp
+-
+opencv2/viz/viz3d.hpp
+-
+
+/usr/local/include/opencv2/viz/widgets.hpp
+opencv2/viz/types.hpp
+-
 
