@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/Vision/2018/Vision/test_vid
+# Install script for directory: /home/pi/Robotics/2019/Vision/test_vid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/Vision/2018/Vision/test_vid/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/Robotics/2019/Vision/test_vid/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -186,12 +186,13 @@ int main(int argc, char** argv){
 		tdelta = tprocess_end - tprocess_start;
 		printf("Process time: %lld\n", tdelta);
 		
-		if(ret) {
-			sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
+		if(!ret) {
 			
+			sprintf(stemp, "%6.2lf %6.2lf", vis.distance, vis.angle);
 			if(mosqf) {
 				mosquitto_publish(mosq, 0, "PI/CV/SHOOT/DATA", strlen(stemp), stemp, 0, 0);
 				rc = mosquitto_loop(mosq, 0, 1);
+				printf("Message Sent: %s/n", stemp);
 				if(rc){
 					printf("connection error!\n");
 					// sleep(10);
@@ -214,7 +215,7 @@ int main(int argc, char** argv){
 	trun = (1.0 * tend - tstart)/1e6;
 	printf("time: %7.3lf frames: %ld  fps: %6.2lf\n", trun,
 				 frames, (1.0 * frames/trun));
-	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",
+	printf("time_t: %d suseconds_t: %d long: %d long long %d\n",			
 				 sizeof(time_t), sizeof(suseconds_t), sizeof(long), sizeof(long long));
 
 	if(mosqf) {
