@@ -37,13 +37,26 @@ Vision::Vision()
 {
 
   //extract green
-	HMin = 70;
-	HMax = 120;
-	SMin = 65;
+	
+	HMin = 35;
+	HMax = 100;
+	SMin = 70;
 	SMax = 255;
-	VMin = 200;
+	VMin = 40;
 	VMax = 255;
 	
+	
+
+	// White
+	/*
+	HMin = 0;
+        HMax = 255;
+        SMin = 0;
+        SMax = 255;
+        VMin = 240;
+        VMax = 255;
+	*/
+
 	// H: 0-180
 	// S: 0-255
 	// V: 0-255
@@ -131,12 +144,19 @@ double Vision::angle_calc_cube(int xPos)
 	return angle; 
 }
 
+// Added 16 to atan because too lazy to calibrate
 double Vision::angle_calc_target(int xPos)
 {
-	angle = atan((xPos-320.0)/530.47) * (180.0/M_PI);
+	angle = 16 + atan((xPos-320.0)/530.47) * (180.0/M_PI);
 	return angle; 
 }
 
+// Added extra multiplicitive constant
+double Vision::distance_calc_target(int width)
+{
+	distance = 6604.463483 * (1/double(width)) * 1.72413;
+	return distance;
+}
 
 
 		
@@ -173,6 +193,10 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		cv::imshow("Input", img);
 	}
 	
+
+	// Start Process Time
+	long long tProcstart = gettime_usec();
+
 	// first convert to HSV
 	long long tHSVstart = gettime_usec();
 	cv::Mat imgHSV =img.clone(); // faster to create and fill with zeros ?
@@ -213,22 +237,26 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	long long tmorphstart = gettime_usec();
 	// cloning imgThresh takes ~0.5 msec
 	cv::Mat imgOpen;
+	cv::Mat imgTemp2;
 	if(parallelf) {
 		// cloning imgThresh in here, and performing Open operation inplace increased from ~9.7msec to ~17.3msec
 		// Wow! Just replacing morphologyEx Open operation with erode() followed by dilate() reduces Morphology step from ~9.6 msec to 2.4 msec!
 		// Process time now around 21-23 msec
 		cv::Mat imgTemp;
-		cv::erode(imgThresh, imgTemp, cv::Mat());
-		cv::dilate(imgTemp, imgOpen, cv::Mat());
+		// cv::erode(imgThresh, imgTemp, cv::Mat());
+		// cv::dilate(imgTemp, imgTemp2, cv::Mat());
+		cv::dilate(imgThresh, imgTemp2, cv::Mat());
+		cv::dilate(imgTemp2, imgTemp, cv::Mat());
+		cv::dilate(imgTemp, imgOpen, cv::Mat());		
 	} else {
 		cv::morphologyEx(imgThresh, imgOpen, CV_MOP_OPEN, cv::Mat());
 	}
 	long long tmorphend = gettime_usec();
 	printf("Morphology time: %lld usec\n", tmorphend - tmorphstart);
-
-	// cv::namedWindow("Open", cv::WINDOW_AUTOSIZE);
-	// cv::imshow("Open", imgOpen);
-
+	if(displayf == 1) {
+		cv::namedWindow("Open", cv::WINDOW_AUTOSIZE);
+		cv::imshow("Open", imgOpen);
+	}
 
 	// find countours
 	// cv::Mat imgDraw(img);
@@ -249,12 +277,92 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	rects.clear();
 
 	printf("Found %d contours\n", contours.size());
+	
+	// New Code for 2020, super easy
+	// We only have to deal with half a hexagon
+	// Just looks for best match and then calculates angle
+	// Will eventually add distance
 
 	int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 	double fontScale = 0.5;
 	char s1[255];
-	cv::Point ptText(40, 40);		
+	cv::Point ptText(40, 40);
+	float bestMatch = -1;
+	double match = 0;
+	int contnum = 0;
+	for(int i = 0; i < contours.size(); i++) {
+		match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
+		if(match > bestMatch && match < 3) {
+			bestMatch = match;
+			contnum = i;
+		}
+
+	}
 	
+	
+	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
+        if(bestMatch == -1) {
+                imgDraw = img.clone();
+                printf("No Match Found. Did you try turning it off and back on again?");
+                if(displayf == 2) {
+                        sprintf(s1, "Match: NONE");
+	               	cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+	
+	                sprintf(s1, "Angle: UNKNOWN");
+	                ptText.y += 15;
+	                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+			sprintf(s1, "Distance: UNKNOWN");
+                        ptText.y += 15;
+                        cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+	                sprintf(s1, "NO IDEA HOW YOU SCREWED UP THIS BADLY");
+	                ptText.y += 15;
+	                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+	                cv::imshow("Contours", imgDraw);
+	                cv::waitKey(1);
+
+                }
+                return 0;
+        }
+
+	// bounding rectangle
+        cv::Rect rect1 = cv::boundingRect(contours[contnum]);
+
+        printf("Angle of targets: %6.2lf\n", angle_calc_target(rect1.x + rect1.width / 2));
+	printf("Distance of targets: %6.2lf\n", distance_calc_target(rect1.width));
+
+	long long tProcend = gettime_usec();
+	printf("Est. FPS: %6.2lf\n", 1000 / ((double(tProcend - tProcstart) / 1000) + 4));
+
+        if(displayf == 2 || displayf == 1) {
+          imgDraw = img.clone();
+                cv::drawContours(imgDraw, contours, contnum, cv::Scalar(0, 0, 255));
+                cv::rectangle(imgDraw, rect1, cv::Scalar(0, 255, 0));
+
+                sprintf(s1, "Match: %6.2lf", bestMatch);
+                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+                sprintf(s1, "Angle:  %6.2lf", angle_calc_target(rect1.x + rect1.width / 2));
+                ptText.y += 15;
+                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+		sprintf(s1, "Distance:  %6.2lf", distance_calc_target(rect1.width));
+                ptText.y += 15;
+                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+		sprintf(s1, "FPS:  %6.2lf", 1000 / ((double(tProcend - tProcstart) / 1000) + 4));
+                ptText.y += 15;
+                cv::putText(imgDraw, s1, ptText, fontFace, fontScale, cv::Scalar(0, 0, 255), 1);
+
+                cv::imshow("Contours", imgDraw);
+                cv::waitKey(1);
+        }
+
+
+
+	/*
 	if(contours.size() < 2) {
 		printf("No match found. God hath mercy on us all.\n");
 		imgDraw = img.clone();
@@ -347,7 +455,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	}
 
 	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
-  if(bestMatch == -1) {
+  	if(bestMatch == -1) {
 		imgDraw = img.clone();
 		printf("No Match Found. Did you try turning it off and back on again?");
 		if(displayf == 2) {
@@ -393,7 +501,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 		cv::imshow("Contours", imgDraw);
 		cv::waitKey(1);
 	}
-	
+	*/
 	
 
 

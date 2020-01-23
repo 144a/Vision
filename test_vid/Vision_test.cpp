@@ -125,6 +125,11 @@ int main(int argc, char** argv){
 		cap.open(0);              //open first camera
 		cap.set(CV_CAP_PROP_FRAME_WIDTH, 640);
 		cap.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
+		// cap.set(CV_CAP_PROP_CONTRAST, 1);
+		// cap.set(CV_CAP_PROP_SATURATION, 0);
+
+		cap.set(CV_CAP_PROP_FPS, 120);
+
 	}else{
 		cap.open(fid);
 	}
