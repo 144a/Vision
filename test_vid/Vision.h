@@ -54,9 +54,13 @@ class Vision
 	int VMin;
 	int VMax;
 
+	double extern_template;
+	double extern_contour;
+	double previous_area;
 	std::vector< std::vector< cv::Point> > contours;
 	std::vector< cv::Moments > moms;
 	std::vector< cv::Rect > rects;
+	cv::Rect rectExtern;
 
 	std::vector< std::vector< cv::Point> > contoursTemplate;
 

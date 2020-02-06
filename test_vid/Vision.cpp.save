@@ -65,11 +65,11 @@ Vision::Vision()
 
 	
 	//extract yellow
-	HMin = 10;
-	HMax = 40;
-	SMin = 70;
+	HMin = 20;
+	HMax = 35;
+	SMin = 90;
 	SMax = 255;
-	VMin = 70;
+	VMin = 90;
 	VMax = 255;
 	
 	
@@ -97,8 +97,6 @@ int Vision::process_template(char *templateFile)
 			cv::imshow("Template", imgTemplate);
 			cv::waitKey(0);
 	}
-	// Calculate extern for template
-	extern_template = cv::contourArea(contoursTemplate[0]) / (cv::boundingRect(contoursTemplate[0]).width * cv::boundingRect(contoursTemplate[0]).height);
 
 
 	return 0;
@@ -286,7 +284,7 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	// We only have to deal with half a hexagon
 	// Just looks for best match and then calculates angle
 	// Will eventually add distance
-	
+
 	int fontFace = cv::FONT_HERSHEY_SIMPLEX;
 	double fontScale = 0.5;
 	char s1[255];
@@ -294,23 +292,21 @@ int Vision::process(cv::Mat img, cv::Mat &imgDraw, int filterf)
 	float bestMatch = -1;
 	double match = 0;
 	int contnum = 0;
-	
-	// For Running Targets
-	
 	for(int i = 0; i < contours.size(); i++) {
+		/*
 		match = cv::matchShapes(contoursTemplate[0], contours[i], CV_CONTOURS_MATCH_I3, 0);
-		rectExtern = cv::boundingRect(contours[i]);
-		extern_contour = (double) cv::contourArea(contours[i]) / ((double) (rectExtern.width * rectExtern.height));
-		if(match > bestMatch && match < .5 && abs(extern_contour - extern_template) / extern_template <= 0.07) {
+		 if(match > bestMatch && match < 3) {
+                        bestMatch = match;
+                        contnum = i;
+                }
+if(match > bestMatch && match < 3) {
 			bestMatch = match;
 			contnum = i;
 		}
+		*/
 
 	}
 	
-
-
-
 	
 	printf("Best-y Match-y Thing-y: %6.2lf\n", bestMatch);
         if(bestMatch == -1) {
